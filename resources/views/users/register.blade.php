@@ -63,7 +63,8 @@
                     <!-- Contact Form -->
                     <div class="contact_from_area mb-100 clearfix wow fadeInUp" data-wow-delay="300ms" data-aos="fade-up">
                         <div class="contact_form">
-                            <form action="mail.php" method="post" id="main_contact_form">
+                            <form action="/register" method="post" id="main_contact_form">
+                            @csrf
                                 <div class="contact_input_area">
                                     <div id="success_fail_info"></div>
                                     <div class="row">
@@ -100,13 +101,13 @@
                                         <!-- Form Group -->
                                         <div class="col-12 col-lg-6">
                                             <div class="form-group">
-                                                <input type="email" class="form-control mb-30 p-4" name="quali" id="quali" placeholder="Qualification">
+                                                <input type="text" class="form-control mb-30 p-4" name="qualification" id="quali" placeholder="Qualification">
                                             </div>
                                         </div>
                                         <!-- Form Group -->
                                         <div class="col-12 col-lg-6">
                                             <div class="form-group">
-                                                <input type="number" class="form-control mb-30 p-4" name="lang" id="lang" placeholder="Language and Batch">
+                                                <input type="text" class="form-control mb-30 p-4" name="language" id="lang" placeholder="Language and Batch">
                                             </div>
                                         </div>
                                         <!-- Button -->

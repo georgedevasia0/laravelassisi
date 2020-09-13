@@ -136,7 +136,7 @@ ol {
 .blog__large {
 	margin-bottom: 45px;
 	overflow: hidden;
-	background: #f5f5f5;
+	background: #ffffff;
 }
 
 .blog__large__pic {
@@ -449,4 +449,8 @@ ol {
 		width: 100%;
 		font-size: 24px;
 	}
+}
+.blog__item__text span {
+	font-size: 13px;
+	color: #f3bd00;
 }

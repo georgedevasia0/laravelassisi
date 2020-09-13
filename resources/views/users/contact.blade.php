@@ -1,15 +1,62 @@
 @extends('layouts.headerandfooter')
 @section("contents") 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .logo1 {
+            width: 150px !important;
+            margin-top: -30px !important;
+        }
+
+        @media (max-width: 992px) {
+            .logo1 {
+                width: 150px !important;
+                margin-top: -30px !important;
+            }
+
+            @media (max-width: 768px) {
+                .logo1 {
+                    width: 200px !important;
+                    margin-top: -35px !important;
+                }
+
+                .logo {
+                    height: 150px;
+                }
+
+                #header #logo img {
+                    max-height: 70px;
+                }
+            }
+        }
+        
+    </style>
+</head>
+<body style="font-family: 'Raleway', sans-serif;">
 <section class="ftco-section bg-light">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-12">
 				<div class="wrapper mt-5">
+					
 					<div class="row no-gutters" style="border-radius:5px;">
 						<div class="col-md-7 col-sm-12" data-aos="fade-right">
 							<div class="contact-wrap w-100  p-4">
 								<h2 class="mb-4 text-dark font-weight-bold text-center">Get In Touch</h2>
-								<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+								<form method="POST" action="/contact" id="contactForm" name="contactForm" class="contactForm">
+								@csrf
 									<div class="row">
 										<div class="col-md-12">
 											<div class="form-group">
@@ -20,7 +67,7 @@
 										<div class="col-md-12">
 											<div class="form-group">
 												<label class="label font-weight-bold text-dark" for="subject">Email</label>
-												<input type="text" class="form-control" name="subject" id="subject" placeholder="youremail@gmail.com">
+												<input type="text" class="form-control" name="email" id="subject" placeholder="youremail@gmail.com">
 											</div>
 										</div>
 										<div class="col-md-12">
@@ -95,4 +142,14 @@
 		</div>
 	</div>
 </section>
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/wow/wow.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/superfish/superfish.min.js"></script>
+<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
 @endsection

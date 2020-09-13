@@ -21,7 +21,7 @@ class CreateRegisterationsTable extends Migration
             $table->biginteger('phone');
             $table->string('address');
             $table->string('email');
-            $table->string('qulification');
+            $table->string('qualification');
             $table->string('branch');
             $table->integer('age');
             $table->string('contacted');

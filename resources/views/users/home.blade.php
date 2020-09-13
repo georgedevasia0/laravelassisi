@@ -1,6 +1,7 @@
 @extends('layouts.headerandfooter')
 @section("contents")   
     <!-- ======= Hero Section ======= -->
+    <body style="font-family: 'Raleway', sans-serif;">
     <section id="hero">
         <div class="hero-container">
             <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -10,7 +11,7 @@
                 <div class="carousel-inner" role="listbox">
 
                     <!-- Slide 1 -->
-                    <div class="carousel-item active" style="background-image: url('user/img/bg-1.jpg');">
+                    <div class="carousel-item active" style="background-image: url('assets/img/bg-1.jpg');">
                         <div class="carousel-container">
                             <div class="carousel-content container">
                                 <h2 class="animated fadeInDown type-font">Assisi Institute of Foreign
@@ -33,7 +34,7 @@
                     </div>
 
                     <!-- Slide 2 -->
-                    <div class="carousel-item" style="background-image: url('user/img/hero_bg_2.jpg');">
+                    <div class="carousel-item" style="background-image: url('assets/img/hero_bg_2.jpg');">
                         <div class="carousel-container">
                             <div class="carousel-content container">
                                 <h2 class="animated fadeInDown">Join us <span>and Emphasize your Career</span></h2>
@@ -64,7 +65,7 @@
                     </div>
 
                     <!-- Slide 3 -->
-                    <div class="carousel-item" style="background-image: url('user/img/hero_bg_1.jpg');">
+                    <div class="carousel-item" style="background-image: url('assets/img/hero_bg_1.jpg');">
                         <div class="carousel-container">
                             <div class="carousel-content container">
                                 <h2 class="animated fadeInDown">Admission Started for new <span>Batches</span></h2>
@@ -114,10 +115,10 @@
         <a href="#" data-aos="fade-up" class="btn text-white float-right"style="background-color:#4045AE;"><i class="fa fa-wpexplorer"></i> View</a>
     </div>
 
-    <!--<marquee behavior="" direction="left" class="text-danger pt-3"><span><img src="user/img/logo/new.GIF"
+    <!--<marquee behavior="" direction="left" class="text-danger pt-3"><span><img src="assets/img/logo/new.GIF"
                 alt=""></span> Admissions
         for 2020-21 batches
-        started. Register Now. <span><img src="user/img/logo/new.GIF" alt=""></span> Admissions
+        started. Register Now. <span><img src="assets/img/logo/new.GIF" alt=""></span> Admissions
         for 2020-21 batches
         started. Register Now.
     </marquee>-->
@@ -135,8 +136,8 @@
                     <div class="row p-2">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12 ml-2 mx-auto">
                             <div>
-                                <p class="text-white pt-1 text-center" style="line-height:35px;"><span><i class="fa fa-star"></i></span>
-                                 Admissions for 2020-21 batches started. <span class="btn btn-light btn-rounded" style="border-radius:15px;">Register Now <i class="fa fa-user-plus text-danger"></i></span>
+                                <p class="text-white pt-1 text-center" style="line-height:35px;"><span><i class="fas fa-user-graduate fa-2x p-2"></i></span>
+                                 Admissions for 2020-21 batches started. <span class="btn pl-3 btn-light btn-rounded" style="border-radius:15px;">Register Now <i class="fa fa-user-plus text-danger"></i></span>
                                 </p>
                             </div>
                         </div>
@@ -146,7 +147,7 @@
                     <div class="row p-2">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12 ml-2 mx-auto">
                             <div>
-                                <p class="text-white pt-1 text-center" style="line-height:35px;"><span><i class="fa fa-star"></i></span>
+                                <p class="text-white pt-1 text-center" style="line-height:35px;"><span><i class="fas fa-user-graduate fa-2x p-2"></i></span>
                                 Admissions for 2020-21 batches started. <span class="btn btn-light btn-rounded" style="border-radius:15px;">Register Now <i class="fa fa-user-plus text-danger"></i></span>
                                 </p>
                             </div>
@@ -157,7 +158,7 @@
                     <div class="row p-2">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12 ml-2 mx-auto">
                             <div>
-                                <p class="text-white pt-1 text-center" style="line-height:35px;"><span><i class="fa fa-star"></i></span>
+                                <p class="text-white pt-1 text-center" style="line-height:35px;"><span><i class="fas fa-user-graduate fa-2x p-2"></i></span>
                                 Admissions for 2020-21 batches started. <span class="btn btn-light btn-rounded" style="border-radius:15px;">Register Now <i class="fa fa-user-plus text-danger"></i> </span>
                                 </p>
                             </div>
@@ -250,7 +251,7 @@
                                 </li>
                             </ol>
                             <div class="carousel-inner radius">
-                                <div class="carousel-item active p-3 radius" style="background:url(user/img/about2.png);background-repeat:no-repeat;background-size:cover;">
+                                <div class="carousel-item active p-3 radius" style="background:url(assets/img/about2.png);background-repeat:no-repeat;background-size:cover;">
                                     <div class="row p-2">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-12 ml-2 mx-auto">
                                             <p class="text-center font-weight-bold text-dark">A2 Winners <i class="fa fa-trophy text-primary"></i></p>
@@ -261,21 +262,21 @@
                                                 <!--first row-->
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
                                                 </div>
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-web">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
                                                 </div>
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -283,7 +284,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -291,7 +292,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -299,7 +300,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -308,7 +309,7 @@
                                                 <!--second row-->
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -316,7 +317,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-web">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                             
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -324,7 +325,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -332,7 +333,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -340,7 +341,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -348,7 +349,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -358,7 +359,7 @@
                                                 <!--third row-->
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -366,7 +367,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/avatar.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/avatar.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">You</p>
@@ -374,7 +375,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/plus.png" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/plus.png" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">More</p>
@@ -385,7 +386,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="carousel-item p-3 radius" style="background:url(user/img/about2.png);background-repeat:no-repeat;background-size:cover;" >
+                                <div class="carousel-item p-3 radius" style="background:url(assets/img/about2.png);background-repeat:no-repeat;background-size:cover;" >
                                     <div class="row p-2">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-12 ml-2 mx-auto">
                                             <p class="text-center font-weight-bold text-dark">B2 Winners <i class="fa fa-trophy text-primary"></i></p>
@@ -394,7 +395,7 @@
                                                 <!--first row-->
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -402,7 +403,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-web">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                     
                                                   </div>
@@ -411,7 +412,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -419,7 +420,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -427,7 +428,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -435,7 +436,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -444,7 +445,7 @@
                                                 <!--second row-->
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -452,7 +453,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-web">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                     
                                                   </div>
@@ -461,7 +462,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -469,7 +470,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -477,7 +478,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -485,7 +486,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -495,7 +496,7 @@
                                                 <!--third row-->
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -504,7 +505,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/avatar.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/avatar.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">You</p>
@@ -512,7 +513,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/plus.png" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/plus.png" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">More</p>
@@ -524,7 +525,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="carousel-item  p-3 radius" style="background:url(user/img/about2.png);background-repeat:no-repeat;background-size:cover;">
+                                <div class="carousel-item  p-3 radius" style="background:url(assets/img/about2.png);background-repeat:no-repeat;background-size:cover;">
                                     <div class="row p-2">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-12 ml-2 mx-auto">
                                             <p class="text-center font-weight-bold text-dark">C2 Winners <i class="fa fa-trophy text-primary"></i></p>
@@ -533,7 +534,7 @@
                                                 <!--first row-->
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -541,7 +542,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-web">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                     
                                                   </div>
@@ -550,7 +551,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -558,7 +559,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -566,7 +567,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -574,7 +575,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -583,7 +584,7 @@
                                                 <!--second row-->
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -591,7 +592,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-web">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                     
                                                   </div>
@@ -600,7 +601,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -608,7 +609,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -616,7 +617,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -624,7 +625,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -634,7 +635,7 @@
                                                 <!--third row-->
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
@@ -643,7 +644,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/avatar.jpg" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/avatar.jpg" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">You</p>
@@ -651,7 +652,7 @@
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="user/img/testimonials/plus.png" class="img-fluid" alt="">
+                                                    <img src="assets/img/testimonials/plus.png" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">More</p>
@@ -681,9 +682,9 @@
                             <div class="row portfolio-container mt-4" data-aos="fade-up" data-aos-delay="100">
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-4 portfolio-item filter-app">
                                   <div class="portfolio-wrap">
-                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                     <div class="portfolio-links">
-                                      <a href="user/img/testimonials/testimonials-5.jpg" data-gall="portfolioGallery" class="venobox py-2"
+                                      <a href="assets/img/testimonials/testimonials-5.jpg" data-gall="portfolioGallery" class="venobox py-2"
                                         title="App 1">Albin Francis</a>
                                     </div>
                                   </div>
@@ -691,9 +692,9 @@
 
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-4 portfolio-item filter-web">
                                   <div class="portfolio-wrap">
-                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                     <div class="portfolio-links">
-                                      <a href="user/img/testimonials/testimonials-5.jpg" data-gall="portfolioGallery" class="venobox py-2"
+                                      <a href="assets/img/testimonials/testimonials-5.jpg" data-gall="portfolioGallery" class="venobox py-2"
                                         title="Web 3">Noel Francis</a>
                                     </div>
                                   </div>
@@ -701,9 +702,9 @@
 
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-4 portfolio-item filter-app">
                                   <div class="portfolio-wrap">
-                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                     <div class="portfolio-links">
-                                      <a href="user/img/testimonials/testimonials-5.jpg" data-gall="portfolioGallery" class="venobox py-2"
+                                      <a href="assets/img/testimonials/testimonials-5.jpg" data-gall="portfolioGallery" class="venobox py-2"
                                         title="App 2">Noel Francis</a>
                                     </div>
                                   </div>
@@ -711,9 +712,9 @@
 
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-4 portfolio-item filter-app">
                                   <div class="portfolio-wrap">
-                                    <img src="user/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
                                     <div class="portfolio-links">
-                                      <a href="user/img/testimonials/testimonials-5.jpg" data-gall="portfolioGallery" class="venobox py-2"
+                                      <a href="assets/img/testimonials/testimonials-5.jpg" data-gall="portfolioGallery" class="venobox py-2"
                                         title="App 2">Noel Francis</a>
                                     </div>
                                   </div>
@@ -721,9 +722,9 @@
 
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-4 portfolio-item filter-app">
                                   <div class="portfolio-wrap">
-                                    <img src="user/img/testimonials/avatar.jpg" class="img-fluid" alt="">
+                                    <img src="assets/img/testimonials/avatar.jpg" class="img-fluid" alt="">
                                     <div class="portfolio-links">
-                                      <a href="user/img/testimonials/avatar.jpg" data-gall="portfolioGallery" class="venobox py-2"
+                                      <a href="assets/img/testimonials/avatar.jpg" data-gall="portfolioGallery" class="venobox py-2"
                                         title="App 2">You</a>
                                     </div>
                                   </div>
@@ -731,9 +732,9 @@
 
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-4 portfolio-item filter-app">
                                   <div class="portfolio-wrap">
-                                    <img src="user/img/testimonials/plus.png" class="img-fluid" alt="">
+                                    <img src="assets/img/testimonials/plus.png" class="img-fluid" alt="">
                                     <div class="portfolio-links">
-                                      <a href="user/img/testimonials/plus.png" data-gall="portfolioGallery" class="venobox py-2"
+                                      <a href="assets/img/testimonials/plus.png" data-gall="portfolioGallery" class="venobox py-2"
                                         title="App 2">View More</a>
                                     </div>
                                   </div>
@@ -796,6 +797,25 @@
         </div>
     </section><!-- End Courses Section -->
 
+    <section class=" p-5" style="background-color:#E1F0FA;">
+      <div class="container">
+          <div class="wants-wrapper">
+              <div class="row align-items-center justify-content-between">
+                  <div class="col-xl-8 col-lg-9 col-md-8" data-aos="fade-right">
+                      <div class="wantToWork-caption wantToWork-caption2">
+                          <h2 class="font-weight-bold" style="color:#2C234D">Download our Newsletter</h2>
+                          <p style="color:#2C234D">Our success story depends on the students who learn from us by enlightning their knowledge. </p>
+                      </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-4" data-aos="fade-left">
+                      <a href="#" class="btn btt text-white px-5 py-3">Download <i class="fa fa-download"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
 
     <!-- Team Section Begin -->
     <section class="team spad bg-light pt-5">
@@ -813,7 +833,7 @@
                     <div class="col-lg-5 mx-auto" data-aos="fade-up" data-aos-delay="100">
                         <div class="team__item bg-white" style="border-radius:5px;">
                             <div class="team__item__img col-lg-12">
-                                <img src="user/img/testimonials/testimonials-5.jpg" alt="" class="mx-auto row" style="width:150px;border-radius:5px;">
+                                <img src="assets/img/testimonials/testimonials-5.jpg" alt="" class="mx-auto row" style="width:150px;border-radius:5px;">
                                 <div class="team__item__text">
                                 <h5 class="text-center pt-3">DAVID WARNER</h5>
                                 <span class="text-center">Instructor</span>
@@ -826,7 +846,7 @@
                 <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
                     <div class="team__item bg-white" style="border-radius:5px;">
                         <div class="team__item__img">
-                            <img src="user/img/testimonials/testimonials-5.jpg" alt="" style="width:150px;border-radius:5px;">
+                            <img src="assets/img/testimonials/testimonials-5.jpg" alt="" style="width:150px;border-radius:5px;">
                         </div>
                         <div class="team__item__text">
                             <h5>DAVID WARNER</h5>
@@ -844,7 +864,7 @@
                 <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
                     <div class="team__item bg-white" style="border-radius:5px;">
                         <div class="team__item__img">
-                            <img src="user/img/testimonials/testimonials-5.jpg" alt="" style="width:150px;border-radius:5px;">
+                            <img src="assets/img/testimonials/testimonials-5.jpg" alt="" style="width:150px;border-radius:5px;">
                         </div>
                         <div class="team__item__text">
                             <h5>DAVID WARNER</h5>
@@ -862,7 +882,7 @@
                 <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
                     <div class="team__item bg-white" style="border-radius:5px;">
                         <div class="team__item__img">
-                            <img src="user/img/testimonials/testimonials-5.jpg" alt="" style="width:150px;border-radius:5px;">
+                            <img src="assets/img/testimonials/testimonials-5.jpg" alt="" style="width:150px;border-radius:5px;">
                         </div>
                         <div class="team__item__text">
                             <h5>DAVID WARNER</h5>
@@ -880,7 +900,7 @@
                 <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
                     <div class="team__item bg-white" style="border-radius:5px;">
                         <div class="team__item__img">
-                            <img src="user/img/testimonials/testimonials-5.jpg" alt="" style="width:150px;border-radius:5px;">
+                            <img src="assets/img/testimonials/testimonials-5.jpg" alt="" style="width:150px;border-radius:5px;">
                         </div>
                         <div class="team__item__text">
                             <h5>DAVID WARNER</h5>
@@ -923,6 +943,7 @@
         </div>
     </div> -->
     <!--end batches-->
+
 
     <!-- ======= Facts Section ======= -->
     <section id="facts" class="wow fadeIn pb-5">
@@ -985,7 +1006,7 @@
 
                     <div class="block-20 radius" data-aos="fade-right">
                         <figure>
-                            <a href="#"><img src="user/img/img_1.jpg" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="assets/img/img_1.jpg" alt="" class="img-fluid"></a>
                         </figure>
                         <div class="text pb-4 pt-4">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
@@ -1003,7 +1024,7 @@
 
                     <div class="block-21 d-flex mb-4" data-aos="fade-up" data-aos-delay="50">
                         <figure class="mr-3">
-                            <a href="#"><img src="user/img/img_2.jpg" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="assets/img/img_2.jpg" alt="" class="img-fluid"></a>
                         </figure>
                         <div class="text">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
@@ -1018,7 +1039,7 @@
 
                     <div class="block-21 d-flex mb-4" data-aos="fade-up" data-aos-delay="100">
                         <figure class="mr-3">
-                            <a href="#"><img src="user/img/img_3.jpg" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="assets/img/img_3.jpg" alt="" class="img-fluid"></a>
                         </figure>
                         <div class="text">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
@@ -1033,7 +1054,7 @@
 
                     <div class="block-21 d-flex mb-4" data-aos="fade-up" data-aos-delay="150">
                         <figure class="mr-3">
-                            <a href="#"><img src="user/img/img_1.jpg" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="assets/img/img_1.jpg" alt="" class="img-fluid"></a>
                         </figure>
                         <div class="text">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
@@ -1048,7 +1069,7 @@
 
                     <div class="block-21 d-flex mb-4" data-aos="fade-up" data-aos-delay="200">
                         <figure class="mr-3">
-                            <a href="#"><img src="user/img/img_1.jpg" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="assets/img/img_1.jpg" alt="" class="img-fluid"></a>
                         </figure>
                         <div class="text">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
@@ -1121,7 +1142,7 @@
 
                 <div class="testimonial-wrap py-2 pr-3 radius" style="background-color:#FFFFFF">
                     <div class="testimonial-item">
-                        <img src="user/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                         <h3>Dilnet Thomas</h3>
                         <h4>Ceo &amp; Founder</h4>
                         <p>
@@ -1148,7 +1169,7 @@
                 
                 <!--<div class="testimonial-wrap  py-2" style="background-color:#FFFFFF">
                     <div class="testimonial-item">
-                        <img src="user/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
                         <h3>Joel Sunny George</h3>
                         <h4>Designer</h4>
                         <p>
@@ -1163,7 +1184,7 @@
 
                 <div class="testimonial-wrap py-2 pr-3" style="background-color:#FFFFFF">
                     <div class="testimonial-item">
-                        <img src="user/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                         <h3>Sraddha Maria Shajan</h3>
                         <h4>Store Owner</h4>
                         <p>
@@ -1190,14 +1211,14 @@
 
                 <div class="testimonial-wrap py-2 pr-3" style="background-color:#FFFFFF">
                     <div class="testimonial-item">
-                        <img src="user/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                        <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                         <h3>John Larson</h3>
                         <h4>Entrepreneur</h4>
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                             Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam
                             enim culpa
-                            labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum.
+                            labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nis.
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
                     </div>
@@ -1239,6 +1260,6 @@
                 </div>
             </div>
         </div>
-    </section>
- -->
+    </section>-->
+
  @endsection

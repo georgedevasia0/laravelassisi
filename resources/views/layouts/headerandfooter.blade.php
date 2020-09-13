@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assisi Institute of Foreign Languages</title>
 
+    <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
     <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -16,71 +21,99 @@
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/vendor/ionicons/css/ionicons.min.css">
     <link href="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
-    <link href="/user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/user/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/user/vendor/icofont/icofont.min.css" rel="stylesheet">
-    <link href="/user/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/user/vendor/ionicons/css/ionicons.min.css">
-    <link href="/user/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="/user/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/ionicons/css/ionicons.min.css">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!--<link rel="stylesheet" href="assets/vendor/aos/aos.css">-->
+    
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="/user/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+      .logo1 {
+            width: 150px !important;
+            margin-top: -30px !important;
+        }
+
+        @media (max-width: 992px) {
+            .logo1 {
+                width: 150px !important;
+                margin-top: -30px !important;
+            }
+
+            @media (max-width: 768px) {
+                .logo1 {
+                    width: 200px !important;
+                    margin-top: -35px !important;
+                }
+
+                .logo {
+                    height: 150px;
+                }
+
+                #header #logo img {
+                    max-height: 70px;
+                }
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- ======= Header ======= -->
-    <header id="header" style="background-color: #FFFFFF;" class="border">
-        <div class="container-fluid">
+  <header id="header" style="background-color: #FFFFFF;">
+    <div class="container-fluid">
 
-            <div id="logo" class="pull-left">
-                <!--<h1><a href="#intro" class="scrollto">Assissi</a></h1>-->
-                <!-- Uncomment below if you prefer to use an image logo -->
-                <a href="#intro"><img src="/user/img/logo/2.png" alt=""
-                        style="height:60px;width:60px;margin-top:-15px;"><img src="/user/img/logo/4.png" alt=""
-                        style="height:60px;width:170px;margin-top:-15px;"></a>
-            </div>
-
-            <nav id="nav-menu-container">
-                <ul class="nav-menu">
-                    <li class="menu-active"><a href="/">Home</a></li>
-                    <li class="menu-has-children"><a href="/aboutus" onclick="window.scrollTo(0, 600);">About Us</a>
-                        <ul>
-                            <li><a href="#">ASSISI IFL</a></li>
-                            <li><a href="#">OUR INSPIRATION</a></li>
-                            <li><a href="#">OUR VISION</a></li>
-                            <li><a href="#">OUR MISSION</a></li>
-                            <li><a href="#">FACULTY</a></li>
-                            <li><a href="#">PHILODOPHY OF AIFL</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-has-children"><a href="/courses" onclick="window.scrollTo(0, 1150);">COURSES</a>
-                        <ul>
-                            <li><a onclick="window.scrollTo(0, 1150);">GERMAN</a></li>
-                            <li><a onclick="window.scrollTo(0, 1150);">FRENCH</a></li>
-                            <li><a onclick="window.scrollTo(0, 1150);">ITALIAN</a></li>
-                            <li><a onclick="window.scrollTo(0, 1150);">ENGLISH</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-has-children"><a href="/facilities" href="#portfolio">FACILITIES</a>
-                        <ul>
-                            <li><a href="#">LAB</a></li>
-                            <li><a href="#">HOSTEL</a></li>
-                            <li><a href="#">LIBRARY</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/gallery">GALLERY</a></li>
-                    <li><a href="/contact">CONTACT</a>
-                    </li>
-                    <li><a href="/register">REGISTER</a></li>
-                </ul>
-            </nav><!-- #nav-menu-container -->
+        <div id="logo" class="pull-left">
+            <!--<h1><a href="#intro" class="scrollto">Assissi</a></h1>-->
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <a href="#intro"><img class="logo1" src="assets/img/logo/logo.png" alt=""></a>
         </div>
-    </header><!-- End Header -->
 
-    @yield('contents') <!-- contents to display for the /user -->
-
-
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li class="menu-active"><a href="/">Home</a></li>
+                <li class="menu-has-children"><a href="/aboutus">About Us</a>
+                    <ul>
+                        <li><a href="/aboutus">ASSISI IFL</a></li>
+                        <li><a href="/aboutus">OUR INSPIRATION</a></li>
+                        <li><a href="/aboutus">OUR VISION</a></li>
+                        <li><a href="/aboutus">OUR MISSION</a></li>
+                        <li><a href="/aboutus">FACULTY</a></li>
+                        <li><a href="/aboutus">PHILODOPHY OF AIFL</a></li>
+                    </ul>
+                </li>
+                <li class="menu-has-children"><a href="/courses">COURSES</a>
+                    <ul>
+                        <li><a href="/courses">GERMAN</a></li>
+                        <li><a href="/courses">FRENCH</a></li>
+                        <li><a href="/courses">ITALIAN</a></li>
+                        <li><a href="/courses">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li class="menu-has-children"><a href="/facilities">FACILITIES</a>
+                    <ul>
+                        <li><a href="/facilities">LAB</a></li>
+                        <li><a href="/facilities">HOSTEL</a></li>
+                        <li><a href="/facilities">LIBRARY</a></li>
+                    </ul>
+                </li>
+                <li><a href="/gallery">GALLERY</a></li>
+                <li><a href="/contact">CONTACT</a>
+                </li>
+                <li><a href="/register">REGISTER</a></li>
+            </ul>
+        </nav><!-- #nav-menu-container -->
+    </div>
+</header>
+<!-- header ends here -->
+@yield('contents') <!-- contents to display for the assets -->
     <footer>
         <div class="footer-wrappr pt-5 section-bg"
             style="background-image:url(assets/img/footer_bg.png);background-size:100%">
@@ -157,10 +190,11 @@
                                 <!-- Form -->
                                 <div class="footer-form">
                                     <div id="mc_embed_signup">
-                                        <form target="_blank" action="#" method="get"
+                                        <form target="_blank" action="/subcription" method="post"
                                             class="subscribe_form relative mail_part" novalidate="true">
+                                            @csrf
                                             <input type="email" style="color:#2C234D;" data-aos="fade-right"
-                                                name="EMAIL" id="newsletter-form-email" placeholder=" Email Address "
+                                                name="email" id="newsletter-form-email" placeholder=" Email Address "
                                                 class=" placeholder hide-on-focus" onfocus="this.placeholder = ''"
                                                 onblur="this.placeholder = 'Your email address'">
                                             <div class="form-icon" data-aos="fade-left">
@@ -204,21 +238,29 @@
             </div>
         </div>
     </footer>
-
+</body>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/superfish/1.7.10/js/superfish.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/owl.carousel.min.js"></script>-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
-    <script src="/user/vendor/jquery/jquery.min.js"></script>
-    <script src="/user/vendor/wow/wow.min.js"></script>
-    <script src="/user/vendor/superfish/superfish.min.js"></script>
-    <script src="/user/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/user/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/wow/wow.min.js"></script>
+    <script src="assets/vendor/superfish/superfish.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <!--<script src="assets/vendor/aos/aos.js"></script>-->
+    
+    
+    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/vendor/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/superfish/superfish.min.js"></script>
+    <script src="assets/vendor/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-    <script src="/user/js/script.js"></script>
-</body>
+    <script src="assets/js/script.js"></script>
 
 </html>

@@ -13,7 +13,9 @@ class RegisterationController extends Controller
      */
     public function index()
     {
-      
+        //displaying the result to admin ,registeredstudent section
+        $data = Registeration::latest()->get();
+        return view('admins.formupdate.registeredstudent',['data'=>$data]);
     }
 
     /**
@@ -34,7 +36,19 @@ class RegisterationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //storing the user input values to  database 
+        $registered= new Registeration();
+        $registered->name=request('name');
+        $registered->phone=request('phone');
+        $registered->email=request('email');
+        $registered->age=request('age');
+        $registered->address=request('address');
+        $registered->qualification=request('qualification');
+        $registered->branch=request('language');
+        $registered->date=date('Y:m:d');
+        $registered->contacted='not verified';
+        $registered->save();
+        return redirect('/');
     }
 
     /**

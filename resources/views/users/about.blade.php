@@ -2,20 +2,26 @@
 @section("contents") 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>About</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="user/vendor/bootstrap/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="user/vendor/animate.css/animated.css">
-    <link rel="stylesheet" href="user/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="user/css/about.css">
-</head>
+    <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/animate.css/animated.css">
+    <link rel="stylesheet" href="/assets/vendor/aos/aos.css">
+    <link rel="stylesheet" href="/assets/vendor/ionicons/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="/assets/css/about.css">
+</head>
 <body>
-<section class="ftco-services mt-5 pt-5 bg-light">
-        <div class="container pt-5">
+    <section class="ftco-services mt-5 pt-5">
+        <div class="container">
             <div class="row no-gutters">
                 <div class="col-md-4 ftco-animate pt-5 mb-5 nav-link-wrap ">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -148,22 +154,19 @@
             </div>
         </div>
     </section>
-
-    <script src="/user/vendor/jquery/jquery.min.js"></script>
-    <script src="/user/vendor/jquery/jquery-migrate-3.0.1.min.js"></script>
-    <script src="/user/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/user/vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="/user/vendor/jquery/jquery.stellar.min.js"></script>
-    <script src="/user/vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="/user/vendor/aos/aos.js"></script>
-    <script src="/user/vendor/scrollax.min.js"></script>
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/assets/vendor/jquery/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="/assets/vendor/jquery/jquery.stellar.min.js"></script>
+    <script src="/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/vendor/scrollax.min.js"></script>
     
 
-    <script src="/user/vendor/wow/wow.min.js"></script>
-    <script src="/user/vendor/superfish/superfish.min.js"></script>
-    <script src="/user/js/about.js"></script>
-    <script src="/user/js/script.js"></script>
+    <script src="/assets/vendor/wow/wow.min.js"></script>
+    <script src="/assets/vendor/superfish/superfish.min.js"></script>
+    <script src="/assets/js/about.js"></script>
 </body>
-
 </html>
 @endsection

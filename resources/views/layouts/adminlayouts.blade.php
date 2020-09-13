@@ -99,6 +99,7 @@
 							</ul>
 						</div>
 					</li>
+					
 
 					<li><a href="/admins/news" class="@yield('news')"><i class="lnr lnr-bubble"></i> <span>News</span></a></li>
 					
@@ -114,6 +115,15 @@
 					</li>
 					<li><a href="/admins/profile" class="@yield('prof')"><i class="fa fa-user-o "></i> <span>Profile</span></a></li>
 					<li><a href="/admins/document" class="@yield('prof')"><i class="fa fa-user-o "></i> <span></span>pdf</a></li>
+					<li>
+						<a href="#gallery" data-toggle="collapse" class=""><i class="fa fa-folder"></i> <span>Testimonial</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+						<div id="gallery" class="">
+							<ul class="nav">
+								<li><a href="/admins/testimonial/youtube" class=""><i class="fa fa-youtube"></i> <span>Youtube</span></a></li>
+								<li><a href="/admins/testimonial/gallery" class=""><i class="fa fa-file-image-o"></i> <span>Image</span></a></li>
+							</ul>
+						</div>
+					</li>
 
 					<!-- <li><a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Security</span></a></li> -->
 					

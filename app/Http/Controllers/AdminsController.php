@@ -13,12 +13,6 @@ class AdminsController extends Controller
     {
    return view('admins.dashboard');
     }
-    function contact()
-    {
-        $data = contact::latest()->get();
-        return view('admins.contact',['data'=>$data]);
-    }
-
     function newslettersubscription()
     {
         $data = home::latest()->get();
@@ -27,10 +21,5 @@ class AdminsController extends Controller
     function profile()
     {
         return view('admins.profile');
-    }  
-    function registeredstudent()
-    {
-        $data = Registeration::latest()->get();
-        return view('admins.registeredstudent',['data'=>$data]);
-    }  
+    }
 }

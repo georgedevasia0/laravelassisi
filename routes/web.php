@@ -20,12 +20,14 @@ Route::view('/courses','users.course');
 Route::view('/aboutus','users.about');
 Route::view('/facilities','users.facilities');
 Route::view('/contact','users.contact');
+route::post('/contact','ContactController@store');
 Route::view('/register','users.register');
+Route::post('/register','RegisterationController@store');
 Route::view('/gallery','users.gallery');
 Route::view('/gallery/youtube','users.youtube');
 Route::view('/gallery/rankers','users.rankers');
 Route::view('/gallery/album','users.album');
-Route::post('/home/subcription','HomeController@subcription');
+Route::post('/subcription','HomeController@subcription');
 
 
 
@@ -35,7 +37,7 @@ Route::view("adminlogin",'admins.login');
 Route::group(['middleware'=>['LoginAuth']],function()
 {
     Route::get('/admins','AdminsController@index');
-    Route::get('/admins/contact','AdminsController@contact');
+    Route::get('/admins/contact','ContactController@index');
     Route::get('/admins/profile','AdminsController@profile');
     Route::get('/admins/youtube','YoutubeController@index');
     Route::post('/admins/youtube','YoutubeController@store');
@@ -51,11 +53,13 @@ Route::group(['middleware'=>['LoginAuth']],function()
     Route::get('/admins/news/{id}/edit','NewsController@edit'); 
     Route::put('/admins/news/{id}','NewsController@update'); 
     Route::get('/admins/newslettersubscription','AdminsController@newslettersubscription'); 
-    Route::get('/admins/registeredstudent','AdminsController@registeredstudent');
+    Route::get('/admins/registeredstudent','RegisterationController@index');
     Route::get('admins/document','DocumentController@index');
     Route::post('admins/document','DocumentController@store');
     Route::get('admins/document/{id}/edit','DocumentController@edit');
     Route::put('admins/document/{id}','DocumentController@update');
+    Route::get('/admins/testimonial/youtube','TestimonialimageController@index');
+    Route::get('/admins/testimonial/gallery','TestimonialyoutubeController@index');
 
 });
 Route::get('/admins/logout', 'AdminController@logout');

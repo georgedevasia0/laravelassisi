@@ -70,7 +70,7 @@
                               <td>{{$reg->address}}</td>
                               <td>{{$reg->date}}</td>
                               <td>{{$reg->email}}</td>
-                              <td>{{$reg->qulification}}</td>
+                              <td>{{$reg->qualification}}</td>
                               <td>{{$reg->branch}}</td>
                               <td>{{$reg->age}}</td>
                               <td>

@@ -9,11 +9,11 @@
     <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
-    <link href="/user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/user/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/user/vendor/aos/aos.css">
-    <link rel="stylesheet" href="/user/css/youtube.css">
-    <link rel="stylesheet" href="/user/css/style.css">
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/vendor/aos/aos.css">
+    <link rel="stylesheet" href="/assets/css/youtube.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <style>
         .logo1 {
             width: 150px !important;
@@ -101,14 +101,14 @@
                 </div>
             </div>
         </div>
-    <script src="/user/vendor/jquery/jquery.min.js"></script>
-    <script src="/user/vendor/wow/wow.min.js"></script>
-    <script src="/user/vendor/aos/aos.js"></script>
-    <script src="/user/vendor/superfish/superfish.min.js"></script>
-    <script src="/user/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/assets/vendor/wow/wow.min.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/vendor/superfish/superfish.min.js"></script>
+    <script src="/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 
 
-    <script src="/user/js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
     
 </body>
 </html>
