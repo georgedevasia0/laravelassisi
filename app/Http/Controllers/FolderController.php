@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\gallery;
-use App\folder;
+use App\Folder;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class GalleryController extends Controller
+class FolderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +14,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $folder=Folder::all();
-        $galleries=gallery::latest()->get();
-        return view('admins.gallery.gallery',['galleries'=>$galleries,'data'=>$folder]);
+        //
     }
 
     /**
@@ -29,6 +25,8 @@ class GalleryController extends Controller
     public function create()
     {
         //
+        $folder= Folder::all();
+        return view('admins.gallery.gallery',['data'=>$folder]);
     }
 
     /**
@@ -39,40 +37,32 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate([
-            'image'=>['required','mimes:jpeg,bmp,png'],
-            'body'=>'required',
-            
-        ]);
-        $folder=folder::find(1);
-        $image=$request->image->getClientOriginalName();
-        $request->image->storeas('image',$image,'public');
-        $gallery=new gallery();
-        $gallery->image=$image;
-        $gallery->folder=$folder->folder;
-        $gallery->body=request('body');
-        $gallery->save();
+        //
+        $folder= new Folder();
+        $folder->folder=request('folder');
+        $folder->save();
         return redirect('/admins/gallery');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\gallery  $gallery
+     * @param  \App\Folder  $folder
      * @return \Illuminate\Http\Response
      */
-    public function show(gallery $gallery)
+    public function show(Folder $folder)
     {
         //
+        
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\gallery  $gallery
+     * @param  \App\Folder  $folder
      * @return \Illuminate\Http\Response
      */
-    public function edit(gallery $gallery)
+    public function edit(Folder $folder)
     {
         //
     }
@@ -81,10 +71,10 @@ class GalleryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\gallery  $gallery
+     * @param  \App\Folder  $folder
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, gallery $gallery)
+    public function update(Request $request, Folder $folder)
     {
         //
     }
@@ -92,13 +82,11 @@ class GalleryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\gallery  $gallery
+     * @param  \App\Folder  $folder
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Folder $folder)
     {
-        $gallery = gallery::find($id);
-        $gallery->delete();
-        return redirect('/admins/gallery');
+        //
     }
 }

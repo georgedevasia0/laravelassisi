@@ -15,7 +15,8 @@ class TestimonialyoutubeController extends Controller
     public function index()
     {
         //
-        echo "reached";
+        $link=Testimonialyoutube::all();
+        return view('admins.testimonial.youtube',['data'=>$link]);
     }
 
     /**
@@ -36,7 +37,11 @@ class TestimonialyoutubeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //storing the youtube link to database from admin
+        $link= new Testimonialyoutube();
+        $link->youtubelink=request('youtubelink');
+        $link->save();
+        return redirect('/admins/testimonial/youtube');
     }
 
     /**
@@ -79,8 +84,11 @@ class TestimonialyoutubeController extends Controller
      * @param  \App\Testimonialyoutube  $testimonialyoutube
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Testimonialyoutube $testimonialyoutube)
+    public function destroy($id)
     {
         //
+        $link=Testimonialyoutube::find($id);
+        $link->delete();
+        return redirect('/admins/testimonial/youtube');
     }
 }

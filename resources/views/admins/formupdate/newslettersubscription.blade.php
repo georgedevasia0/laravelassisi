@@ -16,26 +16,24 @@
                         <div class="col-md-3">
                            <h3 class="panel-title">Filter Results</h3>
                         </div>
-                        <form action="#" method="post">
+                        <form action="/admins/newslettersubcription/filter" method="POST">
+                        @csrf
                            <div class="col-md-3">
-                              <select class="form-control">
-                                 <option value="null">Select one</option>
-                                 <option value="verified">Verified</option>
-                                 <option value="recent">Recent added</option>
+                              <select name="filter1" class="form-control">
+                                 <option  value="null">Select one</option>
+                                 <option  value="verified">Verified</option>
                                  <option value="not-verified">Not-Verified</option>
                               </select>
                            </div>
                            <div class="col-md-3">
-                              <select class="form-control">
+                              <select name="filter2" class="form-control">
                                  <option value="null">Select one</option>
-                                 <option value="verified">Verified</option>
                                  <option value="recent">Recent added</option>
-                                 <option value="not-verified">Not-Verified</option>
                               </select>
                            </div>
                            <div class="col-md-3">
                               <p class="demo-button btn btn-primary">
-                                 <button type="button" class="fa fa-search">Filter</button>
+                                <a href="/admins/newslettersubcription/filter"><button type="submit" class="fa fa-search">Filter</button></a>
                               </p>
                            </div>
                         </form>
@@ -60,20 +58,22 @@
                               <td>{{$sub->date}}</td>
                               <td>
                                  <div class="row">
-                                    <form action="#">
+                                    <form action="/admins/newslettersubscription/{{$sub->id}}" method="POST">
+                                    @csrf 
+                        
                                        <div class="col-md-6">
                                           <label class="fancy-radio">
-                                          <input name="gender" value="male" type="radio">
+                                          <input name="gender" value="verified" type="radio">
                                           <span><i></i>Verified</span>
                                           </label>
                                           <label class="fancy-radio">
-                                          <input name="gender" value="female" type="radio" checked>
+                                          <input name="gender" value="not-verified" type="radio" checked>
                                           <span><i></i>Not-Verified</span>
                                           </label>
                                        </div>
                                        <div class="col-md-6 ">
                                           <p class="demo-button">
-                                             <button type="button" class="btn btn-primary">Save</button>
+                                            <a href="/admins/newslettersubscription/{{$sub->id}}"> <button type="button" class="btn btn-primary">Save</button></a>
                                           </p>
                                        </div>
                                     </form>

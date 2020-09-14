@@ -17,13 +17,12 @@
                   <!-- start -->
                   <ul class="nav">
                      <!--  list folders in db -->
-                     <li><a href="gallery.php" class=""><span>Folder 3</span></a></li>
-                     <li><a href="gallery.php" class=""><span>Folder </span></a></li>
-                     <li><a href="gallery.php" class=""> <span>Folder 1</span></a></li>
-                     <li><a href="gallery.php" class=""><span>Folder 1</span></a></li>
-                     <li><a href="gallery.php" class=""><span>Folder 1</span></a></li>
+                     @foreach($data as $folder)
+                     <li><a href="" class=""><span>{{$folder->folder}}</span></a></li>
+                     @endforeach
+
                      <!-- end loop -->
-                     <center><button  class="btn btn-primary "  data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> <span>Add Folder</span></button></center>
+                     <center><button onclick="popup()"  class="btn btn-primary "  onclick=" "data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> <span>Add Folder</span></button></center>
                   </ul>
                   <!-- end -->
                </div>
@@ -75,6 +74,13 @@
 <!-- form end -->
 <!-- image display    -->
 <br>
+<div class="popup" id="popup-1">
+               <form action="/admins/gallery/folder" method="POST">
+                  @csrf
+                  <input type="text" name="folder">
+                  <button  class="btn btn-success">Create</button>
+              </form>
+           </div>
 
 <div class="row">
 @foreach($galleries as $gallery)

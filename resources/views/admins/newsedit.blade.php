@@ -1,6 +1,9 @@
 @extends('layouts.adminlayouts')
 @section('admincontents')
 @section('news','active')
+<div class="main">
+<div class="main-content">
+   <div class="container-fluid">
 <div class="row">
          <!-- News List  -->
           <div class="col-md-7" id="edit">
@@ -9,7 +12,6 @@
                 <center>
                    <h3>Edit News</h3>
                 <center>
-               <image src="{{asset('/storage/image/'.$news->image)}}" style="width:100%;height:300px">
                <form action="/admins/news/{{$news->id}}" method="POST" enctype="multipart/form-data" >
                @csrf
                @method('PUT')
@@ -24,6 +26,9 @@
             </div>
 
             
+         </div>
+         </div>
+         </div>
          </div>
          
 </div>

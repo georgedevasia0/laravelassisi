@@ -2,6 +2,7 @@
 @section('admincontents')
 @section('gall','active')
 @section('coll','in')
+<div class="main">
 <div class="main-content">
    <div class="container-fluid">
       <h3 class="page-title">Youtube Gallery</h3>

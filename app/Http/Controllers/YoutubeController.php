@@ -16,7 +16,7 @@ class YoutubeController extends Controller
     {
 
         $youtubes=Youtube::latest()->get();
-        return view('admins.youtube',['youtubes'=>$youtubes]);
+        return view('admins.gallery.youtube',['data'=>$youtubes]);
     }
 
     /**
@@ -71,7 +71,7 @@ class YoutubeController extends Controller
     public function edit($id) 
     {
         $youtube = Youtube::find($id);
-        return view('admins.youtubeedit',['youtube'=>$youtube]);
+        return view('admins.gallery.youtube',['data'=>$youtube]);
     }
 
     /**

@@ -85,7 +85,7 @@ class NewsController extends Controller
     {
         $image=$request->image->getClientOriginalName();
         $request->image->storeas('image',$image,'public');
-        $news=new news();
+        $news=news::find($id);
         $news->image=$image;
         $news->body=request('body');
         $news->save();

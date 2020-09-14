@@ -2,6 +2,7 @@
 @section('admincontents')
 @section('gall','active')
 @section('coll','in')
+<div class="main">
 <div class="main-content">
    <div class="container-fluid">
       <h3 class="page-title">Youtube Gallery</h3>
@@ -53,7 +54,7 @@
                   <br>
              
                   <div class="row">
-                  @foreach($youtubes as $youtube)
+                  @foreach($data as $youtube)
                      <!-- image card  -->
                      <div class="col-md-4" style="margin-bottom:5px">
                         <div class="item ">

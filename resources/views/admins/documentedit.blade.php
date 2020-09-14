@@ -1,6 +1,7 @@
 @extends('layouts.adminlayouts')
 @section('admincontents')
 @section('news','active')
+<div class="main">
 <div class="main-content">
    <div class="container-fluid">
       <div class="row">

@@ -7,36 +7,10 @@
    <div class="container-fluid">
       <h3 class="page-title">Gallery</h3>
       <div class="row">
-         <div class="col-md-3">
-            <!-- FOLDERS -->
-            <div class="panel">
-               <div class="panel-heading">
-                  <h3 class="panel-title">Folders</h3>
-               </div>
-               <div class="panel-body ">
-                  <!-- start -->
-                  <ul class="nav">
-                     <!--  list folders in db -->
-                     <li><a href="gallery.php" class=""><span>Folder 3</span></a></li>
-                     <li><a href="gallery.php" class=""><span>Folder </span></a></li>
-                     <li><a href="gallery.php" class=""> <span>Folder 1</span></a></li>
-                     <li><a href="gallery.php" class=""><span>Folder 1</span></a></li>
-                     <li><a href="gallery.php" class=""><span>Folder 1</span></a></li>
-                     <!-- end loop -->
-                     <center><button  class="btn btn-primary "  data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> <span>Add Folder</span></button></center>
-                  </ul>
-                  <!-- end -->
-               </div>
-            </div>
-            <!-- END FOLDERS -->
-            <!-- END INPUT SIZING -->
-         </div>
-         <div class="col-md-9">
+         <div class="col-md-12">
             <!-- LABELS -->
             <div class="panel">
                <div class="panel-heading">
-                  <h3 class="panel-title">Folder 2</h3>
-                  <!-- FOLDER NAME -->
                </div>
                <div class="panel-body">
 
@@ -48,7 +22,7 @@
             <center>
                <h4>UPLOAD IMAGE</h4>
                <br>
-               <form action="/admins/gallery" method="POST" enctype="multipart/form-data">
+               <form action="/admins/testimonial/gallery" method="POST" enctype="multipart/form-data">
                @csrf
                   <div class="form-group" style="margin-top:15px">
                      <input type="file"  name="image" value="{{old('image')}}" class="form-control-file">
@@ -57,11 +31,18 @@
                   @enderror
                      <br>
                      <div class="form-group">
-                        <label for="exampleFormControlInput1" >Title</label>
-                        <input type="text" value="{{old('body')}}"  name="body" class="form-control"  placeholder="Enter the title">
+                        <label for="exampleFormControlInput1" >Name</label>
+                        <input type="text" value="{{old('body')}}"  name="name" class="form-control"  placeholder="Enter the Name">
                         @error('body')
                         <p style="color:red">{{$errors->first("body")}}</p>
                        @enderror
+                       <label for="exampleFormControlInput1" >designation</label>
+                        <input type="text" value="{{old('body')}}"  name="designation" class="form-control"  placeholder="Enter the Designation">
+                        <label for="exampleFormControlInput1" >Message</label>
+                        <textarea type="textarea"  name="body" style="height:200px;width:100%" > {{old('body')}}</textarea>
+                   @error('body')
+                   <p style="color:red">{{$errors->first("body")}}</p>
+                   @enderror
                      </div>
                      <button class="btn btn-success" style="margin:11px">Upload</button>
                   </div>
@@ -77,15 +58,17 @@
 <br>
 
 <div class="row">
-@foreach($galleries as $gallery)
+@foreach($data as $gallery)
    <!-- image card  -->
    <div class="col-md-4" style="margin-bottom:5px">
       <div class="item ">
          <div class="card item-card card-block">
             <img class="card-img-top" src="{{asset('/storage/image/'.$gallery->image)}}" alt="Card image" style="width:100%;height:150px">
+            <h2>{{$gallery->name}}</h2>
+            <h4>{{$gallery->designation}}</h4>
             <div class="card-body">
                <p class="card-title">{{$gallery->body}}</p>
-               <form action="/admins/gallery/{{$gallery->id}}" method="post">
+               <form action="/admins/testimonial/gallery/{{$gallery->id}}" method="post">
                                  @csrf
                                  @method("DELETE")
                                  <center><button onclick="return confirm('are you sure');" class="btn btn-danger stretched-link">Delete</button></center>
