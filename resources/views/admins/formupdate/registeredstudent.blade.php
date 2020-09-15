@@ -17,29 +17,27 @@
                            <h3 class="panel-title">Filter Results</h3>
                         </div>
                         <br>
-                        <form action="#" method="post">
+                        <form action="/admins/registeredstudent/filter" method="post">
+                        @csrf
                            <div class="col-md-3">
-                              <input type="text" class="form-control" placeholder="Search Text">
+                              <input type="text"  name="search" class="form-control" placeholder="Search Text">
                            </div>
                            <div class="col-md-3">
-                              <select class="form-control">
+                              <select name="filter1" class="form-control">
                                  <option value="null">Select one</option>
                                  <option value="contacted">Contacted</option>
-                                 <option value="recent">Recent added</option>
                                  <option value="not-contacted">Not-Contacted</option>
                               </select>
                            </div>
                            <div class="col-md-3">
-                              <select class="form-control">
+                              <select name="filter2" class="form-control">
                                  <option value="null">Select one</option>
-                                 <option value="contacted">Contacted</option>
                                  <option value="recent">Recent added</option>
-                                 <option value="not-contacted">Not-Contacted</option>
                               </select>
                            </div>
                            <div class="col-md-3">
                               <p class="demo-button btn btn-primary">
-                                 <button type="button" class="fa fa-search">Filter</button>
+                                 <button type="submit" class="fa fa-search">Filter</button>
                               </p>
                            </div>
                         </form>
@@ -58,7 +56,8 @@
                               <th>Qualification</th>
                               <th>Branch</th>
                               <th>Age</th>
-                              <th>Contacted</th>
+                              <th>Contact</th>
+                              <th>contacted or not</th>
                            </tr>
                         </thead>
                         <tbody>
@@ -75,25 +74,28 @@
                               <td>{{$reg->age}}</td>
                               <td>
                                  <!-- <div class="row"> -->
-                                 <form action="#">
+                                 <form action="/admins/registeredstudent/{{$reg->id}}" method="POST">
+                                 @csrf 
+                                 @method('PUT')
                                     <!-- <div class="col-md-6"> -->
                                     <label class="fancy-radio">
-                                    <input name="gender" value="male" type="radio">
+                                    <input name="contact" value="contacted" type="radio" checked>
                                     <span><i></i>Contacted</span>
                                     </label>
                                     <label class="fancy-radio">
-                                    <input name="gender" value="female" type="radio" checked>
+                                    <input name="contact" value="not-contacted" type="radio">
                                     <span><i></i>Not-Contacted</span>
                                     </label>
                                     <!-- </div> -->
                                     <div class="col-md-6 ">
                                        <p class="demo-button">
-                                          <button type="button" class="btn btn-primary">Save</button>
+                                          <button type="submit" value="save" class="btn btn-primary">Save</button>
                                        </p>
                                     </div>
                                  </form>
-                  </div>
+                  </div>               
                   </td>
+                  <td>{{$reg->contacted}}</td>
                   </tr>
                   @endforeach
                <!-- end  -->

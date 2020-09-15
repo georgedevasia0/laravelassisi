@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Folder;
+use App\gallery;
 use Illuminate\Http\Request;
 
 class FolderController extends Controller
@@ -12,9 +13,14 @@ class FolderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
         //
+        $folder= Folder::find($id);
+        $data= Folder::all();
+        $folders=$folder->folder;
+        $galleries=gallery::where(['folder'=>$folders])->latest()->get();       
+        return view('admins.gallery.galleryfolder',['galleries'=>$galleries,'data'=>$data,'folderdata'=>$folder]);
     }
 
     /**
@@ -25,8 +31,7 @@ class FolderController extends Controller
     public function create()
     {
         //
-        $folder= Folder::all();
-        return view('admins.gallery.gallery',['data'=>$folder]);
+      
     }
 
     /**

@@ -26,5 +26,64 @@ class ContactController extends Controller
           $contacted->save();
           return redirect('/contact');
     }
+    public function update(Request $request,$id)
+    {
+      $contact=request('contact');
+      Contact::where('id',$id)->update(['contacted'=>$contact]);
+      return redirect('/admins/contact');
+    }
+    public function filter( Request $request)
+    {
+        $search=request('search');
+        $filter1=request('filter1');
+        $filter2=request('filter2');
+        if(!$search && $filter1 == 'null'&& $filter2 == 'null')
+        {
+            return redirect('/admins/contact');
+        }
+        if($search) 
+        {
+            if($filter1 == 'null'&& $filter2 == 'null')
+            {
+                $user=Contact::where('name','like',"%".$search."%")->get();
+                return view('admins.formupdate.contact',['data'=>$user]);
+            }
+            elseif($filter1 && !$filter2)
+            {
+                $user=Contact::where([['name','like',"%".$search."%"],['contacted','=',$filter1]])->get();
+                return view('admins.formupdate.contact',['data'=>$user]);
+            }
+            elseif($filter1 && $filter2)
+            {
+                $user=Contact::where([['name','like',"%".$search."%"],['contacted','=',$filter1]])->latest()->get();
+                return view('admins.formupdate.contact',['data'=>$user]);
+            }
+            elseif(!$filter1 && $filter2)
+            {
+                $user=Contact::where(['name','like',"%".$search."%"])->latest()->get();
+                return view('admins.formupdate.contact',['data'=>$user]);
+            }
+       
+        }
+        if(!$search)
+        {
+            if($filter1 && !$filter2)
+            {
+                $user=Contact::where(['contacted'=>$filter1])->get();
+                return view('admins.formupdate.contact',['data'=>$user]);
+            }
+            elseif($filter1 && $filter2)
+            {
+                $user=Contact::where(['contacted'=>$filter1])->latest()->get();
+                return view('admins.formupdate.contact',['data'=>$user]);
+            }
+            elseif(!$filter1 && $filter2)
+            {
+                $user=Contact::latest()->get();
+                return view('admins.formupdate.contact',['data'=>$user]);
+            }
+        }
+    }
+
 }
 

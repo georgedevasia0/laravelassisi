@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Newsletter;
 use Illuminate\Http\Request;
+use Response;
+use PDF;
 
 class NewsletterController extends Controller
 {
@@ -79,10 +81,12 @@ class NewsletterController extends Controller
      * @param  \App\Newsletter  $newsletter
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Newsletter $newsletter)
+    public function update(Request $request, $id)
     {
-        //
-        echo"reached";
+        //updating the verified or not verified to database from admin
+        $data=request('verified'); 
+        Newsletter::where('id',$id)->update(['verified'=>$data]);
+        return redirect('/admins/newslettersubscription');
     }
 
     /**
@@ -101,25 +105,46 @@ class NewsletterController extends Controller
         $filter2=request('filter2');
         if($filter1 =='null' && $filter2 =="null")
         {
+          
             return redirect('/admins/newslettersubscription');
         }
         if($filter1 =='verified' && $filter2 =="null")
         {
+
             echo "verified";
         }
         if($filter1 =='not-verified' && $filter2 =='null')
         {
-             echo "not verified";
+               $user=Newsletter::where('verified',$filter1)->latest()->get();
+            return view('admins.formupdate.newslettersubscription',['subcription'=>$user]);
         }
         if($filter1 =='verified' && $filter2 =='recent')
         {
-            echo"verified recent";
+            $user=Newsletter::where('verified',$filter1)->latest()->get();
+            return view('admins.formupdate.newslettersubscription',['subcription'=>$user]);
         }
         if($filter1 =='not-verified' && $filter2 =='recent')
         {
-            echo"not verified recent";
+            $user=Newsletter::where('verified',$filter1)->latest()->get();
+            return view('admins.formupdate.newslettersubscription',['subcription'=>$user]);
         }
+        if($filter1 =='null' && $filter2 =='recent')
+        {
+            $user=Newsletter::latest()->get();
+            return view('admins.formupdate.newslettersubscription',['subcription'=>$user]);
+        }
+
         
        
+    }
+    public function download(Request $request)
+    {
+        $from=request('from');
+        $to=request('to');
+        // $user= Newsletter::whereBetween('date',[$from,$to])->get();
+        $user=Newsletter::all();
+        view()->share('news',$user);
+        $pdf = PDF::loadView('admins.formupdate.sample',$user);
+        return $pdf->stream('newsletter.pdf');
     }
 }

@@ -18,7 +18,7 @@
                   <ul class="nav">
                      <!--  list folders in db -->
                      @foreach($data as $folder)
-                     <li><a href="" class=""><span>{{$folder->folder}}</span></a></li>
+                     <li><a href="/admins/gallery/folder/{{$folder->id}}" class=""><span>{{$folder->folder}}</span></a></li>
                      @endforeach
 
                      <!-- end loop -->
@@ -34,44 +34,9 @@
             <!-- LABELS -->
             <div class="panel">
                <div class="panel-heading">
-                  <h3 class="panel-title">Folder 2</h3>
                   <!-- FOLDER NAME -->
                </div>
                <div class="panel-body">
-
-            <!-- form start  -->
-<div class="row">
-   <div class="col-md-12 badge-dark">
-      <div class="item ">
-         <div class="card item-card card-block">
-            <center>
-               <h4>UPLOAD IMAGE</h4>
-               <br>
-               <form action="/admins/gallery" method="POST" enctype="multipart/form-data">
-               @csrf
-                  <div class="form-group" style="margin-top:15px">
-                     <input type="file"  name="image" value="{{old('image')}}" class="form-control-file">
-                     @error('image')
-                   <p style="color:red">{{$errors->first("image")}}</p>
-                  @enderror
-                     <br>
-                     <div class="form-group">
-                        <label for="exampleFormControlInput1" >Title</label>
-                        <input type="text" value="{{old('body')}}"  name="body" class="form-control"  placeholder="Enter the title">
-                        @error('body')
-                        <p style="color:red">{{$errors->first("body")}}</p>
-                       @enderror
-                     </div>
-                     <button class="btn btn-success" style="margin:11px">Upload</button>
-                  </div>
-               </form>
-            </center>
-         </div>
-      </div>
-   </div>
-</div>
-<hr>
-<!-- form end -->
 <!-- image display    -->
 <br>
 <div class="popup" id="popup-1">
@@ -89,6 +54,7 @@
       <div class="item ">
          <div class="card item-card card-block">
             <img class="card-img-top" src="{{asset('/storage/image/'.$gallery->image)}}" alt="Card image" style="width:100%;height:150px">
+            <h4>{{$gallery->folder}}</h4>
             <div class="card-body">
                <p class="card-title">{{$gallery->body}}</p>
                <form action="/admins/gallery/{{$gallery->id}}" method="post">

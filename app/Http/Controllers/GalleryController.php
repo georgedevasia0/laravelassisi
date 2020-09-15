@@ -37,14 +37,14 @@ class GalleryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
         request()->validate([
             'image'=>['required','mimes:jpeg,bmp,png'],
             'body'=>'required',
             
         ]);
-        $folder=folder::find(1);
+        $folder=folder::find($id);
         $image=$request->image->getClientOriginalName();
         $request->image->storeas('image',$image,'public');
         $gallery=new gallery();
@@ -100,5 +100,9 @@ class GalleryController extends Controller
         $gallery = gallery::find($id);
         $gallery->delete();
         return redirect('/admins/gallery');
+    }
+    public function folder($id)
+    {
+        
     }
 }

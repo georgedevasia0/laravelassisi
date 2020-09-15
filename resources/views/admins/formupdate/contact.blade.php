@@ -17,29 +17,27 @@
                            <h3 class="panel-title">Filter Results</h3>
                         </div>
                         <br>
-                        <form action="#" method="post">
+                        <form action="/admins/contact/filter" method="post">
+                        @csrf
                            <div class="col-md-3">
-                              <input type="text" class="form-control" placeholder="Search Text">
+                              <input  type="text" name='search' class="form-control" placeholder="Search Text">
                            </div>
                            <div class="col-md-3">
-                              <select class="form-control">
+                              <select name="filter1" class="form-control">
                                 <option value="null">Select one</option>
                                  <option value="contact">Contact</option>
-                                 <option value="recent">Recent added</option>
                                  <option value="not-contact">Not-Contact</option>
                               </select>
                            </div>
                            <div class="col-md-3">
-                              <select class="form-control">
+                              <select name="filter2" class="form-control">
                                  <option value="null">Select one</option>
-                                 <option value="contact">Contact</option>
                                  <option value="recent">Recent added</option>
-                                 <option value="not-contact">Not-Contact</option>
                               </select>
                            </div>
                            <div class="col-md-3">
                               <p class="demo-button btn btn-primary">
-                                 <button type="button" class="fa fa-search">Filter</button>
+                                 <button type="submit" class="fa fa-search">Filter</button>
                               </p>
                            </div>
                         </form>
@@ -56,6 +54,8 @@
                               <th>Email</th>
                               <th>Date</th>
                               <th>Contact</th>
+                              <th>Contacted or Not</th>
+                              
                            </tr>
                         </thead>
                         <tbody>
@@ -71,25 +71,28 @@
                               
                               <td>
                                  <!-- <div class="row"> -->
-                                 <form action="#">
+                                 <form action="/admins/contact/{{$contact->id}}" method='POST'>
+                                 @csrf 
+                                 @method('PUT')
                                     <!-- <div class="col-md-6"> -->
                                     <label class="fancy-radio">
-                                    <input name="gender" value="male" type="radio">
+                                    <input name="contact" value="Contact" type="radio">
                                     <span><i></i>Contact</span>
                                     </label>
                                     <label class="fancy-radio">
-                                    <input name="gender" value="female" type="radio" checked>
+                                    <input name="contact" value="Not-Contact" type="radio" checked>
                                     <span><i></i>Not-Contact</span>
                                     </label>
                                     <!-- </div> -->
                                     <div class="col-md-6 ">
                                        <p class="demo-button">
-                                          <button type="button" class="btn btn-primary">Save</button>
+                                          <button type="submit" class="btn btn-primary">Save</button>
                                        </p>
                                     </div>
                                  </form>
                   </div>
                   </td>
+                  <td>{{$contact->contacted}}</td>
                   </tr>
                   @endforeach
                   <!-- second list  -->

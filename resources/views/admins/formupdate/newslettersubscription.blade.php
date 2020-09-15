@@ -33,11 +33,17 @@
                            </div>
                            <div class="col-md-3">
                               <p class="demo-button btn btn-primary">
-                                <a href="/admins/newslettersubcription/filter"><button type="submit" class="fa fa-search">Filter</button></a>
-                              </p>
+                                <button type="submit" class="fa fa-search">Filter</button>
+                              </p> 
                            </div>
                         </form>
                      </div>
+                     <form action="/admins/newslettersubcription/download" method="POST">
+                     @csrf
+                     <input type="date" name="from" id="" placeholder="date from">
+                     <input type="date" name="to" id="" placeholder="date to"> 
+                     <BUtton type="submit">download</BUtton>
+                     </form>
                   </div>
                 
                   <div class="panel-body no-padding">
@@ -48,6 +54,7 @@
                               <th>Email id</th>
                               <th>SubScription Date</th>
                               <th>verified</th>
+                              <th>verified or not</th>
                            </tr>
                         </thead>
                         <tbody>
@@ -60,25 +67,27 @@
                                  <div class="row">
                                     <form action="/admins/newslettersubscription/{{$sub->id}}" method="POST">
                                     @csrf 
+                                    @method('PUT')
                         
                                        <div class="col-md-6">
                                           <label class="fancy-radio">
-                                          <input name="gender" value="verified" type="radio">
+                                          <input name="verified" value="verified" type="radio">
                                           <span><i></i>Verified</span>
                                           </label>
                                           <label class="fancy-radio">
-                                          <input name="gender" value="not-verified" type="radio" checked>
+                                          <input name="verified" value="not-verified" type="radio" checked>
                                           <span><i></i>Not-Verified</span>
                                           </label>
                                        </div>
                                        <div class="col-md-6 ">
                                           <p class="demo-button">
-                                            <a href="/admins/newslettersubscription/{{$sub->id}}"> <button type="button" class="btn btn-primary">Save</button></a>
+                                          <button type="submit" value="save" class="btn btn-primary">Save</button></a>
                                           </p>
                                        </div>
                                     </form>
                                  </div>
                               </td>
+                              <td>{{$sub->verified}}</td>
                            </tr>
                            @endforeach
                            <!-- end  -->

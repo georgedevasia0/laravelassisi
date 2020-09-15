@@ -46,7 +46,7 @@ class RegisterationController extends Controller
         $registered->qualification=request('qualification');
         $registered->branch=request('language');
         $registered->date=date('Y:m:d');
-        $registered->contacted='not verified';
+        $registered->contacted='null';
         $registered->save();
         return redirect('/');
     }
@@ -80,9 +80,12 @@ class RegisterationController extends Controller
      * @param  \App\Registeration  $registeration
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Registeration $registeration)
+    public function update(Request $request, $id)
     {
         //
+        $contact=request('contact');
+        Registeration::where('id',$id)->update(['contacted'=>$contact]);
+        return redirect('/admins/registeredstudent');
     }
 
     /**
@@ -94,5 +97,57 @@ class RegisterationController extends Controller
     public function destroy(Registeration $registeration)
     {
         //
+    }
+    public function filter( Request $request)
+    {
+        $search=request('search');
+        $filter1=request('filter1');
+        $filter2=request('filter2');
+        if(!$search && $filter1 == 'null'&& $filter2 == 'null')
+        {
+            return redirect('/admins/registeredstudent');
+        }
+        if($search) 
+        {
+            if($filter1 == 'null'&& $filter2 == 'null')
+            {
+                $user=Registeration::where('name','like',"%".$search."%")->get();
+                return view('admins.formupdate.registeredstudent',['data'=>$user]);
+            }
+            elseif($filter1 && !$filter2)
+            {
+                $user=Registeration::where([['name','like',"%".$search."%"],['contacted','=',$filter1]])->get();
+                return view('admins.formupdate.registeredstudent',['data'=>$user]);
+            }
+            elseif($filter1 && $filter2)
+            {
+                $user=Registeration::where([['name','like',"%".$search."%"],['contacted','=',$filter1]])->latest()->get();
+                return view('admins.formupdate.registeredstudent',['data'=>$user]);
+            }
+            elseif(!$filter1 && $filter2)
+            {
+                $user=Registeration::where(['name','like',"%".$search."%"])->latest()->get();
+                return view('admins.formupdate.registeredstudent',['data'=>$user]);
+            }
+       
+        }
+        if(!$search)
+        {
+            if($filter1 && !$filter2)
+            {
+                $user=Registeration::where(['contacted'=>$filter1])->get();
+                return view('admins.formupdate.registeredstudent',['data'=>$user]);
+            }
+            elseif($filter1 && $filter2)
+            {
+                $user=Registeration::where(['contacted'=>$filter1])->latest()->get();
+                return view('admins.formupdate.registeredstudent',['data'=>$user]);
+            }
+            elseif(!$filter1 && $filter2)
+            {
+                $user=Registeration::latest()->get();
+                return view('admins.formupdate.registeredstudent',['data'=>$user]);
+            }
+        }
     }
 }

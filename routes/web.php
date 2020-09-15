@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('users.home');
-});
+Route::get('/','HomeController@home');
 Route::view('/courses','users.course');
 Route::view('/aboutus','users.about');
 Route::view('/facilities','users.facilities');
@@ -38,6 +36,8 @@ Route::group(['middleware'=>['LoginAuth']],function()
 {
     Route::get('/admins','AdminsController@index');
     Route::get('/admins/contact','ContactController@index');
+    Route::put('/admins/contact/{id}','ContactController@update');
+    Route::post('/admins/contact/filter','ContactController@filter');
     Route::get('/admins/profile','AdminsController@profile');
     Route::get('/admins/youtube','YoutubeController@index');
     Route::post('/admins/youtube','YoutubeController@store');
@@ -47,8 +47,9 @@ Route::group(['middleware'=>['LoginAuth']],function()
     Route::delete('/admins/youtube/{id}','YoutubeController@destroy');
     Route::get('/admins/gallery','GalleryController@index'); 
     Route::delete('/admins/gallery/{id}','GalleryController@destroy'); 
-    Route::post('/admins/gallery','GalleryController@store'); 
     Route::post('/admins/gallery/folder','FolderController@store');
+    Route::get('/admins/gallery/folder/{id}','FolderController@index');
+    Route::post('/admins/gallery/folder/{id}','GalleryController@store');
     Route::get('/admins/news','NewsController@index'); 
     Route::post('/admins/news','NewsController@store'); 
     Route::get('/admins/news/{id}/edit','NewsController@edit'); 
@@ -56,7 +57,10 @@ Route::group(['middleware'=>['LoginAuth']],function()
     Route::get('/admins/newslettersubscription','NewsletterController@index');
     Route::put('/admins/newslettersubscription/{id}','NewsletterController@update');
     Route::post('/admins/newslettersubcription/filter','NewsletterController@filter'); 
+    Route::post('/admins/newslettersubcription/download','NewsletterController@download');
     Route::get('/admins/registeredstudent','RegisterationController@index');
+    Route::put('/admins/registeredstudent/{id}','RegisterationController@update');
+    Route::post('/admins/registeredstudent/filter','RegisterationController@filter');
     Route::get('admins/document','DocumentController@index');
     Route::post('admins/document','DocumentController@store');
     Route::get('admins/document/{id}/edit','DocumentController@edit');
