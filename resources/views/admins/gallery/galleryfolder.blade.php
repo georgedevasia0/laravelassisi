@@ -59,10 +59,7 @@
                              <br>
                              <div class="form-group">
                                 <label for="exampleFormControlInput1" >Title</label>
-                                <input type="text" value="{{old('body')}}"  name="body" class="form-control"  placeholder="Enter the title">
-                                @error('body')
-                                <p style="color:red">{{$errors->first("body")}}</p>
-                               @enderror
+                                <input type="text" value="{{old('body')}}"  name="body" class="form-control"  placeholder="Enter the title">                              
                              </div>
                              <button class="btn btn-success" style="margin:11px">Upload</button>
                           </div>

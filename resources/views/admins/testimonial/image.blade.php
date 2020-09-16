@@ -63,7 +63,7 @@
    <div class="col-md-4" style="margin-bottom:5px">
       <div class="item ">
          <div class="card item-card card-block">
-            <img class="card-img-top" src="{{asset('/storage/image/'.$gallery->image)}}" alt="Card image" style="width:100%;height:150px">
+            <img class="card-img-top" src="{{asset('image/testimonial/'.$gallery->image)}}" alt="Card image" style="width:100%;height:150px">
             <h2>{{$gallery->name}}</h2>
             <h4>{{$gallery->designation}}</h4>
             <div class="card-body">

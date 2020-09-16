@@ -12,7 +12,6 @@
             <!-- LABELS -->
             <div class="panel">
                <div class="panel-heading">
-                  <h3 class="panel-title">Folder 2</h3>
                   <!-- FOLDER NAME -->
                </div>
                <div class="panel-body">

@@ -1003,14 +1003,14 @@
             <div class="row element-animate">
 
                 <div class="col-md-12 mb-5 mb-lg-0 col-lg-6">
+                @foreach($new as $news)
 
                     <div class="block-20 radius" data-aos="fade-right">
                         <figure>
-                            <a href="#"><img src="assets/img/img_1.jpg" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="{{asset('image/news/'.$news->image)}}" alt="" class="img-fluid"></a>
                         </figure>
                         <div class="text pb-4 pt-4">
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
-                                    blind texts</a></h3>
+                            <h3 class="heading"><a href="#">{{$news->body}}</a></h3>
                             <div class="meta">
                                 <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
                                 <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
@@ -1020,68 +1020,23 @@
                     </div>
 
                 </div>
+                @endforeach
                 <div class="col-md-12 col-lg-6">
-
-                    <div class="block-21 d-flex mb-4" data-aos="fade-up" data-aos-delay="50">
-                        <figure class="mr-3">
-                            <a href="#"><img src="assets/img/img_2.jpg" alt="" class="img-fluid"></a>
-                        </figure>
-                        <div class="text">
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
-                                    blind texts</a></h3>
-                            <div class="meta">
-                                <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                                <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                                <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="block-21 d-flex mb-4" data-aos="fade-up" data-aos-delay="100">
-                        <figure class="mr-3">
-                            <a href="#"><img src="assets/img/img_3.jpg" alt="" class="img-fluid"></a>
-                        </figure>
-                        <div class="text">
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
-                                    blind texts</a></h3>
-                            <div class="meta">
-                                <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                                <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                                <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                            </div>
-                        </div>
-                    </div>
-
+@foreach($data as $image)
                     <div class="block-21 d-flex mb-4" data-aos="fade-up" data-aos-delay="150">
                         <figure class="mr-3">
-                            <a href="#"><img src="assets/img/img_1.jpg" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="{{asset('image/news/'.$image->image)}}" alt="" class="img-fluid"></a>
                         </figure>
                         <div class="text">
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
-                                    blind texts</a></h3>
+                            <h3 class="heading"><a href="#">{{$image->body}}</a></h3>
                             <div class="meta">
-                                <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
+                                <div><a href="#"><span class="ion-android-calendar"></span>{{$image->created_at}}</a></div>
                                 <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
                                 <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="block-21 d-flex mb-4" data-aos="fade-up" data-aos-delay="200">
-                        <figure class="mr-3">
-                            <a href="#"><img src="assets/img/img_1.jpg" alt="" class="img-fluid"></a>
-                        </figure>
-                        <div class="text">
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
-                                    blind texts</a></h3>
-                            <div class="meta">
-                                <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                                <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                                <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                            </div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -1139,17 +1094,15 @@
             </div>
 
             <div class="owl-carousel testimonials-carousel" data-aos="fade-up" data-aos-delay="200">
+            @foreach($testimonial as $data)
 
                 <div class="testimonial-wrap py-2 pr-3 radius" style="background-color:#FFFFFF">
                     <div class="testimonial-item">
-                        <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                        <h3>Dilnet Thomas</h3>
-                        <h4>Ceo &amp; Founder</h4>
+                        <img src="{{asset('image/testimonial/'.$data->image)}}" class="testimonial-img" alt="">
+                        <h3>{{$data->name}}</h3>
+                        <h4>{{$data->designation}} </h4>
                         <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                            Accusantium
-                            quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>{{$data->body}}
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
                     </div>
@@ -1166,6 +1119,7 @@
                     </div>
                     </div>
                 </div>
+                @endforeach
                 
                 <!--<div class="testimonial-wrap  py-2" style="background-color:#FFFFFF">
                     <div class="testimonial-item">
@@ -1181,60 +1135,6 @@
                         </p>
                     </div>
                 </div>-->
-
-                <div class="testimonial-wrap py-2 pr-3" style="background-color:#FFFFFF">
-                    <div class="testimonial-item">
-                        <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                        <h3>Sraddha Maria Shajan</h3>
-                        <h4>Store Owner</h4>
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis
-                            minim tempor
-                            labore quem eram duis noster aute amet eram fore quis sint minim.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="testimonial-wrap pt-4 py-2" style="background-color:#FFFFFF">
-                    <div class="col-md-12 order-md-2">
-                    <div class="block-16">
-                        <figure>
-                          <iframe width="420" height="280" style="border-radius:5px;"
-                              src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                          </iframe>
-                        </figure>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-wrap py-2 pr-3" style="background-color:#FFFFFF">
-                    <div class="testimonial-item">
-                        <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                        <h3>John Larson</h3>
-                        <h4>Entrepreneur</h4>
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam
-                            enim culpa
-                            labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nis.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="testimonial-wrap pt-4 py-2" style="background-color:#FFFFFF">
-                    <div class="col-md-12 order-md-2">
-                    <div class="block-16">
-                        <figure>
-                          <iframe width="420" height="280" style="border-radius:5px;"
-                              src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                          </iframe>
-                        </figure>
-                    </div>
-                    </div>
-                </div>
 
             </div>
 

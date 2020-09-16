@@ -21,7 +21,7 @@
                         <h3 class="panel-title">Name</h3>
                      </div>
                      <div class="panel-body">
-                       sarath 
+                     {{$data->name}}
                      </div>
                   </div>
                   <div class="panel panel-info" style="margin: 1em;">
@@ -29,7 +29,7 @@
                         <h3 class="panel-title">Email</h3>
                      </div>
                      <div class="panel-body">
-                        aarthejohn2@gmail.com
+                        {{$data->email}}
                      </div>
                   </div>
                   <div class="panel panel-info" style="margin: 1em;">
@@ -37,7 +37,7 @@
                         <h3 class="panel-title">Last Password Change</h3>
                      </div>
                      <div class="panel-body">
-                        12-10-2020
+                        {{$data->updated_at}}
                      </div>
                   </div>
                </div>
@@ -68,7 +68,8 @@
                   </div>
                </div>
                <div class="col-md-9  admin-content" id="change-password">
-                  <form action="#password" method="post">
+                  <form action="/admins/profile/{{$data->id}}" method="post">
+                  @csrf
                     <div class="panel panel-info" style="margin: 1em;">
                         <div class="panel-heading">
                            <h3 class="panel-title"><label for="new_password" class="control-label panel-title">Old Password</label></h3>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\contact;
+use App\Exports\ContactExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ContactController extends Controller
 {
@@ -83,6 +85,12 @@ class ContactController extends Controller
                 return view('admins.formupdate.contact',['data'=>$user]);
             }
         }
+    }
+    public function export()
+    {
+        return Excel::download(new ContactExport,'newsletter.csv');
+        
+       
     }
 
 }

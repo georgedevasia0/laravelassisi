@@ -14,7 +14,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-       $data=Profile::latest()->get();
+       $data=Profile::first();
        return view('admins.profile',['data'=>$data]);
 
     }
@@ -69,9 +69,13 @@ class ProfileController extends Controller
      * @param  \App\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Profile $profile)
+    public function update(Request $request,$id)
     {
         //
+        $profile=Profile::find($id);
+        echo $profile;
+       echo "will finish at last";
+        
     }
 
     /**

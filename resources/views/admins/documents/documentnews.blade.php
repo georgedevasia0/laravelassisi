@@ -5,11 +5,11 @@
 <div class="main-content">
    <div class="container-fluid">
    <div class="row">
-      <h3 class="page-title">Document</h3>
+      <h3 class="page-title">NEWS</h3>
       <div class="col-md-7" id="edit">
          <h3 class="page-title">Add Document </h3>
             <div class="panel panel-headline">
-               <form action="/admins/document" method="post" enctype="multipart/form-data" >
+               <form action="/admins/document/news" method="post" enctype="multipart/form-data" >
                 @csrf
                  <div class="panel-body">
                    <p>Select Document</p>
@@ -31,12 +31,15 @@
       <div class="col-md-5"> 
            <!-- PANEL HEADLINE -->
          <div class="panel panel-headline">
-            <image src="{{asset('/storage/image/'.$document->file)}}" style="width:100%;height:300px">
+            <image src="{{asset('storage/file/news'.$document->file)}}" style="width:100%;height:300px">
             <div class="panel-body">
             <h3 class="card-title">{{$document->title}}</h3>
             <h4>{{$document->body}}</h4>
-                
-                  <center><a href="/admins/document/{{$document->id}}/edit"><button class="btn btn-outline-secondary btn-primary float-right">EDIT</button></a></center>
+                <form action="/admins/document/news/{{$document->id}}" method="POST">
+                @csrf
+                @method('DELETE')
+                  <center><button type="submit" class="btn btn-outline-secondary btn-primary float-right">delete</button></center>
+                 </form>
              </div>
          </div>
             

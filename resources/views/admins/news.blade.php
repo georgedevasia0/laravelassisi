@@ -35,7 +35,7 @@
                 <div class="col-md-5"> 
                      <!-- PANEL HEADLINE -->
                    <div class="panel panel-headline">
-                       <image src="{{asset('/storage/image/'.$news->image)}}" style="width:100%;height:300px">
+                       <image src="{{asset('image/news/'.$news->image)}}" style="width:100%;height:300px">
                          <div class="panel-body">
                               <h4>{{$news->body}}</h4>
                               <center><a href="/admins/news/{{$news->id}}/edit"><button class="btn btn-outline-secondary btn-primary float-right">EDIT</button></a></center>

@@ -42,6 +42,12 @@
                            </div>
                         </form>
                      </div>
+                     <form action="/admins/contact/download" method="POST">
+                     @csrf
+                     <input type="date" name="from" id="" placeholder="date from">
+                     <input type="date" name="to" id="" placeholder="date to"> 
+                     <BUtton type="submit">download</BUtton>
+                     </form>
                   </div>
                   <div class="panel-body no-padding">
                      <table class="table table-striped">

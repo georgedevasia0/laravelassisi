@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\gallery;
-use App\folder;
+use App\DocumentNews;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class GalleryController extends Controller
+class DocumentNewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +14,10 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $folder=Folder::all();
-        $galleries=gallery::latest()->get();
-        return view('admins.gallery.gallery',['galleries'=>$galleries,'data'=>$folder]);
+        //
+        $data=DocumentNews::all();
+        return view('admins.documents.documentnews',['data'=>$data]);
+        
     }
 
     /**
@@ -37,35 +36,31 @@ class GalleryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,$id)
+    public function store(Request $request)
     {
-        request()->validate([
-            'image'=>['required','mimes:jpeg,bmp,png'],
-            
-        ]);
-        $gallery=new gallery();
-        $folder=folder::find($id);
-        if($request->hasfile('image'))
+        //
+        $news=new DocumentNews();
+        if($request->hasfile('file'))
         {
-            $file=$request->file('image');
+            $file=$request->file('file');
             $extension=$file->getClientOriginalExtension(); //getting image extension
             $filename=time().'.'.$extension;
-            $file->move('image/gallery/',$filename);
-            $gallery->image=$filename;
+            $file->move('storage/file/news',$filename);
+            $news->file=$filename;
         }
-        $gallery->folder=$folder->folder;
-        $gallery->body=request('body');
-        $gallery->save();
-        return redirect('/admins/gallery')->with('success','image is added');
+        $news->title=request('title');
+        $news->body=request('body');
+        $news->save();
+        return redirect('/admins/document/news');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\gallery  $gallery
+     * @param  \App\DocumentNews  $documentNews
      * @return \Illuminate\Http\Response
      */
-    public function show(gallery $gallery)
+    public function show(DocumentNews $documentNews)
     {
         //
     }
@@ -73,10 +68,10 @@ class GalleryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\gallery  $gallery
+     * @param  \App\DocumentNews  $documentNews
      * @return \Illuminate\Http\Response
      */
-    public function edit(gallery $gallery)
+    public function edit(DocumentNews $documentNews)
     {
         //
     }
@@ -85,10 +80,10 @@ class GalleryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\gallery  $gallery
+     * @param  \App\DocumentNews  $documentNews
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, gallery $gallery)
+    public function update(Request $request, DocumentNews $documentNews)
     {
         //
     }
@@ -96,17 +91,14 @@ class GalleryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\gallery  $gallery
+     * @param  \App\DocumentNews  $documentNews
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $gallery = gallery::find($id);
-        $gallery->delete();
-        return redirect('/admins/gallery');
-    }
-    public function folder($id)
-    {
-        
+        //
+        $news=DocumentNews::find($id);
+        $news->delete();
+        return redirect("/admins/document/news");
     }
 }

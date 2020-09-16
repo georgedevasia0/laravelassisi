@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Newsletter;
 use Illuminate\Http\Request;
+use App\Exports\NewsletterExport;
+use Maatwebsite\Excel\Facades\Excel;
 use Response;
-use PDF;
 
 class NewsletterController extends Controller
 {
@@ -14,11 +15,13 @@ class NewsletterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $data = Newsletter::latest()->get();
-        return view('admins.formupdate.newslettersubscription',['subcription'=>$data]);
+      $from=request('from');
+        $to=request('to');
+        $user= Newsletter::whereBetween('date',[$from,$to])->get();
+        return view('admins.formupdate.newsletterexcel',['data'=>$user]);
     }
 
     /**
@@ -29,6 +32,8 @@ class NewsletterController extends Controller
     public function create()
     {
         //
+        $data = Newsletter::latest()->get();
+        return view('admins.formupdate.newslettersubscription',['subcription'=>$data]);
     }
 
     /**
@@ -137,14 +142,10 @@ class NewsletterController extends Controller
         
        
     }
-    public function download(Request $request)
+    public function export()
     {
-        $from=request('from');
-        $to=request('to');
-        // $user= Newsletter::whereBetween('date',[$from,$to])->get();
-        $user=Newsletter::all();
-        view()->share('news',$user);
-        $pdf = PDF::loadView('admins.formupdate.sample',$user);
-        return $pdf->stream('newsletter.pdf');
+        return Excel::download(new NewsletterExport,'newsletter.csv');
+        
+       
     }
 }

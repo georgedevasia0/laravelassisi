@@ -114,13 +114,21 @@
 						</div>
 					</li>
 					<li><a href="/admins/profile" class="@yield('prof')"><i class="fa fa-user-o "></i> <span>Profile</span></a></li>
-					<li><a href="/admins/document" class="@yield('prof')"><i class="fa fa-user-o "></i> <span></span>pdf</a></li>
 					<li>
 						<a href="#gallery" data-toggle="collapse" class=""><i class="fa fa-folder"></i> <span>Testimonial</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 						<div id="gallery" class="">
 							<ul class="nav">
 								<li><a href="/admins/testimonial/youtube" class=""><i class="fa fa-youtube"></i> <span>Youtube</span></a></li>
 								<li><a href="/admins/testimonial/gallery" class=""><i class="fa fa-file-image-o"></i> <span>Image</span></a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#gallery" data-toggle="collapse" class=""><i class="fa fa-folder"></i> <span>document</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+						<div id="gallery" class="">
+							<ul class="nav">
+								<li><a href="/admins/document/news" class=""><i class="fa fa-youtube"></i> <span>News</span></a></li>
+								<li><a href="/admins/document/brosser" class=""><i class="fa fa-file-image-o"></i> <span>Brosser</span></a></li>
 							</ul>
 						</div>
 					</li>

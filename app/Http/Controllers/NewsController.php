@@ -42,10 +42,15 @@ class NewsController extends Controller
             'body'=>'required',
             
         ]);
-        $image=$request->image->getClientOriginalName();
-        $request->image->storeas('image',$image,'public');
         $news=new news();
-        $news->image=$image;
+        if($request->hasfile('image'))
+        {
+            $file=$request->file('image');
+            $extension=$file->getClientOriginalExtension(); //getting image extension
+            $filename=time().'.'.$extension;
+            $file->move('image/news/',$filename);
+            $news->image=$filename;
+        }
         $news->body=request('body');
         $news->save();
         return redirect('/admins/news');
@@ -83,10 +88,20 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $image=$request->image->getClientOriginalName();
-        $request->image->storeas('image',$image,'public');
+          request()->validate([
+            'image'=>['required','mimes:jpeg,bmp,png'],
+            'body'=>'required',
+            
+        ]);
         $news=news::find($id);
-        $news->image=$image;
+        if($request->hasfile('image'))
+        {
+            $file=$request->file('image');
+            $extension=$file->getClientOriginalExtension(); //getting image extension
+            $filename=time().'.'.$extension;
+            $file->move('image/news/',$filename);
+            $news->image=$filename;
+        }
         $news->body=request('body');
         $news->save();
         return redirect('/admins/news');

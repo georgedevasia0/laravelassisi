@@ -37,16 +37,21 @@ class TestimonialimageController extends Controller
      */
     public function store(Request $request)
     {
-        //storing the testimonial image sectio to database from admin
-        $image=$request->image->getClientOriginalName();
-        $request->image->storeas('image',$image,'public');
+        //storing the testimonial image section to database from admin
         $data= new Testimonialimage();
+        if($request->hasfile('image'))
+        {
+            $file=$request->file('image');
+            $extension=$file->getClientOriginalExtension(); //getting image extension
+            $filename=time().'.'.$extension;
+            $file->move('image/testimonial/',$filename);
+            $data->image=$filename;
+        }
         $data->name=request('name');
-        $data->image=$image;
         $data->designation=request('designation');
         $data->body=request('body');
         $data->save();
-        return redirect('/admins/testimonial/gallery');
+        return redirect('/admins/testimonial/gallery')->with('success','image is added');;
     }
 
     /**

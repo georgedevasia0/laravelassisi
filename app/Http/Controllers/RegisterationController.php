@@ -150,4 +150,10 @@ class RegisterationController extends Controller
             }
         }
     }
+    public function export()
+    {
+        return Excel::download(new NewsletterExport,'newsletter.csv');
+        
+       
+    }
 }
