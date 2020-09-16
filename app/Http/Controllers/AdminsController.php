@@ -18,8 +18,4 @@ class AdminsController extends Controller
         $data = home::latest()->get();
         return view('admins.formupdate.newslettersubscription',['subcription'=>$data]);
     } 
-    function profile()
-    {
-        return view('admins.profile');
-    }
 }

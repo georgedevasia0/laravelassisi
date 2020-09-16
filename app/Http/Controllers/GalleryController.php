@@ -44,15 +44,20 @@ class GalleryController extends Controller
             'body'=>'required',
             
         ]);
-        $folder=folder::find($id);
-        $image=$request->image->getClientOriginalName();
-        $request->image->storeas('image',$image,'public');
         $gallery=new gallery();
-        $gallery->image=$image;
+        $folder=folder::find($id);
+        if($request->hasfile('image'))
+        {
+            $file=$request->file('image');
+            $extension=$file->getClientOriginalExtension(); //getting image extension
+            $filename=time().'.'.$extension;
+            $file->move('image/gallery/',$filename);
+            $gallery->image=$filename;
+        }
         $gallery->folder=$folder->folder;
         $gallery->body=request('body');
         $gallery->save();
-        return redirect('/admins/gallery');
+        return redirect('/admins/gallery')->with('success','app setting added');
     }
 
     /**

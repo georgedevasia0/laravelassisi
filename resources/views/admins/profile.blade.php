@@ -21,7 +21,7 @@
                         <h3 class="panel-title">Name</h3>
                      </div>
                      <div class="panel-body">
-                       {{$data->name}}
+                       sarath 
                      </div>
                   </div>
                   <div class="panel panel-info" style="margin: 1em;">
@@ -29,7 +29,7 @@
                         <h3 class="panel-title">Email</h3>
                      </div>
                      <div class="panel-body">
-                        {{$data->email}}
+                        aarthejohn2@gmail.com
                      </div>
                   </div>
                   <div class="panel panel-info" style="margin: 1em;">
@@ -37,7 +37,7 @@
                         <h3 class="panel-title">Last Password Change</h3>
                      </div>
                      <div class="panel-body">
-                        {{$data->updated_at}}
+                        12-10-2020
                      </div>
                   </div>
                </div>

@@ -38,7 +38,7 @@ Route::group(['middleware'=>['LoginAuth']],function()
     Route::get('/admins/contact','ContactController@index');
     Route::put('/admins/contact/{id}','ContactController@update');
     Route::post('/admins/contact/filter','ContactController@filter');
-    Route::get('/admins/profile','AdminsController@profile');
+    Route::get('/admins/profile','ProfileController@index');
     Route::get('/admins/youtube','YoutubeController@index');
     Route::post('/admins/youtube','YoutubeController@store');
     Route::get('/admins/youtube/{id}','YoutubeController@show');

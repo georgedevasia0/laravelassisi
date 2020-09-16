@@ -90,7 +90,7 @@
            <div class="col-md-4" style="margin-bottom:5px">
               <div class="item ">
                  <div class="card item-card card-block">
-                    <img class="card-img-top" src="{{asset('/storage/image/'.$gallery->image)}}" alt="Card image" style="width:100%;height:150px">
+                    <img class="card-img-top" src="{{asset('image/gallery/'.$gallery->image)}}" alt="Card image" style="width:100%;height:150px">
                     <div class="card-body">
                        <p class="card-title">{{$gallery->body}}</p>
                        <form action="/admins/gallery/{{$gallery->id}}" method="post">
