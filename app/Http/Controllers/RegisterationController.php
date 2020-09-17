@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Registeration;
 use Illuminate\Http\Request;
+use App\Exports\RegisterationExport;
+use Excel;
 class RegisterationController extends Controller
 {
     /**

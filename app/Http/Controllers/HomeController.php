@@ -7,6 +7,7 @@ use App\Testimonialimage;
 use App\Testimonialyoutube;
 use App\gallery;
 use App\folder;
+use App\Youtube;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,14 +24,16 @@ class HomeController extends Controller
     $array=[
       'data'=>$news,
       'new'=>$new,
-      'testimonial'=>$data,
-      'youtube'=>$youtube,
       'galleryA2'=>$galleryA2,
       'galleryB2'=>$galleryB2,
       'galleryC2'=>$galleryC2,
 
     ];
-    return view('users.home',$array);
+    $testimonial=[
+    'testimonial'=>$data,
+    'youtube'=>$youtube,
+    ];
+    return view('users.home',$array,$testimonial);
    }
    public function gallery()
    {
@@ -43,6 +46,11 @@ class HomeController extends Controller
       $folders=$folder->folder;
       $galleries=gallery::where(['folder'=>$folders])->latest()->get();  
       return view('users.album',['data'=>$galleries]);
+   }
+   public function youtube()
+   {
+        $youtube = Youtube::all();
+        return view('users.youtube',['data'=>$youtube]);
    }
 
 }

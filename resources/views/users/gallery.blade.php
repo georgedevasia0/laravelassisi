@@ -100,31 +100,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="properties pb-20 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="properties__card">
-                            <div class="properties__img overlay1">
-                                <a href="youtube.php"><img src="assets/img/img_1.jpg" alt=""></a>
-                                <div class="img-text">
-                                    <span>28-02-2020</span>
-                                    <!--<span>Closed</span>-->
-                                </div>
-                                <div class="icon">
-                                    <img src="assets/img/categori_icon1.png" alt=""> 
-                                </div>
-                            </div>
-                            <div class="properties__caption">
-                                <h3><a href="youtube.php">Videos</a></h3>
-                                <p style="margin-bottom:25px;">Our Functional and Educative videos</p>
-                            </div>
-                            <div class="properties__footer d-flex justify-content-between align-items-center">
-                                <div class="restaurant-name col-lg-12">
-                                    <span><h5 style="float:left;line-height:1.5"><i class="fab fa-youtube pr-2"></i>Youtube Videos</h5><a href="youtube.php"><button class="btn px-3 text-white" style="float:right;background-color:#FF7E5F;border-radius:20px;">View</button></a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>

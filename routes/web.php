@@ -23,6 +23,7 @@ Route::view('/register','users.register');
 Route::post('/register','RegisterationController@store');
 Route::get('/gallery','HomeController@gallery');
 Route::view('/gallery/youtube','users.youtube');
+Route::get('/gallery/youtube','HomeController@youtube');
 Route::view('/gallery/rankers','users.rankers');
 Route::get('/gallery/album/{id}','HomeController@album');
 Route::post('/subcription','NewsletterController@store');

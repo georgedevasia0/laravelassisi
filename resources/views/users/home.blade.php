@@ -709,7 +709,7 @@
                         <div class="text pb-4 pt-4">
                             <h3 class="heading"><a href="#">{{$news->body}}</a></h3>
                             <div class="meta">
-                                <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
+                                <div><a href="#"><span class="ion-android-calendar"></span> {{$news->created_at}}</a></div>
                                 <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
                                 <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
                             </div>
@@ -791,7 +791,7 @@
             </div>
 
             <div class="owl-carousel testimonials-carousel" data-aos="fade-up" data-aos-delay="200">
-            @foreach($testimonial as $data)
+            @foreach($testimonial as $key => $data)
 
                 <div class="testimonial-wrap py-2 pr-3 radius" style="background-color:#FFFFFF">
                     <div class="testimonial-item">
@@ -810,7 +810,7 @@
                     <div class="block-16">
                         <figure>
                           <iframe width="420" height="280" style="border-radius:5px;"
-                              src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                              src="{{$data->youtubelink}}">
                           </iframe> 
                         </figure>
                     </div>

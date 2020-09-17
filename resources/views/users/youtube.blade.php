@@ -49,55 +49,19 @@
             <div class="container pt-5 pb-5 bg-light">
                 <h2 class="text-center font-weight-bold pt-5" style="color:#2C234D;">Our Videos</h2>
                 <div class="row">
-
+                  @foreach($data as $youtube)
                     <div class="testimonial-wrap pt-4 py-2  mx-auto">
                         <div class="col-md-12 col-lg-4 order-md-2">
                             <div class="block-16">
                                 <figure>
                                   <iframe width="330" height="280" style="border-radius:5px;"
-                                      src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                                      src="{{$youtube->youtubelink}}">
                                   </iframe>
                                 </figure>
                             </div>
                         </div>
                     </div>
-
-                    <div class="testimonial-wrap pt-4 py-2  mx-auto">
-                        <div class="col-md-12 col-lg-4 order-md-2">
-                            <div class="block-16">
-                                <figure>
-                                  <iframe width="330" height="280" style="border-radius:5px;"
-                                      src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                  </iframe>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-wrap pt-4 py-2  mx-auto">
-                        <div class="col-md-12 col-lg-4 order-md-2">
-                            <div class="block-16">
-                                <figure>
-                                  <iframe width="330" height="280" style="border-radius:5px;"
-                                      src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                  </iframe>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-wrap pt-4 py-2  mx-auto">
-                        <div class="col-md-12 col-lg-4 order-md-2">
-                            <div class="block-16">
-                                <figure>
-                                  <iframe width="330" height="280" style="border-radius:5px;"
-                                      src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                  </iframe>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
         </div>

@@ -26,7 +26,7 @@ class NewsletterExport implements FromQuery, WithHeadings
     public function headings() :array
     {
         return [
-            'sid',
+            'id',
             'created_at',
             'updated_at',
             'date',

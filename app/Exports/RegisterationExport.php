@@ -5,8 +5,9 @@ namespace App\Exports;
 use App\Registeration;
 use Maatwebsite\Excel\Concerns\FromQuery;
 use Maatwebsite\Excel\Concerns\Exportable;
+use Maatwebsite\Excel\Concerns\WithHeadings;
 
-class RegisterationExport implements Fromquery
+class RegisterationExport implements Fromquery, WithHeadings
 {
     /**
     * @return \Illuminate\Support\Collection
@@ -20,5 +21,23 @@ class RegisterationExport implements Fromquery
     public function query()
     {
         return  Registeration::whereBetween('date',[$this->from,$this->to]);
+    }
+    public function headings() : array 
+    {
+        return
+        [
+            'Id',
+            'Created_at',
+            'Updated_at',
+            'Name',
+            'Phone',
+            'Address',
+            'Email',
+            'Qualification',
+            'Branch',
+            'Age',
+            'Contected'
+
+        ];
     }
 }
