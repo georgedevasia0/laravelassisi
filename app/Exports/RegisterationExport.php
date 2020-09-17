@@ -3,15 +3,22 @@
 namespace App\Exports;
 
 use App\Registeration;
-use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\FromQuery;
+use Maatwebsite\Excel\Concerns\Exportable;
 
-class RegisterationExport implements FromCollection
+class RegisterationExport implements Fromquery
 {
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection()
+    use Exportable;
+    public function __construct(int $from ,int $to)
     {
-        return Registeration::all();
+        $this->to=date("Y-m-d",$to);
+        $this->from=date("Y-m-d",$from);
+    }
+    public function query()
+    {
+        return  Registeration::whereBetween('date',[$this->from,$this->to]);
     }
 }

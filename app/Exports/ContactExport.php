@@ -2,16 +2,23 @@
 
 namespace App\Exports;
 
-use App\Contact;
-use Maatwebsite\Excel\Concerns\FromCollection;
+use App\contact;
+use Maatwebsite\Excel\Concerns\FromQuery;
+use Maatwebsite\Excel\Concerns\Exportable;
 
-class ContactExport implements FromCollection
+class ContactExport implements Fromquery
 {
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection()
+    use Exportable;
+    public function __construct(int $from ,int $to)
     {
-        return Contact::all();
+        $this->to=date("Y-m-d",$to);
+        $this->from=date("Y-m-d",$from);
+    }
+    public function query()
+    {
+        return  contact::whereBetween('date',[$this->from,$this->to]);
     }
 }

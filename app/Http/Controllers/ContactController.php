@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\contact;
 use App\Exports\ContactExport;
-use Maatwebsite\Excel\Facades\Excel;
+use Excel;
+
+
 
 class ContactController extends Controller
 {
@@ -86,9 +88,12 @@ class ContactController extends Controller
             }
         }
     }
-    public function export()
+    public function export(Request $request)
     {
-        return Excel::download(new ContactExport,'newsletter.csv');
+        $from=strtotime(request('from'));
+        $to=strtotime(request('to'));
+        $export = new ContactExport($from,$to);
+        return Excel::download($export,'newsletter.xlsx');
         
        
     }

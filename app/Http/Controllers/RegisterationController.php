@@ -150,9 +150,12 @@ class RegisterationController extends Controller
             }
         }
     }
-    public function export()
+    public function export(Request $request)
     {
-        return Excel::download(new NewsletterExport,'newsletter.csv');
+        $from=strtotime(request('from'));
+        $to=strtotime(request('to'));
+        $export = new RegisterationExport($from,$to);
+        return Excel::download($export,'newsletter.xlsx');
         
        
     }

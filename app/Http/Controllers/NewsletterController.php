@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Newsletter;
 use Illuminate\Http\Request;
 use App\Exports\NewsletterExport;
-use Maatwebsite\Excel\Facades\Excel;
+use Excel;
 use Response;
 
 class NewsletterController extends Controller
@@ -144,8 +144,12 @@ class NewsletterController extends Controller
     }
     public function export()
     {
-        return Excel::download(new NewsletterExport,'newsletter.csv');
+        $from=strtotime(request('from'));
+        $to=strtotime(request('to'));
+        $export = new NewsletterExport($from,$to);
+        return Excel::download($export,'newsletter.xlsx');
         
        
     }
 }
+
