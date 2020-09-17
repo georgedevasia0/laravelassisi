@@ -17,6 +17,7 @@ class CreateFoldersTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('folder');
+            $table->string('image')->nullable();
         });
     }
 

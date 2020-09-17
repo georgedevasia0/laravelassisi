@@ -50,36 +50,14 @@
             <div class="container">
                 <div class="directory-active row">
                     <!-- Single -->
-                    <div class="properties pb-20 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="50">
-                        <div class="properties__card">
-                            <div class="properties__img overlay1">
-                                <a href="album.php"><img src="assets/img/slide1.jpg" alt="" height="210" width="300"></a>
-                                <div class="img-text">
-                                    <span>28-02-2020</span>
-                                    <!--<span>Closed</span>-->
-                                </div>
-                                <div class="icon">
-                                    <i class="fa fa-file-image-o fa-3x" style="color:#11CFE1;"></i>
-                                </div>
-                            </div>
-                            <div class="properties__caption">
-                                <h3><a href="album.php">Album</a></h3>
-                                <p style="margin-bottom:25px;">Let's uncover the College Festival Album</p>
-                            </div>
-                            <div class="properties__footer d-flex justify-content-between align-items-center">
-                                <div class="restaurant-name col-lg-12">
-                                    <span><h5 style="float:left;line-height:1.5"><i class="fa fa-bank pr-2"></i>College Festival</h5><a href="/gallery/album"><button class="btn px-3 text-white" style="float:right;background-color:#FF7E5F;border-radius:20px;">View</button></a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    @foreach($folder as $folder)
                     <div class="properties pb-20 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
                         <div class="properties__card">
+                       
                             <div class="properties__img overlay1">
-                                <a href="rankers.php"><img src="assets/img/img_2.jpg" alt="" height="210" width="300"></a>
+                                <a href="rankers.php"><img src="{{asset('image/gallery/'.$folder->image)}}" alt="" height="210" width="300"></a>
                                 <div class="img-text">
-                                    <span>28-02-2020</span>
+                                    <span>{{$folder->created_at}}</span>
                                     <!--<span>Closed</span>-->
                                 </div>
                                 <div class="icon">
@@ -87,16 +65,17 @@
                                 </div>
                             </div>
                             <div class="properties__caption">
-                                <h3><a href="rankers.php">Rank Holders</a></h3>
+                                <h3><a href="rankers.php">Album</a></h3>
                                 <p style="margin-bottom:25px;">View our recent Rank holders.</p>
                             </div>
                             <div class="properties__footer d-flex justify-content-between align-items-center">
                                 <div class="restaurant-name col-lg-12">
-                                    <span><h5 style="float:left;line-height:1.5"><i class="fas fa-user-graduate pr-2"></i>Our Winners</h5><a href="/gallery/rankers"><button class="btn px-3 text-white" style="float:right;background-color:#FF7E5F;border-radius:20px;">View</button></a></span>
+                                    <span><h5 style="float:left;line-height:1.5"><i class="fas fa-user-graduate pr-2"></i>{{$folder->folder}}</h5><a href="/gallery/album/{{$folder->id}}"><button class="btn px-3 text-white" style="float:right;background-color:#FF7E5F;border-radius:20px;">View</button></a></span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    @endforeach
 
                     <div class="properties pb-20 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="150">
                         <div class="properties__card">

@@ -21,10 +21,10 @@ Route::view('/contact','users.contact');
 route::post('/contact','ContactController@store');
 Route::view('/register','users.register');
 Route::post('/register','RegisterationController@store');
-Route::view('/gallery','users.gallery');
+Route::get('/gallery','HomeController@gallery');
 Route::view('/gallery/youtube','users.youtube');
 Route::view('/gallery/rankers','users.rankers');
-Route::view('/gallery/album','users.album');
+Route::get('/gallery/album/{id}','HomeController@album');
 Route::post('/subcription','NewsletterController@store');
 
 

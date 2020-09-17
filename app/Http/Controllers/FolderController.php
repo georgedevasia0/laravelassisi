@@ -45,6 +45,7 @@ class FolderController extends Controller
         //
         $folder= new Folder();
         $folder->folder=request('folder');
+        $folder->image='null';
         $folder->save();
         return redirect('/admins/gallery');
     }

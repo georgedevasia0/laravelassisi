@@ -6,6 +6,7 @@ use App\gallery;
 use App\folder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Redirect;
 
 class GalleryController extends Controller
 {
@@ -17,8 +18,7 @@ class GalleryController extends Controller
     public function index()
     {
         $folder=Folder::all();
-        $galleries=gallery::latest()->get();
-        return view('admins.gallery.gallery',['galleries'=>$galleries,'data'=>$folder]);
+        return view('admins.gallery.gallery',['data'=>$folder]);
     }
 
     /**
@@ -52,11 +52,13 @@ class GalleryController extends Controller
             $filename=time().'.'.$extension;
             $file->move('image/gallery/',$filename);
             $gallery->image=$filename;
+            
         }
         $gallery->folder=$folder->folder;
+        folder::where('folder',$folder->folder)->update(['image'=>$filename]);
         $gallery->body=request('body');
         $gallery->save();
-        return redirect('/admins/gallery')->with('success','image is added');
+        return redirect()->back()->with('msg','added');
     }
 
     /**

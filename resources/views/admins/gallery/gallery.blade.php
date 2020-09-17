@@ -46,28 +46,7 @@
                   <button  class="btn btn-success">Create</button>
               </form>
            </div>
-
-<div class="row">
-@foreach($galleries as $gallery)
-   <!-- image card  -->
-   <div class="col-md-4" style="margin-bottom:5px">
-      <div class="item ">
-         <div class="card item-card card-block">
-            <img class="card-img-top" src="{{asset('image/gallery/'.$gallery->image)}}" alt="Card image" style="width:100%;height:150px">
-            <h4>{{$gallery->folder}}</h4>
-            <div class="card-body">
-               <p class="card-title">{{$gallery->body}}</p>
-               <form action="/admins/gallery/{{$gallery->id}}" method="post">
-                                 @csrf
-                                 @method("DELETE")
-                                 <center><button onclick="return confirm('are you sure');" class="btn btn-danger stretched-link">Delete</button></center>
-                                 </form>
-            </div>
-         </div>
-      </div>
-   </div>
 <!-- END MAIN CONTENT -->  
-@endforeach
 </div>
 <!-- end -->
 @endsection

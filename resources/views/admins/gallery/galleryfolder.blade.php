@@ -16,8 +16,6 @@
                        <div class="panel-body ">
                           <!-- start -->
                           <ul class="nav">
-                          <li><a href="/admins/gallery" class=""><span>Home Gallery</span></a></li>
-
                              <!--  list folders in db -->
                              @foreach($data as $folder)
                              <li><a href="/admins/gallery/folder/{{$folder->id}}" class=""><span>{{$folder->folder}}</span></a></li>
@@ -40,7 +38,6 @@
                           <!-- FOLDER NAME -->
                        </div>
                        <div class="panel-body">
-        
                     <!-- form start  -->
         <div class="row">
            <div class="col-md-12 badge-dark">

@@ -18,7 +18,7 @@ class CreateGalleriesTable extends Migration
             $table->timestamps();
             $table->string('folder')->unique;
             $table->string('image');
-            $table->text('body');
+            $table->text('body')->nullable();
         });
     }
 

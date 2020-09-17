@@ -260,111 +260,14 @@
                                 
                                 
                                                 <!--first row-->
+                                                @foreach($galleryA2 as $gallery)
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="{{asset('image/gallery/'.$gallery->image)}}" class="img-fluid" alt="">
                                                   </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
+                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">{{$gallery->body}}</p>
                                                 </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-web">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-
-                                                <!--second row-->
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-web">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                            
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-
-
-                                                <!--third row-->
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
+                                                @endforeach
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
                                                     <img src="assets/img/testimonials/avatar.jpg" class="img-fluid" alt="">
@@ -393,116 +296,15 @@
                                             <hr style="margin-top:-5px;">
                                             <div class="row portfolio-container mt-4" data-aos="fade-up" data-aos-delay="100">
                                                 <!--first row-->
+                                                @foreach($galleryB2 as $gallery)
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
+                                                    <img src="{{asset('image/gallery/'.$gallery->image)}}" class="img-fluid" alt="">
                                                     
                                                   </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
+                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">{{$gallery->body}}</p>
                                                 </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-web">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-
-                                                <!--second row-->
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-web">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-
-
-                                                <!--third row-->
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                
+                                                @endforeach
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
                                                     <img src="assets/img/testimonials/avatar.jpg" class="img-fluid" alt="">
@@ -532,116 +334,14 @@
                                             <hr style="margin-top:-5px;">
                                             <div class="row portfolio-container mt-4" data-aos="fade-up" data-aos-delay="100">
                                                 <!--first row-->
+                                                @foreach($galleryC2 as $gallery)
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
+                                                    <img src="{{asset('image/gallery/'.$gallery->image)}}" class="img-fluid" alt="">
                                                   </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
+                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">{{$gallery->body}}</p>
                                                 </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-web">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-
-                                                <!--second row-->
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-web">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-
-
-                                                <!--third row-->
-                                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
-                                                  <div class="portfolio-wrap" style="border-radius:50%">
-                                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="img-fluid" alt="">
-                                                    
-                                                  </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">Manuel</p>
-                                                </div>
-                
-                
+                                                @endforeach
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
                                                     <img src="assets/img/testimonials/avatar.jpg" class="img-fluid" alt="">
@@ -658,9 +358,6 @@
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">More</p>
                                                 </div>
                                             </div>
-
-
-
                                         </div>
                                     </div>
                                 </div>
