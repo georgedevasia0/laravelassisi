@@ -66,8 +66,14 @@
 										</div>
 										<div class="col-md-12">
 											<div class="form-group">
+												<label class="label font-weight-bold text-dark" for="name">Phone number</label>
+												<input type="number" class="form-control" name="phone" id="name" placeholder="phone number">
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
 												<label class="label font-weight-bold text-dark" for="subject">Email</label>
-												<input type="text" class="form-control" name="email" id="subject" placeholder="youremail@gmail.com">
+												<input type="email" class="form-control" name="email" id="subject" placeholder="youremail@gmail.com">
 											</div>
 										</div>
 										<div class="col-md-12">

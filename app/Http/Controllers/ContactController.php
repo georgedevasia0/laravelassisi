@@ -26,7 +26,7 @@ class ContactController extends Controller
           $contacted->message=request('message');
           $contacted->date=date('Y:m:d');
           $contacted->contacted='not-contacted';
-        //   $contacted->phone=request('phone');
+          $contacted->phone=request('phone');
           $contacted->save();
           return redirect('/contact');
     }

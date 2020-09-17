@@ -56,7 +56,7 @@
                               <th>#</th>
                               <th>Name</th>
                               <th>Phone</th>
-                              <th>Quistine</th>
+                              <th>message</th>
                               <th>Email</th>
                               <th>Date</th>
                               <th>Contact</th>
@@ -70,11 +70,9 @@
                               <td>{{$contact->id}}</td>
                               <td>{{$contact->name}}</td>
                               <td>{{$contact->phone}}</td>
-                              <td>{{$contact->address}}</td>
+                              <td>{{$contact->message}}</td>
                               <td>{{$contact->email}}</td>
-                              
                               <td>{{$contact->date}}</td>
-                              
                               <td>
                                  <!-- <div class="row"> -->
                                  <form action="/admins/contact/{{$contact->id}}" method='POST'>

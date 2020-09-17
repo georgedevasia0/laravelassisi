@@ -14,8 +14,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-       $data=Profile::first();
-       return view('admins.profile',['data'=>$data]);
+      
 
     }
 
@@ -72,9 +71,24 @@ class ProfileController extends Controller
     public function update(Request $request,$id)
     {
         //
+
         $profile=Profile::find($id);
-        echo $profile;
-       echo "will finish at last";
+
+        if($profile->password === request("oldpassword"))
+        {
+           if(request('password_confirmation')==request('password'))
+           {
+               Profile::where('id',$profile->id)->update(['password'=>request('password')]);
+               return redirect()->back();
+           }
+        }
+        else
+        {
+            echo 'not reached';
+
+        }
+        
+      
         
     }
 

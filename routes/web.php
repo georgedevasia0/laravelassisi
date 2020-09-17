@@ -40,7 +40,7 @@ Route::group(['middleware'=>['LoginAuth']],function()
     Route::post('/admins/contact/filter','ContactController@filter');
     Route::post('/admins/contact/download','ContactController@export');
     Route::get('/admins/profile','ProfileController@index');
-    Route::post('/admins/profile/{id}','ProfileController@update');
+    Route::put('/admins/profile/{id}','ProfileController@update');
     Route::get('/admins/youtube','YoutubeController@index');
     Route::post('/admins/youtube','YoutubeController@store');
     Route::get('/admins/youtube/{id}','YoutubeController@show');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Admin;
+use App\Profile;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -13,11 +14,18 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     function login(Request $request)
-    {
-            
-            $request->session()->put('data',$request->input());
-            return redirect('admins');
+    { 
+      $admin=Profile::where([['email',$request->email],['password',$request->password]])->first();
+      if($admin)
+      {
+          $request->session()->put('data',$request->input());
+            return view('admins.profile',['data'=>$admin]);
+      }
+      else
+      {
+           return redirect()->back();
          
+      }      
     }
     function logout()
     {

@@ -5,8 +5,9 @@ namespace App\Exports;
 use App\Newsletter;
 use Maatwebsite\Excel\Concerns\FromQuery;
 use Maatwebsite\Excel\Concerns\Exportable;
+use Maatwebsite\Excel\Concerns\WithHeadings;
 
-class NewsletterExport implements FromQuery
+class NewsletterExport implements FromQuery, WithHeadings
 {
     use Exportable;
     /**
@@ -21,5 +22,16 @@ class NewsletterExport implements FromQuery
     public function query()
     {
         return  Newsletter::whereBetween('date',[$this->from,$this->to]);
+    }
+    public function headings() :array
+    {
+        return [
+            'sid',
+            'created_at',
+            'updated_at',
+            'date',
+            'email',
+            'verified'
+        ];
     }
 }

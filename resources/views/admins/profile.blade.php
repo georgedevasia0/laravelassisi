@@ -21,7 +21,7 @@
                         <h3 class="panel-title">Name</h3>
                      </div>
                      <div class="panel-body">
-                     {{$data->name}}
+                      {{$data->name}}
                      </div>
                   </div>
                   <div class="panel panel-info" style="margin: 1em;">
@@ -29,7 +29,7 @@
                         <h3 class="panel-title">Email</h3>
                      </div>
                      <div class="panel-body">
-                        {{$data->email}}
+                     {{$data->email}}
                      </div>
                   </div>
                   <div class="panel panel-info" style="margin: 1em;">
@@ -37,7 +37,7 @@
                         <h3 class="panel-title">Last Password Change</h3>
                      </div>
                      <div class="panel-body">
-                        {{$data->updated_at}}
+                     {{$data->updated_at}}
                      </div>
                   </div>
                </div>
@@ -68,16 +68,17 @@
                   </div>
                </div>
                <div class="col-md-9  admin-content" id="change-password">
-                  <form action="/admins/profile/{{$data->id}}" method="post">
+                  <form action="/admins/profile/{{$data->id}}" method="POST">
                   @csrf
+                  @method('PUT')
                     <div class="panel panel-info" style="margin: 1em;">
                         <div class="panel-heading">
-                           <h3 class="panel-title"><label for="new_password" class="control-label panel-title">Old Password</label></h3>
+                           <h3 class="panel-title"><label for="new_password"  class="control-label panel-title">Old Password</label></h3>
                         </div>
                         <div class="panel-body">
                            <div class="form-group">
                               <div class="col-sm-10">
-                                 <input type="password" class="form-control" name="password" id="new_password" >
+                                 <input type="password" class="form-control" name="oldpassword" id="new_password" >
                               </div>
                            </div>
                         </div>
@@ -110,7 +111,7 @@
                         <div class="panel-body">
                            <div class="form-group">
                               <div class="pull-left">
-                                 <input type="submit" class="form-control btn btn-primary" name="submit" id="submit">
+                                 <button type="submit" class="form-control btn btn-primary" name="submit" id="submit">submit</button>
                               </div>
                            </div>
                         </div>
