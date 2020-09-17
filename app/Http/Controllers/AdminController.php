@@ -18,8 +18,8 @@ class AdminController extends Controller
       $admin=Profile::where([['email',$request->email],['password',$request->password]])->first();
       if($admin)
       {
-          $request->session()->put('data',$request->input());
-            return view('admins.profile',['data'=>$admin]);
+          $request->session()->put('data',$request->email,$request->password);
+            return redirect('/admins');
       }
       else
       {

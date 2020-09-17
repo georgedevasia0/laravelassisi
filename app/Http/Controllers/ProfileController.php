@@ -12,9 +12,11 @@ class ProfileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-      
+        $data=$request->session()->get('data');
+        $profile = Profile::where('email',$data)->first();
+      return view('admins.profile',['data'=>$profile]);
 
     }
 

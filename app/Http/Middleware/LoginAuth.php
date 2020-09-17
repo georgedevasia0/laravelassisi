@@ -17,7 +17,7 @@ class LoginAuth
     {
         if(!session()->has('data'))
         {
-          return redirect("/admins/profile");
+          return redirect("adminlogin");
         }
         return $next($request);
     }
