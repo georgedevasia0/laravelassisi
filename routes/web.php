@@ -27,6 +27,7 @@ Route::get('/gallery/youtube','HomeController@youtube');
 Route::view('/gallery/rankers','users.rankers');
 Route::get('/gallery/album/{id}','HomeController@album');
 Route::post('/subcription','NewsletterController@store');
+Route::get('newsletter/download','HomeController@download');
 
 
 

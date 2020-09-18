@@ -31,7 +31,7 @@
       <div class="col-md-5"> 
            <!-- PANEL HEADLINE -->
          <div class="panel panel-headline">
-            <image src="{{asset('storage/file/news'.$document->file)}}" style="width:100%;height:300px">
+            <image src="{{asset('public/storage/file/news/'.$document->file)}}" style="width:100%;height:300px">
             <div class="panel-body">
             <h3 class="card-title">{{$document->title}}</h3>
             <h4>{{$document->body}}</h4>

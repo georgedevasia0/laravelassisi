@@ -505,7 +505,7 @@
                       </div>
                   </div>
                   <div class="col-xl-3 col-lg-4 col-md-4" data-aos="fade-left">
-                      <a href="#" class="btn btt text-white px-5 py-3">Download <i class="fa fa-download"></i></a>
+                      <a href="newsletter/download" class="btn btt text-white px-5 py-3">Download <i class="fa fa-download"></i></a>
                   </div>
               </div>
           </div>
@@ -810,7 +810,7 @@
                     <div class="block-16">
                         <figure>
                           <iframe width="420" height="280" style="border-radius:5px;"
-                              src="{{$data->youtubelink}}">
+                              src="{{$youtube[$key]->youtubelink}}">
                           </iframe> 
                         </figure>
                     </div>

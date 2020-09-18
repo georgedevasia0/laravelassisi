@@ -29,6 +29,7 @@ class RegisterationExport implements Fromquery, WithHeadings
             'Id',
             'Created_at',
             'Updated_at',
+            'Date',
             'Name',
             'Phone',
             'Address',

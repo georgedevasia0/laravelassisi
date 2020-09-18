@@ -43,10 +43,12 @@ class DocumentNewsController extends Controller
         if($request->hasfile('file'))
         {
             $file=$request->file('file');
+            $dest='public/storage/file/news/';
             $extension=$file->getClientOriginalExtension(); //getting image extension
             $filename=time().'.'.$extension;
-            $file->move('storage/file/news',$filename);
+           $path = $request->file('file')->storeAs($dest,$filename);
             $news->file=$filename;
+            session()->put('path',$path);
         }
         $news->title=request('title');
         $news->body=request('body');
