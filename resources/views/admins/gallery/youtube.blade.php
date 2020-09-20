@@ -23,6 +23,13 @@
                               <center>
                                  <h4>ADD YOUTUBE VIDEO</h4>
                                  <br>
+                                 @if($message=Session::get('message'))
+                                  <div class="alert alert-success alert-block">
+                                    <button type="button" class="close" data-dismiss="alert">x</button>
+                                    <strong>{{$message}}</strong>
+                                  
+                                  </div>
+                                  @endif
                                  <form action="youtube" method="POST">
                                  @csrf
                                     <div class="form-group" style="margin-top:15px">

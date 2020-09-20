@@ -11,6 +11,13 @@
                            <center>
                       <h3>Edit News</h3>
                           <center>
+                          @if($message=Session::get('message'))
+                   <div class="alert alert-success alert-block">
+                         <button type="button" class="close" data-dismiss="alert">x</button>
+                              <strong>{{$message}}</strong>
+                                  
+                         </div>
+                @endif
                            <form action="/admins/news" method="post" enctype="multipart/form-data" >
                               @csrf
                              <div class="panel-body">

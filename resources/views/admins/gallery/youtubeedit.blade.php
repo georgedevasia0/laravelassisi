@@ -22,18 +22,25 @@
                         <div class="item ">
                            <div class="card item-card card-block">
                               <center>
-                                 <h4>ADD YOUTUBE VIDEO</h4>
+                                 <h4>UPDATE YOUTUBE VIDEO</h4>
                                  <br>
-                                 <form action="/admins/youtube/{{$youtube->id}}" method="POST">
+                                 <form action="/admins/youtube/{{$data->id}}" method="POST">
                                  @csrf
                                  @method('PUT')
                                     <div class="form-group" style="margin-top:15px">
-                                       <input type="text" name="youtubelink" value="{{$youtube->youtubelink}}" class="form-control" placeholder="Enter the Youtube Link" required>
-                                       <br>
+                                       <input type="text" name="youtubelink" value="{{$data->youtubelink}}" class="form-control" placeholder="Enter the Youtube Link">
+                                       @error('youtubelink')
+                                       <p class="alert alert-danger alert-block">{{$errors->first('youtubelink')}}</p>
+                                       @enderror
+                                 <br>
                                   
                                        <div class="form-group">
                                           <label for="exampleFormControlInput1">Title</label>
-                                          <input type="text" name="title" class="form-control" value="{{$youtube->title}}"  placeholder="Enter the title" required>
+                                          <input type="text" name="title" class="form-control" value="{{$data->title}}"  placeholder="Enter the title">
+                                          @error('title')
+                                       <p class="alert alert-danger alert-block">{{$errors->first('title')}}</p>
+                                       @enderror
+                                         
                                        </div>
                                        <button class="btn btn-success" style="margin:11px">update</button>
                                     </div>

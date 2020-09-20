@@ -39,9 +39,22 @@ class RegisterationController extends Controller
     public function store(Request $request)
     {
         //storing the user input values to  database 
+        $request->validate([
+
+            'name'=>'required|min:2',
+            'phone_number'=>'required|numeric|digits:10',
+            'email'=>'required|email',
+            'age'=>'required|min:2',
+            'address'=>'required',
+            'qualification'=>'required',
+            'language'=>'required',
+
+            
+            
+        ]);
         $registered= new Registeration();
         $registered->name=request('name');
-        $registered->phone=request('phone');
+        $registered->phone=request('phone_number');
         $registered->email=request('email');
         $registered->age=request('age');
         $registered->address=request('address');
@@ -50,7 +63,7 @@ class RegisterationController extends Controller
         $registered->date=date('Y:m:d');
         $registered->contacted='null';
         $registered->save();
-        return redirect('/');
+        return back()->with('message','updated successfully');
     }
 
     /**

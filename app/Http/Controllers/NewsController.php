@@ -53,7 +53,7 @@ class NewsController extends Controller
         }
         $news->body=request('body');
         $news->save();
-        return redirect('/admins/news');
+        return back()->with('message','News Saved Successfully');
     }
 
     /**
@@ -104,7 +104,7 @@ class NewsController extends Controller
         }
         $news->body=request('body');
         $news->save();
-        return redirect('/admins/news');
+        return redirect("/admins/news")->with('message','News Updated Successfully');
     }
 
     /**

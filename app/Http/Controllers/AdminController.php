@@ -15,6 +15,11 @@ class AdminController extends Controller
      */
     function login(Request $request)
     { 
+        request()->validate([
+            'email'=>'required|email',
+            'password'=>'required',
+            
+        ]);
       $admin=Profile::where([['email',$request->email],['password',$request->password]])->first();
       if($admin)
       {
@@ -23,7 +28,7 @@ class AdminController extends Controller
       }
       else
       {
-           return redirect()->back();
+           return redirect()->back()->with('message','email or passowrd is wrong');
          
       }      
     }

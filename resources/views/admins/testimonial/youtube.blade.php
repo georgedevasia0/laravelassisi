@@ -22,11 +22,21 @@
          <div class="card item-card card-block">
                               <center>
                                  <h4>ADD YOUTUBE VIDEO</h4>
+                                 @if($message=Session::get('message'))
+                                  <div class="alert alert-success alert-block">
+                                    <button type="button" class="close" data-dismiss="alert">x</button>
+                                    <strong>{{$message}}</strong>
+                                  
+                                  </div>
+                                  @endif
                                  <br>
                                  <form action="/admins/testimonial/youtube" method="POST">
                                  @csrf
                                     <div class="form-group" style="margin-top:15px">
                                        <input type="text" name="youtubelink" value="" class="form-control" placeholder="Enter the Youtube Link">
+                                       @error('youtubelink')
+                                       <p class="alert alert-danger alert-block">{{$errors->first('youtubelink')}}</p>
+                                       @enderror
                                        <br>
                                        <button class="btn btn-success" style="margin:11px">Upload</button>
                                     </div>

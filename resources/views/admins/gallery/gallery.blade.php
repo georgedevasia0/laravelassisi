@@ -16,7 +16,25 @@
                <div class="panel-body ">
                   <!-- start -->
                   <ul class="nav">
+                  @if($message=Session::get('message'))
+                   <div class="alert alert-success alert-block">
+                         <button type="button" class="close" data-dismiss="alert">x</button>
+                               <strong>{{$message}}</strong>
+                                  
+                         </div>
+                   @endif
+                  <form action="/admins/gallery/folder" method="POST">
+                  @csrf
+                  <input type="text" name="folder" value="{{old('folder')}}">
+                  @error('folder')
+                  <p class="alert alert-danger alert-block">{{$errors->first('folder')}}</p>
+                  @enderror
+             
+                  <button  class="btn btn-success">Create</button>
+              </form>
+                 
                      <!--  list folders in db -->
+                  
                      @foreach($data as $folder)
                      <li><a href="/admins/gallery/folder/{{$folder->id}}" class=""><span>{{$folder->folder}}</span></a></li>
                      @endforeach
@@ -40,11 +58,8 @@
 <!-- image display    -->
 <br>
 <div class="popup" id="popup-1">
-               <form action="/admins/gallery/folder" method="POST">
-                  @csrf
-                  <input type="text" name="folder">
-                  <button  class="btn btn-success">Create</button>
-              </form>
+
+             
            </div>
 <!-- END MAIN CONTENT -->  
 </div>

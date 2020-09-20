@@ -38,6 +38,13 @@ class TestimonialimageController extends Controller
     public function store(Request $request)
     {
         //storing the testimonial image section to database from admin
+        $request->validate([
+
+            'image'=>'required|mimes:jpeg,bmp,png',
+            'name'=>'required',
+            'designation'=>'required',
+            'message'=>'required'
+        ]);
         $data= new Testimonialimage();
         if($request->hasfile('image'))
         {
@@ -49,9 +56,9 @@ class TestimonialimageController extends Controller
         }
         $data->name=request('name');
         $data->designation=request('designation');
-        $data->body=request('body');
+        $data->body=request('message');
         $data->save();
-        return redirect('/admins/testimonial/gallery')->with('success','image is added');;
+        return redirect('/admins/testimonial/gallery')->with('message','Data Uploaded');;
     }
 
     /**

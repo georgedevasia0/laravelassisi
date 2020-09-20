@@ -73,6 +73,12 @@ class ProfileController extends Controller
     public function update(Request $request,$id)
     {
         //
+        $request->validate([
+
+            'oldpassword'=>'required',
+            'password'=>'min:8|required_with:password_confirmation|same:password_confirmation',
+            'password_confirmation'=>'min:8'
+        ]);
 
         $profile=Profile::find($id);
 
@@ -81,12 +87,16 @@ class ProfileController extends Controller
            if(request('password_confirmation')==request('password'))
            {
                Profile::where('id',$profile->id)->update(['password'=>request('password')]);
-               return redirect()->back();
+               return back()->with('message','Password Updated Successfully');
            }
+        //    else
+        //    {
+        //      return back()->with('message','passwords  not matching');
+        //    }
         }
         else
         {
-            echo 'not reached';
+            return back()->with('message','old password not matching');
 
         }
         

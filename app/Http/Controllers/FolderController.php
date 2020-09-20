@@ -43,11 +43,23 @@ class FolderController extends Controller
     public function store(Request $request)
     {
         //
+        $valid=Folder::where('folder',"=",request('folder'))->distinct()->first();
+        if($valid)
+        {
+            return back()->with('message','Folder Already Exits');
+            
+        }
+        else{
+        $request->validate([
+            'folder'=>'required'
+        ]);
         $folder= new Folder();
         $folder->folder=request('folder');
         $folder->image='null';
         $folder->save();
-        return redirect('/admins/gallery');
+        return back()->with('message','Folder Created');
+        
+        }
     }
 
     /**

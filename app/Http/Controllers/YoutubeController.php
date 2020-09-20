@@ -33,18 +33,35 @@ class YoutubeController extends Controller
      */
     public function store(Request $request)
     { 
-        $youtubelink=request('youtubelink');
         request()->validate([
-            'youtubelink'=>['required'],
+            'youtubelink'=>'required',
             'title'=>'required',
             
         ]);
+        		
+      
+      $url=request('youtubelink');
+      $url_parse= parse_url($url);
+      $valid=preg_match("^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$^", $url);
+      if($valid==1)
+      {
+        $youtube=new youtube();
     
-             $youtube=new youtube();
-      $youtube->youtubelink=request('youtubelink');
-      $youtube->title=request('title');
-      $youtube->save();
-      return redirect('/admins/youtube');
+        $youtube->youtubelink=request('youtubelink');
+  
+        $youtube->title=request('title');
+        $youtube->save();
+        $replace=preg_replace("/\s*[a-zA-Z\/\/:\.]*youtube.com\/watch\?v=([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i","<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/$1\" frameborder=\"0\" allowfullscreen></iframe>",$valid);
+        return back()->with('message','uploaded successfully');
+      }
+      
+      else {
+        return back()->with('message','youtube link is not found');
+        
+      }
+      
+    
+        
          
     
      
@@ -71,7 +88,7 @@ class YoutubeController extends Controller
     public function edit($id) 
     {
         $youtube = Youtube::find($id);
-        return view('admins.gallery.youtube',['data'=>$youtube]);
+        return view('admins.gallery.youtubeedit',['data'=>$youtube]);
     }
 
     /**
@@ -83,11 +100,16 @@ class YoutubeController extends Controller
      */
     public function update(Request $request,$id)
     {
+        request()->validate([
+            'youtubelink'=>'required',
+            'title'=>'required',
+            
+        ]);
         $youtube = Youtube::find($id);  
         $youtube->youtubelink=request('youtubelink');
         $youtube->title=request('title');
         $youtube->save(); 
-        return redirect('/admins/youtube');
+        return redirect('/admins/youtube')->with('message','updated');
 
     }
 

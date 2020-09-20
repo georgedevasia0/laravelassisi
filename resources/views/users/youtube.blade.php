@@ -58,6 +58,7 @@
                                       src="{{$youtube->youtubelink}}">
                                   </iframe>
                                 </figure>
+                                 <p>{{$youtube->title}}</p>
                             </div>
                         </div>
                     </div>

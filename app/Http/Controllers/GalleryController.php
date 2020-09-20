@@ -42,6 +42,7 @@ class GalleryController extends Controller
         request()->validate([
             'image'=>['required','mimes:jpeg,bmp,png'],
             
+            
         ]);
         $gallery=new gallery();
         $folder=folder::find($id);
@@ -58,7 +59,7 @@ class GalleryController extends Controller
         folder::where('folder',$folder->folder)->update(['image'=>$filename]);
         $gallery->body=request('body');
         $gallery->save();
-        return redirect()->back()->with('msg','added');
+        return redirect()->back()->with('message','Image Added');
     }
 
     /**

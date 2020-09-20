@@ -16,6 +16,13 @@
                   </ul>
                </div>
                <div class="col-md-9  admin-content" id="profile">
+               @if($message=Session::get('message'))
+                   <div class="alert alert-success alert-block">
+                         <button type="button" class="close" data-dismiss="alert">x</button>
+                              <strong>{{$message}}</strong>
+                                  
+                         </div>
+                @endif
                   <div class="panel panel-info" style="margin: 1em;">
                      <div class="panel-heading">
                         <h3 class="panel-title">Name</h3>
@@ -79,6 +86,9 @@
                            <div class="form-group">
                               <div class="col-sm-10">
                                  <input type="password" class="form-control" name="oldpassword" id="new_password" >
+                                 @error('oldpassword')
+                                 <p class="alert alert-danger alert-block">{{$errors->first('oldpassword')}}</p>
+                                 @enderror
                               </div>
                            </div>
                         </div>
@@ -91,6 +101,9 @@
                            <div class="form-group">
                               <div class="col-sm-10">
                                  <input type="password" class="form-control" name="password" id="new_password" >
+                                 @error('password')
+                                 <p class="alert alert-danger alert-block">{{$errors->first('password')}}</p>
+                                 @enderror
                               </div>
                            </div>
                         </div>
@@ -103,6 +116,9 @@
                            <div class="form-group">
                               <div class="col-sm-10">
                                  <input type="password" class="form-control" name="password_confirmation" id="confirm_password" >
+                                 @error('password_confirmation')
+                                 <p class="alert alert-danger alert-block">{{$errors->first('password_confirmation')}}</p>
+                                 @enderror
                               </div>
                            </div>
                         </div>

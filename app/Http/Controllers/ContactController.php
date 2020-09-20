@@ -20,15 +20,24 @@ class ContactController extends Controller
     public function store(Request $request)
     {
         //storing value to database from input contact page 
+        $request->validate([
+
+            'name'=>'required|min:2',
+            'email'=>'required|email',
+            'phone_number'=>'required|numeric|digits:10',
+            'message'=>'required|min:10'
+        ]);
+
           $contacted = new contact();
           $contacted->name=request('name');
           $contacted->email=request('email');
           $contacted->message=request('message');
           $contacted->date=date('Y:m:d');
           $contacted->contacted='not-contacted';
-          $contacted->phone=request('phone');
+          $contacted->phone=request('phone_number');
           $contacted->save();
-          return redirect('/contact');
+        //  $request->Session()->flash('message','message has been send');
+          return back()->with('message','message successfully send');
     }
     public function update(Request $request,$id)
     {

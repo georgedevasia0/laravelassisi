@@ -45,18 +45,28 @@
                  <div class="card item-card card-block">
                     <center>
                        <h4>UPLOAD IMAGE</h4>
+                       @if($message=Session::get('message'))
+                                  <div class="alert alert-success alert-block">
+                                    <button type="button" class="close" data-dismiss="alert">x</button>
+                                    <strong>{{$message}}</strong>
+                                  
+                                  </div>
+                                  @endif
                        <br>
                        <form action="/admins/gallery/folder/{{$folderdata->id}}" method="POST" enctype="multipart/form-data">
                        @csrf
                           <div class="form-group" style="margin-top:15px">
                              <input type="file"  name="image" value="{{old('image')}}" class="form-control-file">
                              @error('image')
-                           <p style="color:red">{{$errors->first("image")}}</p>
+                           <p class="alert alert-danger alert-block">{{$errors->first("image")}}</p>
                           @enderror
                              <br>
                              <div class="form-group">
                                 <label for="exampleFormControlInput1" >Title</label>
-                                <input type="text" value="{{old('body')}}"  name="body" class="form-control"  placeholder="Enter the title">                              
+                                <input type="text" value="{{old('body')}}"  name="body" class="form-control"  placeholder="Enter the title"> 
+                                @error('body')
+                           <p class="alert alert-danger alert-block">{{$errors->first("body")}}</p>
+                          @enderror                             
                              </div>
                              <button class="btn btn-success" style="margin:11px">Upload</button>
                           </div>

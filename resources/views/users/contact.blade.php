@@ -54,6 +54,12 @@
 					<div class="row no-gutters" style="border-radius:5px;">
 						<div class="col-md-7 col-sm-12" data-aos="fade-right">
 							<div class="contact-wrap w-100  p-4">
+							@if($message = Session::get('message'))
+							<div class='alert alert-success alert-block'>
+							<button type="button" class='close' data-dismiss='alert'>x</button>
+                            <strong>{{$message}}</strong>
+							</div>
+							@endif
 								<h2 class="mb-4 text-dark font-weight-bold text-center">Get In Touch</h2>
 								<form method="POST" action="/contact" id="contactForm" name="contactForm" class="contactForm">
 								@csrf
@@ -61,25 +67,37 @@
 										<div class="col-md-12">
 											<div class="form-group">
 												<label class="label font-weight-bold text-dark" for="name">Your Name</label>
-												<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+												<input type="text" value="{{old('name')}}" class="form-control" name="name" id="name"  placeholder="Name">
+												@error('name')
+												<p class="alert alert-danger">{{$errors->first('name')}}</p>
+												@enderror
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="form-group">
 												<label class="label font-weight-bold text-dark" for="name">Phone number</label>
-												<input type="number" class="form-control" name="phone" id="name" placeholder="phone number">
+												<input type="text" class="form-control" name="phone_number" value="{{old('phone_number')}}" id="name" placeholder="phone number">
+												@error('phone_number')
+												<p class="alert alert-danger">{{$errors->first('phone_number')}}</p>
+												@enderror
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="form-group">
 												<label class="label font-weight-bold text-dark" for="subject">Email</label>
-												<input type="email" class="form-control" name="email" id="subject" placeholder="youremail@gmail.com">
+												<input type="text" class="form-control" value="{{old('email')}}" name="email" id="subject" placeholder="youremail@gmail.com">
+												@error('email')
+												<p class="alert alert-danger">{{$errors->first('email')}}</p>
+												@enderror
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="form-group">
 												<label class="label font-weight-bold text-dark" for="#">Message</label>
-												<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+												<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message">{{old('message')}}</textarea>
+												@error('message')
+												<p class="alert alert-danger">{{$errors->first('message')}}</p>
+												@enderror
 											</div>
 										</div>
 										<div class="col-md-12">

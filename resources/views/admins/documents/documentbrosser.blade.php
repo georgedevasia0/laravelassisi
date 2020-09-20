@@ -8,18 +8,34 @@
       <h3 class="page-title">BROSSER</h3>
       <div class="col-md-7" id="edit">
          <h3 class="page-title">Add Document </h3>
+         @if($message=Session::get('message'))
+               <div class="alert alert-success alert-block">
+               <button type="button" class="close" data-dismiss="alert">x</button>
+               <strong>{{$message}}</strong>
+               
+               </div>
+         @endif
             <div class="panel panel-headline">
                <form action="/admins/document/brosser" method="post" enctype="multipart/form-data" >
                 @csrf
                  <div class="panel-body">
                    <p>Select Document</p>
                    <input type='file' value="" name="file" style="width:100%;margin-bottom:10px" class="form-control bg-grey" >
+                   @error('file')
+                   <p class="alert alert-danger">{{$errors->first('file')}}</p>
+                   @enderror
                 
                    <p>Title</p>
-                   <input type="text" value=""  name="title" class="form-control"  placeholder="Enter the title">
+                   <input type="text" value="{{old('title')}}"  name="title" class="form-control"  placeholder="Enter the title">
+                   @error('title')
+                   <p class="alert alert-danger">{{$errors->first('title')}}</p>
+                   @enderror
                  
                    <p>Add Discerption</p>
-                   <textarea type="textarea"  name="body" style="height:200px;width:100%" ></textarea>
+                   <textarea type="textarea"   name="body" style="height:200px;width:100%" >{{old('body')}}</textarea>
+                   @error('body')
+                   <p class="alert alert-danger">{{$errors->first('body')}}</p>
+                   @enderror
                   
                    <center><button class="btn btn-outline-secondary float-right btn-success">Save</button></center>
                  </div>

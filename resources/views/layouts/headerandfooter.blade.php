@@ -190,6 +190,12 @@
                                 <!-- Form -->
                                 <div class="footer-form">
                                     <div id="mc_embed_signup">
+                                    @if($message=Session::get('message'))
+                                        <div class="alert alert-success alert-block">
+                                        <button type="submit" class="close" data-dismiss="alert">x</button>
+                                        <strong>{{$message}}</strong>
+                                        </div>  
+                                   @endif
                                         <form target="_blank" action="/subcription" method="post"
                                             class="subscribe_form relative mail_part" novalidate="true">
                                             @csrf
@@ -197,6 +203,9 @@
                                                 name="email" id="newsletter-form-email" placeholder=" Email Address "
                                                 class=" placeholder hide-on-focus" onfocus="this.placeholder = ''"
                                                 onblur="this.placeholder = 'Your email address'">
+                                                @error('email')
+                                                <p class="alert alert-danger">{{$errors->first('email')}}</p>
+                                                @enderror
                                             <div class="form-icon" data-aos="fade-left">
                                                 <button type="submit" name="submit" id="newsletter-submit"
                                                     class="email_icon text-white newsletter-submit button-contactForm">

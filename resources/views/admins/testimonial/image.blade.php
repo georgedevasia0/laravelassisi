@@ -5,7 +5,7 @@
 <div class="main">
 <div class="main-content">
    <div class="container-fluid">
-      <h3 class="page-title">Gallery</h3>
+      <h3 class="page-title">Testimonial Galllery</h3>
       <div class="row">
          <div class="col-md-12">
             <!-- LABELS -->
@@ -22,26 +22,36 @@
             <center>
                <h4>UPLOAD IMAGE</h4>
                <br>
+               @if($message=Session::get('message'))
+                   <div class="alert alert-success alert-block">
+                         <button type="button" class="close" data-dismiss="alert">x</button>
+                              <strong>{{$message}}</strong>
+                                  
+                         </div>
+                @endif
                <form action="/admins/testimonial/gallery" method="POST" enctype="multipart/form-data">
                @csrf
                   <div class="form-group" style="margin-top:15px">
                      <input type="file"  name="image" value="{{old('image')}}" class="form-control-file">
                      @error('image')
-                   <p style="color:red">{{$errors->first("image")}}</p>
+                   <p class="alert alert-danger alert-block">{{$errors->first("image")}}</p>
                   @enderror
                      <br>
                      <div class="form-group">
                         <label for="exampleFormControlInput1" >Name</label>
-                        <input type="text" value="{{old('body')}}"  name="name" class="form-control"  placeholder="Enter the Name">
-                        @error('body')
-                        <p style="color:red">{{$errors->first("body")}}</p>
+                        <input type="text" value="{{old('name')}}"  name="name" class="form-control"  placeholder="Enter the Name">
+                        @error('name')
+                        <p class="alert alert-danger alert-block">{{$errors->first("name")}}</p>
                        @enderror
                        <label for="exampleFormControlInput1" >designation</label>
-                        <input type="text" value="{{old('body')}}"  name="designation" class="form-control"  placeholder="Enter the Designation">
+                        <input type="text" value="{{old('designation')}}"  name="designation" class="form-control"  placeholder="Enter the Designation">
+                        @error('designation')
+                   <p class="alert alert-danger alert-block">{{$errors->first("designation")}}</p>
+                   @enderror
                         <label for="exampleFormControlInput1" >Message</label>
-                        <textarea type="textarea"  name="body" style="height:200px;width:100%" > {{old('body')}}</textarea>
-                   @error('body')
-                   <p style="color:red">{{$errors->first("body")}}</p>
+                        <textarea type="textarea"  name="message" style="height:200px;width:100%" > {{old('message')}}</textarea>
+                   @error('message')
+                   <p class="alert alert-danger alert-block">{{$errors->first("message")}}</p>
                    @enderror
                      </div>
                      <button class="btn btn-success" style="margin:11px">Upload</button>

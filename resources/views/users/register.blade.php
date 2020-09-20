@@ -63,6 +63,12 @@
                     <!-- Contact Form -->
                     <div class="contact_from_area mb-100 clearfix wow fadeInUp" data-wow-delay="300ms" data-aos="fade-up">
                         <div class="contact_form">
+                        @if($message=Session::get('message'))
+                            <div class="alert alert-success alert-block">
+                            <button type='button' class="close" data-dismiss="alert">x</button>
+                            <strong> {{$message}}</strong>
+                            </div>
+                        @endif
                             <form action="/register" method="post" id="main_contact_form">
                             @csrf
                                 <div class="contact_input_area">
@@ -71,43 +77,64 @@
                                         <!-- Form Group -->
                                         <div class="col-12 col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control mb-30 p-4" name="name" id="name" placeholder="Your Name">
+                                                <input type="text"  value="{{old('name')}}" class="form-control mb-30 p-4" name="name" id="name" placeholder="Your Name">
+                                               @error('name')
+                                                <p class="alert alert-danger">{{$errors->first('name')}}</p>
+                                                @enderror
                                             </div>
                                         </div>
                                         <!-- Form Group -->
                                         <div class="col-12 col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control mb-30 p-4" name="phone" id="phone" placeholder="Phone Number">
+                                                <input type="text"  value="{{old('phone_number')}}" class="form-control mb-30 p-4" name="phone_number" id="phone" placeholder="Phone Number">
+                                                @error('phone_number')
+                                                <p class="alert alert-danger">{{$errors->first('phone_number')}}</p>
+                                                @enderror
                                             </div>
                                         </div>
                                         <!-- Form Group -->
                                         <div class="col-12 col-lg-6">
                                             <div class="form-group">
-                                                <input type="email" class="form-control mb-30 p-4" name="email" id="email" placeholder="E-mail">
+                                                <input type="email" value="{{old('email')}}" class="form-control mb-30 p-4" name="email" id="email" placeholder="E-mail">
+                                                @error('email')
+                                                <p class="alert alert-danger">{{$errors->first('email')}}</p>
+                                                @enderror
                                             </div>
                                         </div>
                                         <!-- Form Group -->
                                         <div class="col-12 col-lg-6">
                                             <div class="form-group">
-                                                <input type="number" class="form-control mb-30 p-4" name="age" id="age" placeholder="Age">
+                                                <input type="number" value="{{old('age')}}" class="form-control mb-30 p-4" name="age" id="age" placeholder="Age">
+                                                @error('age')
+                                                <p class="alert alert-danger">{{$errors->first('age')}}</p>
+                                                @enderror
                                             </div>
                                         </div>
                                         <!-- Form Group -->
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <textarea name="address" class="form-control mb-30" id="address" cols="30" rows="6" placeholder="Address *"></textarea>
+                                                <textarea name="address" value="{{old('address')}}" class="form-control mb-30" id="address" cols="30" rows="6" placeholder="Address *"></textarea>
+                                                @error('address')
+                                                <p class="alert alert-danger">{{$errors->first('address')}}</p>
+                                                @enderror
                                             </div>
                                         </div>
                                         <!-- Form Group -->
                                         <div class="col-12 col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control mb-30 p-4" name="qualification" id="quali" placeholder="Qualification">
+                                                <input type="text" value="{{old('qualification')}}" class="form-control mb-30 p-4" name="qualification" id="quali" placeholder="Qualification">
+                                                @error('qualification')
+                                                <p class="alert alert-danger">{{$errors->first('qualification')}}</p>
+                                                @enderror
                                             </div>
                                         </div>
                                         <!-- Form Group -->
                                         <div class="col-12 col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control mb-30 p-4" name="language" id="lang" placeholder="Language and Batch">
+                                                <input type="text" value="{{old('language')}}" class="form-control mb-30 p-4" name="language" id="lang" placeholder="Language and Batch">
+                                                @error('language')
+                                                <p class="alert alert-danger">{{$errors->first('language')}}</p>
+                                                @enderror
                                             </div>
                                         </div>
                                         <!-- Button -->

@@ -46,15 +46,26 @@ class NewsletterController extends Controller
     {
         //
         request()->validate([
-            'email'=>"required",
+            'email'=>"required|email",
         ]);
-       $date=date('Y:m:d');
-        $subcription = new Newsletter();
-        $subcription->date=$date;
-        $subcription->email=request('email');
-        $subcription->verified="null";
-        $subcription->save();
-        return redirect("/");
+        $valid=Newsletter::where('email','=',request('email'))->distinct()->first();
+        if($valid)
+        {
+            return back()->with('message','Already Subscribed');
+
+        }
+        else
+        {
+            
+            $date=date('Y:m:d');
+            $subcription = new Newsletter();
+            $subcription->date=$date;
+            $subcription->email=request('email');
+            $subcription->verified="null";
+            $subcription->save();
+            return back()->with('message','Thankyou For Subscribing');
+        }
+       
     }
 
     /**

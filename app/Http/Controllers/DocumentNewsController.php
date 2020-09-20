@@ -39,6 +39,12 @@ class DocumentNewsController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+
+            'file'=>'required|mimes:pdf',
+            'title'=>'required',
+            'body'=>'required',
+        ]);
         $news=new DocumentNews();
         if($request->hasfile('file'))
         {
@@ -53,7 +59,7 @@ class DocumentNewsController extends Controller
         $news->title=request('title');
         $news->body=request('body');
         $news->save();
-        return redirect('/admins/document/news');
+        return back()->with('message','Document Added');
     }
 
     /**

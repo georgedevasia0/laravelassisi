@@ -17,9 +17,15 @@
                @method('PUT')
                <div class="panel-body">
                   <p>Select Image</p>
-                  <input type='file'  name="image" style="width:100%;margin-bottom:10px" class="form-control bg-grey" required>
+                  <input type='file'  name="image" style="width:100%;margin-bottom:10px" class="form-control bg-grey">
+                  @error('image')
+                  <p class="alert alert-danger alert-bock">{{$errors->first('image')}}</p>
+                  @enderror
                   <p>Add Discerption</p>
-                  <textarea type="textarea"  name="body" style="height:200px;width:100%" required>{{$news->body}}</textarea>
+                  <textarea type="textarea"  name="body" style="height:200px;width:100%" >{{$news->body}}</textarea>
+                  @error('body')
+                  <p class="alert alert-danger alert-bock">{{$errors->first('body')}}</p>
+                  @enderror
                   <center><a href="news.php"><button class="btn btn-outline-secondary float-right btn-success">UPDATE</button></a></center>
                </div>
                </form>
