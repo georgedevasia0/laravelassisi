@@ -41,19 +41,27 @@ class YoutubeController extends Controller
         		
       
       $url=request('youtubelink');
-      $url_parse= parse_url($url);
-      $valid=preg_match("^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$^", $url);
-      if($valid==1)
-      {
         $youtube=new youtube();
-    
-        $youtube->youtubelink=request('youtubelink');
-  
-        $youtube->title=request('title');
-        $youtube->save();
-        $replace=preg_replace("/\s*[a-zA-Z\/\/:\.]*youtube.com\/watch\?v=([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i","<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/$1\" frameborder=\"0\" allowfullscreen></iframe>",$valid);
-        return back()->with('message','uploaded successfully');
-      }
+        $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_-]+)\??/i';
+       $longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))([a-zA-Z0-9_-]+)/i';
+
+        if (preg_match($longUrlRegex, $url, $matches)) {
+            $youtube_id = $matches[count($matches) - 1];
+            $link='https://www.youtube.com/embed/' . $youtube_id ;
+            $youtube->youtubelink=$link;
+            $youtube->title=request('title');
+            $youtube->save();
+            return back()->with('message','uploaded successfully');
+        }
+
+        elseif (preg_match($shortUrlRegex, $url, $matches)) {
+            $youtube_id = $matches[count($matches) - 1];
+            $link='https://www.youtube.com/embed/' . $youtube_id ;
+            $youtube->youtubelink=$link;
+            $youtube->title=request('title');
+            $youtube->save();
+            return back()->with('message','uploaded successfully');
+        }
       
       else {
         return back()->with('message','youtube link is not found');

@@ -36,7 +36,7 @@ Route::view("adminlogin",'admins.login');
 
 Route::group(['middleware'=>['LoginAuth']],function()
 {
-    Route::get('/admins','AdminsController@index');
+    Route::get('/admins','AdminController@index');
     Route::get('/admins/contact','ContactController@index');
     Route::put('/admins/contact/{id}','ContactController@update');
     Route::post('/admins/contact/filter','ContactController@filter');
@@ -54,6 +54,7 @@ Route::group(['middleware'=>['LoginAuth']],function()
     Route::post('/admins/gallery/folder','FolderController@store');
     Route::get('/admins/gallery/folder/{id}','FolderController@index');
     Route::post('/admins/gallery/folder/{id}','GalleryController@store');
+    Route::delete('/admins/gallery/folder/{id}','GalleryController@destroy');
     Route::get('/admins/news','NewsController@index'); 
     Route::post('/admins/news','NewsController@store'); 
     Route::get('/admins/news/{id}/edit','NewsController@edit'); 

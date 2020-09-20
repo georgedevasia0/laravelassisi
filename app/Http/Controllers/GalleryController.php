@@ -17,8 +17,12 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $folder=Folder::all();
-        return view('admins.gallery.gallery',['data'=>$folder]);
+        $folder=Folder::all()->skip(3);
+        $a2folder=Folder::where('folder','A2 Winners')->first();
+        $b2folder=Folder::where('folder','B2 Winners')->first();
+        $c2folder=Folder::where('folder','C2 Winners')->first();
+
+        return view('admins.gallery.gallery',['a2folder'=>$a2folder,'b2folder'=>$b2folder,'c2folder'=>$c2folder,'data'=>$folder]);
     }
 
     /**
@@ -104,8 +108,10 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        $gallery = gallery::find($id);
-        $gallery->delete();
+        $folder = Folder::find($id);
+        $gallery =Gallery::where('folder','=',$folder->folder)->delete();
+        $folder->delete();
+
         return redirect('/admins/gallery');
     }
     public function folder($id)

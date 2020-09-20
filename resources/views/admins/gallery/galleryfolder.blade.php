@@ -17,8 +17,16 @@
                           <!-- start -->
                           <ul class="nav">
                              <!--  list folders in db -->
+                             <li><a href="/admins/gallery/folder/{{$a2folder->id}}" class=""><span></span>A2 Winners</a></li>
+                             <li><a href="/admins/gallery/folder/{{$b2folder->id}}" class=""><span></span>B2  Winners</a></li>
+                             <li><a href="/admins/gallery/folder/{{$c2folder->id}}" class=""><span> </span>C2 Winners</a></li>
                              @foreach($data as $folder)
                              <li><a href="/admins/gallery/folder/{{$folder->id}}" class=""><span>{{$folder->folder}}</span></a></li>
+                     <form action="/admins/gallery/folder/{{$folder->id}}" method="POST">
+                     @csrf
+                     @method('DELETE')
+                      <button type="submit" >delete</button>
+                      </form>
                              @endforeach
         
                              <!-- end loop -->

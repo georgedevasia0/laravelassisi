@@ -17,10 +17,13 @@ class FolderController extends Controller
     {
         //
         $folder= Folder::find($id);
-        $data= Folder::all();
+        $data= Folder::all()->skip(3);
         $folders=$folder->folder;
-        $galleries=gallery::where(['folder'=>$folders])->latest()->get();       
-        return view('admins.gallery.galleryfolder',['galleries'=>$galleries,'data'=>$data,'folderdata'=>$folder]);
+        $galleries=gallery::where(['folder'=>$folders])->latest()->get();   
+        $a2folder=Folder::where('folder','A2 Winners')->first();
+        $b2folder=Folder::where('folder','B2 Winners')->first();
+        $c2folder=Folder::where('folder','C2 Winners')->first();    
+        return view('admins.gallery.galleryfolder',['a2folder'=>$a2folder,'b2folder'=>$b2folder,'c2folder'=>$c2folder,'galleries'=>$galleries,'data'=>$data,'folderdata'=>$folder]);
     }
 
     /**
