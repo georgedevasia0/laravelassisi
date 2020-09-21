@@ -20,7 +20,7 @@ class FolderController extends Controller
         $data= Folder::all()->skip(3);
         $folders=$folder->folder;
         $galleries=gallery::where(['folder'=>$folders])->latest()->get();   
-        $a2folder=Folder::where('folder','A2 Winners')->first();
+        $a2folder=Folder::where('folder','A2Winners')->first();
         $b2folder=Folder::where('folder','B2 Winners')->first();
         $c2folder=Folder::where('folder','C2 Winners')->first();    
         return view('admins.gallery.galleryfolder',['a2folder'=>$a2folder,'b2folder'=>$b2folder,'c2folder'=>$c2folder,'galleries'=>$galleries,'data'=>$data,'folderdata'=>$folder]);
@@ -106,8 +106,12 @@ class FolderController extends Controller
      * @param  \App\Folder  $folder
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Folder $folder)
+    public function destroy($id)
     {
-        //
+        //  
+        $folder = Folder::find($id);
+        $gallery =Gallery::where('folder','=',$folder->folder)->delete();
+        $folder->delete();
+        return redirect('/admins/gallery')->with('message','folder deleted');
     }
 }

@@ -41,10 +41,10 @@
                   
                      @foreach($data as $folder)
                      <li><a href="/admins/gallery/folder/{{$folder->id}}" class=""><span>{{$folder->folder}}</span></a></li>
-                     <form action="/admins/gallery/folder/{{$folder->id}}" method="POST">
+                     <form action="/admins/gallery/folder/delete/{{$folder->id}}" method="POST">
                      @csrf
                      @method('DELETE')
-                      <button type="submit" >delete</button>
+                      <button type="submit" onclick="return confirm('are you sure');" >delete</button>
                       </form>
                      @endforeach
 

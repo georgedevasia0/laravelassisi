@@ -92,361 +92,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Prelaoder */
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #fff;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #f2f2f2;
-  border-top: 6px solid #11CBD7;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@-webkit-keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-  
-  /*--------------------------------------------------------------
-  # Header
-  --------------------------------------------------------------*/
-  #header {
-    padding: 30px 0;
-    height: 82px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    transition: all 0.5s;
-    z-index: 997;
-  }
-  
-  #header.header-scrolled {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 23px 0 20px 0;
-    height: 72px;
-    transition: all 0.5s;
-  }
-  
-  #header #logo {
-    float: left;
-  }
-  
-  @media (min-width: 1024px) {
-    #header #logo {
-      padding-left: 60px;
-    }
-  }
-  
-  #header #logo h1 {
-    font-size: 34px;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    /*font-family: "Montserrat", sans-serif;*/
-    font-weight: 700;
-    letter-spacing: 3px;
-  }
-  
-  #header #logo h1 a, #header #logo h1 a:hover {
-    color: #162647;
-    padding-left: 10px;
-    border-left: 4px solid #162647;
-  }
-  
-  #header #logo img {
-    padding: 0;
-    margin: 0;
-  }
-  
-  @media (max-width: 768px) {
-    #header #logo h1 {
-      font-size: 28px;
-    }
-  }
-  
-  
-  /*--------------------------------------------------------------
-  # Navigation Menu
-  --------------------------------------------------------------*/
-  /* Nav Menu Essentials */
-  .nav-menu, .nav-menu * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .nav-menu ul {
-    position: absolute;
-    display: none;
-    top: 100%;
-    left: 0;
-    z-index: 99;
-  }
-  
-  .nav-menu li {
-    position: relative;
-    white-space: nowrap;
-  }
-  
-  .nav-menu > li {
-    float: left;
-  }
-  
-  .nav-menu li:hover > ul,
-  .nav-menu li.sfHover > ul {
-    display: block;
-  }
-  
-  .nav-menu ul ul {
-    top: 0;
-    left: 100%;
-  }
-  
-  .nav-menu ul li {
-    min-width: 180px;
-  }
-  
-  /* Nav Menu Arrows */
-  .sf-arrows .sf-with-ul {
-    padding-right: 30px;
-  }
-  
-  .sf-arrows .sf-with-ul:after {
-    content: "\f107";
-    position: absolute;
-    right: 15px;
-    font-family: FontAwesome !important;
-    font-style: normal;
-    font-weight: normal;
-  }
-  
-  .sf-arrows ul .sf-with-ul:after {
-    content: "\f105";
-  }
-  
-  /* Nav Meu Container */
-  #nav-menu-container {
-    float: right;
-    margin: 0;
-  }
-  
-  @media (min-width: 1024px) {
-    #nav-menu-container {
-      padding-right: 60px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    #nav-menu-container {
-      display: none;
-    }
-  }
-  
-  /* Nav Meu Styling */
-  .nav-menu a {
-    padding: 0 8px 10px 8px;
-    text-decoration: none;
-    display: inline-block;
-    color: #163269;
-    /*font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  */font-weight: 700;
-    font-size: 13px;
-    outline: none;
-    cursor: pointer;
-    padding:1px 10px 0 10px ;
-    text-transform: uppercase;
-  }
-  
-  .nav-menu li:hover > a, .nav-menu > .menu-active > a {
-    color: #11CBD7;
-  }
-  
-  .nav-menu > li {
-    margin-left: 10px;
-  }
-  
-  .nav-menu ul {
-    margin: 4px 0 0 0;
-    padding: 10px;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-    background: #fff;
-  }
-  
-  .nav-menu ul li {
-    transition: 0.3s;
-  }
-  
-  .nav-menu ul li a {
-    padding: 10px;
-    color:#2C234D;
-    transition: 0.3s;
-    display: block;
-    font-size: 13px;
-    text-transform: none;
-  }
-  
-  .nav-menu ul li:hover > a {
-    color: #11CBD7;
-  }
-  
-  .nav-menu ul ul {
-    margin: 0;
-  }
-  
-  /* Mobile Nav Toggle */
-  #mobile-nav-toggle {
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 999;
-    margin: 20px 20px 0 0;
-    border: 0;
-    background: none;
-    font-size: 24px;
-    display: none;
-    transition: all 0.4s;
-    outline: none;
-    cursor: pointer;
-  }
-  
-  #mobile-nav-toggle i {
-    color: #11CBD7;
-  }
-  
-  @media (max-width: 768px) {
-    #mobile-nav-toggle {
-      display: inline;
-    }
-  }
-  
-  /* Mobile Nav Styling */
-  #mobile-nav {
-    position: fixed;
-    top: 0;
-    padding-top: 18px;
-    bottom: 0;
-    z-index: 998;
-    background: rgba(0, 0, 0, 0.8);
-    left: -260px;
-    width: 260px;
-    overflow-y: auto;
-    transition: 0.4s;
-  }
-  
-  #mobile-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
-  #mobile-nav ul li {
-    position: relative;
-  }
-  
-  #mobile-nav ul li a {
-    color: #fff;
-    font-size: 13px;
-    text-transform: uppercase;
-    overflow: hidden;
-    padding: 10px 22px 10px 15px;
-    position: relative;
-    text-decoration: none;
-    width: 100%;
-    display: block;
-    outline: none;
-    font-weight: 700;
-    /*font-family: "Montserrat", sans-serif;*/
-  }
-  
-  #mobile-nav ul li a:hover {
-    color: #11CBD7;
-  }
-  
-  #mobile-nav ul li li {
-    padding-left: 30px;
-  }
-  
-  #mobile-nav ul li.menu-active a {
-    color: #11CBD7;
-  }
-  
-  #mobile-nav ul .menu-has-children i {
-    position: absolute;
-    right: 0;
-    z-index: 99;
-    padding: 15px;
-    cursor: pointer;
-    color: #fff;
-  }
-  
-  #mobile-nav ul .menu-has-children i.fa-chevron-up {
-    color: #11CBD7;
-  }
-  
-  #mobile-nav ul .menu-has-children li a {
-    text-transform: none;
-  }
-  
-  #mobile-nav ul .menu-item-active {
-    color: #11CBD7;
-  }
-  
-  #mobile-body-overly {
-    width: 100%;
-    height: 100%;
-    z-index: 997;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: rgba(0, 0, 0, 0.7);
-    display: none;
-  }
-  
-  /* Mobile Nav body classes */
-  body.mobile-nav-active {
-    overflow: hidden;
-  }
-  
-  body.mobile-nav-active #mobile-nav {
-    left: 0;
-  }
-  
-  body.mobile-nav-active #mobile-nav-toggle {
-    color: #fff;
-  }
-  
-
-
   /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -507,7 +152,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 30px;
   font-size: 48px;
   font-weight: 900;
-  padding-top: 90px;
 }
 
 #hero p {
@@ -583,10 +227,29 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid #ffffff;
 }
 
+.mpb{
+  background-repeat:no-repeat !important;
+  background-size: 20% !important;
+}
+.mp1{
+  background-color: #C004D9;
+  background-image:url('../img/undraw.svg');
+}
+.mp2{
+  background:#AB05F2;
+  background-image:url('../img/undraw1.svg');
+}
+.mp3{
+  background:#C004D9;
+  background-image:url('../img/undraw2.svg');
+}
 
 @media (max-width: 768px) {
   #hero h2 {
     font-size: 28px;
+  }
+  .mp1,.mp2,.mp3{
+    background-image: none;
   }
 }
 
@@ -1457,14 +1120,28 @@ padding: 0px;
 .team__item__text .team__item__social a:last-child {
 	margin-right: 0;
 }
+.bvr{
+  border-right: 2px solid #fff;
+}
+.reg{
+  background-color: #007bff;
+  color: white;
+  border-radius: 15px;
+}
 @media only screen and (max-width: 479px) {
 	.team__item__img {
 		float: none;
 		margin-right: 0;
 		margin-bottom: 30px;
-	}
+  }
 	.team__item__img img {
-		min-width: 100%;
+    width: 100px;
+  }
+  .v1{
+    text-align: center;
+  }
+  .bvr{
+    border-right: none;
   }
 }
 
@@ -1666,4 +1343,9 @@ padding: 0px;
 .btt{
   background-image: linear-gradient(131deg, #feb47b, #ff7e5f, #ff7e5f, #ff7e5f);
   border-radius: 30px;
+}
+
+
+.img-staff{
+  width:150px;
 }

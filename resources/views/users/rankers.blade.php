@@ -388,7 +388,13 @@
 				</div>
 			</div>
 		</div>
-    </section>
+	</section>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/superfish/superfish.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
     <script src="/assets/vendor/jquery/jquery.min.js"></script>
     <script src="/assets/vendor/wow/wow.min.js"></script>
     <script src="/assets/vendor/aos/aos.js"></script>

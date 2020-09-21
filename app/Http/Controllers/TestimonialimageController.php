@@ -41,9 +41,9 @@ class TestimonialimageController extends Controller
         $request->validate([
 
             'image'=>'required|mimes:jpeg,bmp,png',
-            'name'=>'required',
-            'designation'=>'required',
-            'message'=>'required'
+            'name'=>'required|max:30',
+            'designation'=>'required|max:30',
+            'message'=>'required|max:200'
         ]);
         $data= new Testimonialimage();
         if($request->hasfile('image'))

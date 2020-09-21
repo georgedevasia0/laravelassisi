@@ -42,8 +42,8 @@ class DocumentNewsController extends Controller
         $request->validate([
 
             'file'=>'required|mimes:pdf',
-            'title'=>'required',
-            'body'=>'required',
+            'title'=>'required|max:40',
+            'body'=>'required|max:200',
         ]);
         $news=new DocumentNews();
         if($request->hasfile('file'))

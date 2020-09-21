@@ -27,7 +27,8 @@ Route::get('/gallery/youtube','HomeController@youtube');
 Route::view('/gallery/rankers','users.rankers');
 Route::get('/gallery/album/{id}','HomeController@album');
 Route::post('/subcription','NewsletterController@store');
-Route::get('newsletter/download','HomeController@download');
+Route::get('newsletter/download','HomeController@downloadnewsletter');
+Route::get('brosser/download','HomeController@downloadbrosser');
 
 
 
@@ -49,6 +50,7 @@ Route::group(['middleware'=>['LoginAuth']],function()
     Route::get('/admins/youtube/{id}/edit','YoutubeController@edit');
     Route::put('/admins/youtube/{id}','YoutubeController@update');
     Route::delete('/admins/youtube/{id}','YoutubeController@destroy');
+    Route::delete('/admins/gallery/folder/delete/{id}','FolderController@destroy');
     Route::get('/admins/gallery','GalleryController@index'); 
     Route::delete('/admins/gallery/{id}','GalleryController@destroy'); 
     Route::post('/admins/gallery/folder','FolderController@store');

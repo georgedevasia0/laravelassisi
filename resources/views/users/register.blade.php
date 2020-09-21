@@ -46,8 +46,8 @@
 </head>
 <body style="font-family: 'Raleway', sans-serif;">
 <!-- Contact Area Start -->
-<section class="contact-our-area pt-5 pb-5 bg-light">
-        <div class="container mt-5">
+<section class="contact-our-area pb-5 bg-light">
+        <div class="container">
             <div class="row">
                 <!-- Heading -->
                 <div class="col-12">
@@ -104,7 +104,7 @@
                                         <!-- Form Group -->
                                         <div class="col-12 col-lg-6">
                                             <div class="form-group">
-                                                <input type="number" value="{{old('age')}}" class="form-control mb-30 p-4" name="age" id="age" placeholder="Age">
+                                                <input type="text" value="{{old('age')}}" class="form-control mb-30 p-4" name="age" id="age" placeholder="Age">
                                                 @error('age')
                                                 <p class="alert alert-danger">{{$errors->first('age')}}</p>
                                                 @enderror
@@ -150,6 +150,12 @@
             </div>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/superfish/superfish.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
     <!-- Contact Area End -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/wow/wow.min.js"></script>
@@ -157,6 +163,9 @@
     <script src="assets/vendor/superfish/superfish.min.js"></script>
     <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/superfish/superfish.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script src="assets/js/script.js"></script>
 </body>

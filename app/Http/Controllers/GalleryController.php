@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\gallery;
-use App\folder;
+use App\Folder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Redirect;
@@ -18,7 +18,7 @@ class GalleryController extends Controller
     public function index()
     {
         $folder=Folder::all()->skip(3);
-        $a2folder=Folder::where('folder','A2 Winners')->first();
+        $a2folder=Folder::where('folder','A2Winners')->first();
         $b2folder=Folder::where('folder','B2 Winners')->first();
         $c2folder=Folder::where('folder','C2 Winners')->first();
 
@@ -45,6 +45,7 @@ class GalleryController extends Controller
     {
         request()->validate([
             'image'=>['required','mimes:jpeg,bmp,png'],
+            'body'=>'max:200',
             
             
         ]);
@@ -108,14 +109,7 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        $folder = Folder::find($id);
-        $gallery =Gallery::where('folder','=',$folder->folder)->delete();
-        $folder->delete();
-
-        return redirect('/admins/gallery');
-    }
-    public function folder($id)
-    {
-        
+        $gallery =Gallery::where('id','=',$id)->delete();
+        return redirect()->back()->with('message','image deleted');
     }
 }

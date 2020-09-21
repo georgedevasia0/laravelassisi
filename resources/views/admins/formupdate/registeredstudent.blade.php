@@ -45,7 +45,13 @@
                      <form action="/admins/registeredstudent/download" method="POST">
                      @csrf
                      <input type="date" name="from" id="" placeholder="date from">
+                     @error('from')
+                     <p class='alert alert-danger'>{{$errors->first('from')}}</p>
+                     @enderror
                      <input type="date" name="to" id="" placeholder="date to"> 
+                     @error('to')
+                     <p class='alert alert-danger'>{{$errors->first('to')}}</p>
+                     @enderror
                      <BUtton type="submit">download</BUtton>
                      </form>
                   </div>

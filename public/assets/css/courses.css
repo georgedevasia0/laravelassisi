@@ -111,7 +111,6 @@ ol {
 }
 
 .spad {
-	padding-top: 100px;
 	padding-bottom: 100px;
 }
 
@@ -129,9 +128,7 @@ ol {
 }
 
 
-.blog {
-	padding-top: 70px;
-}
+
 
 .blog__large {
 	margin-bottom: 45px;

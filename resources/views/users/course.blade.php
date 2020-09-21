@@ -64,13 +64,13 @@
                             <p data-aos="fade-left" data-aos-delay="150">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                 ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
                                 viverra maecenas accumsan lacus...</p>
-                            <a href="register.php" data-aos="fade-left" data-aos-delay="200">Enroll Now</a>
+                            <a href="/register" data-aos="fade-left" data-aos-delay="200">Enroll Now</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-sm-6" data-aos="fade-right">
                     <div class="blog__item"  style="box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);">
                         <div class="blog__item__pic" data-aos="zoom-in" data-aos-delay="100">
                             
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-sm-6" data-aos="fade-right">
                     <div class="blog__item" style="box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);">
                         <div class="blog__item__pic" data-aos="zoom-in" data-aos-delay="150">
                             <div class="row col-lg-6 col-md-6 col-sm-6 col-4 py-4 mx-auto">
@@ -121,11 +121,13 @@
                                 French language learning classes.French Language classes are conducted by experienced
                                 instructors.French Language classes with a variety of learning aids and materials.Our
                                 classes unlock the complexities of the French language.--></p>
-                                <p data-toggle="modal" data-target="#mymodal"  class="text-right text-warning pr-2" style="font-size:15px;cursor:pointer">Read More</p>
-                        </div>
+                                <div class="row col-lg-12">
+                                    <p data-toggle="modal" data-target="#mymodal" class="btn btn-primary text-center mx-auto text-white pr-2 mt-3 col-lg-6 border-0" style="font-size:15px;border-radius:20px;background-color:#FF7E5F;">Read More</p>
+                                </div>
+                            </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-sm-6" data-aos="fade-right">
                     <div class="blog__item" style="box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);">
                         <div class="blog__item__pic" data-aos="zoom-in" data-aos-delay="200">
                             <div class="row col-lg-6 col-md-6 col-sm-6 col-4 py-4 mx-auto">
@@ -145,11 +147,13 @@
                                 language.Industry specific Italian language learning classes.Italian Language classes
                                 are conducted by experienced instructors.Italian Language classes with a variety of
                                 learning aids. --></p>
-                                <p data-toggle="modal" data-target="#mymodal"  class="text-right text-warning pr-2" style="font-size:15px;cursor:pointer">Read More</p>
-                        </div>
+                                <div class="row col-lg-12">
+                                    <p data-toggle="modal" data-target="#mymodal" class="btn btn-primary text-center mx-auto text-white pr-2 mt-3 col-lg-6 border-0" style="font-size:15px;border-radius:20px;background-color:#FF7E5F;">Read More</p>
+                                </div>
+                            </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-sm-6" data-aos="fade-right">
                     <div class="blog__item" style="box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);">
                         <div class="blog__item__pic" data-aos="zoom-in" data-aos-delay="100">
                             <div class="row col-lg-6 col-md-6 col-sm-6 col-4 py-4 mx-auto">
@@ -169,7 +173,9 @@
                                 and Write.Language classes are conducted by experienced faculties.Language classes with
                                 a variety of learning aids and materials.Our classes unlock the complexities of the
                                 English language. --></p>
-                                <p data-toggle="modal" data-target="#mymodal"  class="text-right text-warning pr-2" style="font-size:15px;cursor:pointer">Read More</p>
+                                <div class="row col-lg-12">
+                                    <p data-toggle="modal" data-target="#mymodal" class="btn btn-primary text-center mx-auto text-white pr-2 mt-3 col-lg-6 border-0" style="font-size:15px;border-radius:20px;background-color:#FF7E5F;">Read More</p>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -181,7 +187,7 @@
 
 
     <!-- Blog Section End -->
-   <modal class="modal" id="mymodal">
+   <modal class="modal" id="mymodal" style="box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -200,12 +206,16 @@
                     facilitates our students to compete in various German board exams.
                 </div>
                 <div class="modal-footer">
-                    <a href="register.php" class="btn text-white" style="background-color:#FF7E5F">Enroll Now</a>
+                    <a href="/register" class="btn text-white" style="background-color:#FF7E5F">Enroll Now</a>
                 </div>
             </div>
         </div>
     </modal>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/superfish/superfish.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/wow/wow.min.js"></script>

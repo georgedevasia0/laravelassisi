@@ -64,76 +64,106 @@
                 }
             }
         }
+        .x{
+            font-size:14px !important;
+        }
     </style>
 </head>
 <body>
-  <header id="header" style="background-color: #FFFFFF;">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-md navbar-light bg-white" id="header" style="color: #2C234D !important;">
+    <div class="container mt-2">
+        <a href="" class="navbar-brand logo1"><img class="logo" style="height:70px" src="assets/img/logo/logo.png"
+                alt=""></a>
+        <button class="navbar-toggler bg-white" type="button" data-toggle="collapse"
+            data-target="#navbarsupportedcontent"><span class="navbar-toggler-icon"></span></button>
 
-        <div id="logo" class="pull-left">
-            <!--<h1><a href="#intro" class="scrollto">Assissi</a></h1>-->
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <a href="#intro"><img class="logo1" src="assets/img/logo/logo.png" alt=""></a>
-        </div>
+        <div class="collapse navbar-collapse" id="navbarsupportedcontent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active x pr-2"><a style="color: #2C234D;" class="nav-link font-weight-bold"
+                        href="/">HOME</a></li>
 
-        <nav id="nav-menu-container">
-            <ul class="nav-menu">
-                <li class="menu-active"><a href="/">Home</a></li>
-                <li class="menu-has-children"><a href="/aboutus">About Us</a>
-                    <ul>
-                        <li><a href="/aboutus">ASSISI IFL</a></li>
-                        <li><a href="/aboutus">OUR INSPIRATION</a></li>
-                        <li><a href="/aboutus">OUR VISION</a></li>
-                        <li><a href="/aboutus">OUR MISSION</a></li>
-                        <li><a href="/aboutus">FACULTY</a></li>
-                        <li><a href="/aboutus">PHILODOPHY OF AIFL</a></li>
-                    </ul>
+                <li class="nav-item dropdown">
+                    <a href="/aboutus" class="nav-link dropdown-toggle font-weight-bold x pr-2" id="navbardropdown"
+                        role="button" data-toggle="dropdown" style="color: #2C234D;">ABOUT US</a>
+                    <div class="dropdown-menu" aria-labelledby="navbardropdown">
+                        <a class="dropdown-item font-weight-bold x" href="/aboutus" style="color: #2C234D;">ASSISI IFL</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item font-weight-bold x" href="/aboutus" style="color: #2C234D;">OUR
+                            INSPIRATION</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item font-weight-bold x" href="/aboutus" style="color: #2C234D;">OUR VISION</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item font-weight-bold x" href="/aboutus" style="color: #2C234D;">OUR
+                            MISSION</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item font-weight-bold x" href="/aboutus" style="color: #2C234D;">FACULTY</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item font-weight-bold x" href="/aboutus" style="color: #2C234D;">PHILODOPHY OF
+                            AIFL</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
                 </li>
-                <li class="menu-has-children"><a href="/courses">COURSES</a>
-                    <ul>
-                        <li><a href="/courses">GERMAN</a></li>
-                        <li><a href="/courses">FRENCH</a></li>
-                        <li><a href="/courses">ITALIAN</a></li>
-                        <li><a href="/courses">ENGLISH</a></li>
-                    </ul>
+                <li class="nav-item dropdown">
+                    <a href="/courses" class="nav-link dropdown-toggle font-weight-bold x pr-2" id="navbardropdown1"
+                        role="button" data-toggle="dropdown" style="color: #2C234D;">COURSES</a>
+                    <div class="dropdown-menu" aria-labelledby="navbardropdown1">
+                        <a class="dropdown-item font-weight-bold x" href="/courses" style="color: #2C234D;">GERMAN</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item font-weight-bold x" href="/courses" style="color: #2C234D;">FRENCH</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item font-weight-bold x" href="/courses" style="color: #2C234D;">ITALIAN</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item font-weight-bold x" href="/courses" style="color: #2C234D;">ENGLISH</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
                 </li>
-                <li class="menu-has-children"><a href="/facilities">FACILITIES</a>
-                    <ul>
-                        <li><a href="/facilities">LAB</a></li>
-                        <li><a href="/facilities">HOSTEL</a></li>
-                        <li><a href="/facilities">LIBRARY</a></li>
-                    </ul>
+
+                <li class="nav-item dropdown">
+                    <a href="/facilities" class="nav-link dropdown-toggle font-weight-bold x" id="navbardropdown2"
+                        role="button" data-toggle="dropdown" style="color: #2C234D;">FACILITIES</a>
+                    <div class="dropdown-menu" aria-labelledby="navbardropdown2">
+                        <a class="dropdown-item font-weight-bold x" href="/facilities" style="color: #2C234D;">LAB</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item font-weight-bold x" href="/facilities" style="color: #2C234D;">HOSTEL</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item font-weight-bold x" href="/facilities" style="color: #2C234D;">LIBRARY</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
                 </li>
-                <li><a href="/gallery">GALLERY</a></li>
-                <li><a href="/contact">CONTACT</a>
-                </li>
-                <li><a href="/register">REGISTER</a></li>
+
+                <li class="nav-item"><a class="nav-link font-weight-bold x pr-2" href="/gallery"
+                        style="color: #2C234D;">GALLERY</a></li>
+                <li class="nav-item"><a class="nav-link font-weight-bold x pr-2" href="/contact"
+                        style="color: #2C234D;">CONTACT</a></li>
+                <li class="nav-item reg px-3"><a class="nav-link text-center text-white font-weight-bold x pr-2" href="/register">REGISTER</a></li>
+
+
+
             </ul>
-        </nav><!-- #nav-menu-container -->
+        </div>
     </div>
-</header>
+</nav>
 <!-- header ends here -->
 @yield('contents') <!-- contents to display for the assets -->
-    <footer>
-        <div class="footer-wrappr pt-5 section-bg"
-            style="background-image:url(assets/img/footer_bg.png);background-size:100%">
-            <div class="footer-area pt-5 pb-5 ">
+<footer >
+        <div class="footer-wrappr pt-5 section-bg" style="background-color:#23282C !important;">
+            <div class="footer-area pt-5">
                 <div class="container">
                     <div class="row d-flex justify-content-between">
                         <div class="col-xl-2 col-lg-4 col-md-4 col-sm-12 mb-5">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4 data-aos="fade-right" style="color:#2C234D;"><b>Information</b></h4>
+                                    <h4 data-aos="fade-right" style="color:#ffff !important;"><b>Information</b></h4>
                                     <ul data-aos="fade-up">
-                                        <li><a href="#"><i class="fa fa-chevron-right"></i> Campus
+                                        <li><a href="#" style="color:#ffff !important;"><i class="fa fa-chevron-right"></i> Campus
                                                 Tour</a></li>
-                                        <li><a href="#"><i class="fa fa-chevron-right"></i> Student
+                                        <li><a href="#" style="color:#ffff !important;"><i class="fa fa-chevron-right"></i> Student
                                                 Life</a></li>
-                                        <li><a href="#"><i class="fa fa-chevron-right"></i>
+                                        <li><a href="#" style="color:#ffff !important;"><i class="fa fa-chevron-right"></i>
                                                 Scholorship</a></li>
-                                        <li><a href="#"><i class="fa fa-chevron-right"></i>
+                                        <li><a href="#" style="color:#ffff !important;"><i class="fa fa-chevron-right"></i>
                                                 Admission</a></li>
-                                        <li><a href="#"><i class="fa fa-chevron-right"></i>
+                                        <li><a href="#" style="color:#ffff !important;"><i class="fa fa-chevron-right"></i>
                                                 Leadership</a></li>
                                     </ul>
                                 </div>
@@ -142,15 +172,15 @@
                         <div class="col-xl-2 col-lg-4 col-md-4 col-sm-12 mb-5">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4 data-aos="fade-left" style="color:#2C234D;"><b>Courses</b></h4>
+                                    <h4 data-aos="fade-up"  style="color:#ffff !important;"><b>Courses</b></h4>
                                     <ul data-aos="fade-right">
-                                        <li><a href="#"><i class="fa fa-chevron-right"></i>
+                                        <li><a href="#" style="color:#ffff !important;"><i class="fa fa-chevron-right"></i>
                                                 German</a></li>
-                                        <li><a href="#"><i class="fa fa-chevron-right"></i>
+                                        <li><a href="#" style="color:#ffff !important;"><i class="fa fa-chevron-right"></i>
                                                 French</a></li>
-                                        <li><a href="#"><i class="fa fa-chevron-right"></i>
+                                        <li><a href="#" style="color:#ffff !important;"><i class="fa fa-chevron-right"></i>
                                                 Italian</a></li>
-                                        <li><a href="#"><i class="fa fa-chevron-right"></i>
+                                        <li><a href="#" style="color:#ffff !important;"><i class="fa fa-chevron-right"></i>
                                                 English</a></li>
                                     </ul>
                                 </div>
@@ -159,17 +189,17 @@
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-5">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4 data-aos="fade-right" style="color:#2C234D;"><b>Contact Us</b></h4>
-                                    <ul data-aos="fade-left">
-                                        <li><a href="#"><i class="fa fa-map-marker"></i> Assisi
+                                    <h4 data-aos="fade-right"  style="color:#ffff !important;"><b>Contact Us</b></h4>
+                                    <ul data-aos="fade-right">
+                                        <li><a href="#" style="color:#ffff !important;"><i class="fa fa-map-marker"></i> Assisi
                                                 Institute of foreign Languages<br>
                                                 Opp:St. Alphonsa Shrine,<br> Bharanaganam - 686578<br>
                                                 Kottayam Dt, Kerala.</a></li>
-                                        <li><a href="#"><i class="fa fa-phone"></i> 04822236457,
+                                        <li><a href="#" style="color:#ffff !important;"><i class="fa fa-phone"></i> 04822236457,
                                                 9961246648</a></li>
-                                        <li><a href="#"><i class="fa fa-envelope"></i>
+                                        <li><a href="#" style="color:#ffff !important;"><i class="fa fa-envelope"></i>
                                                 assisiifl@gmail.com</a></li>
-                                        <li><a href="#"><i class="fa fa-globe"></i>
+                                        <li><a href="#" style="color:#ffff !important;"><i class="fa fa-globe"></i>
                                                 assisiinstitute.org</a></li>
                                     </ul>
                                 </div>
@@ -178,35 +208,26 @@
                         <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 mb-5">
                             <div class="single-footer-caption mb-50 p-3">
                                 <!-- logo -->
-                                <div class="footer-logo mb-25 pb-3" data-aos="fade-left">
-                                    <a href="#intro"><img src="assets/img/logo/logo.png" alt=""
+                                <div class="footer-logo mb-25 pb-3" data-aos="fade-right">
+                                    <a href="#intro"><img src="assets/img/logo/6.png" alt=""
                                             style="height:80px;margin-top:-15px;"></a>
                                 </div>
                                 <div class="footer-tittle mb-50">
-                                    <p data-aos="fade-right" style="color:#2C234D;">Subscribe our newsletter to get
+                                    <p data-aos="fade-right"  style="color:#ffff !important;">Subscribe our newsletter to get
                                         updates about our services
                                     </p>
                                 </div>
                                 <!-- Form -->
                                 <div class="footer-form">
                                     <div id="mc_embed_signup">
-                                    @if($message=Session::get('message'))
-                                        <div class="alert alert-success alert-block">
-                                        <button type="submit" class="close" data-dismiss="alert">x</button>
-                                        <strong>{{$message}}</strong>
-                                        </div>  
-                                   @endif
-                                        <form target="_blank" action="/subcription" method="post"
+                                        <form  action="/subcription" method="post"
                                             class="subscribe_form relative mail_part" novalidate="true">
                                             @csrf
-                                            <input type="email" style="color:#2C234D;" data-aos="fade-right"
+                                            <input type="email"  style="color:#ffff !important;" data-aos="fade-right"
                                                 name="email" id="newsletter-form-email" placeholder=" Email Address "
                                                 class=" placeholder hide-on-focus" onfocus="this.placeholder = ''"
                                                 onblur="this.placeholder = 'Your email address'">
-                                                @error('email')
-                                                <p class="alert alert-danger">{{$errors->first('email')}}</p>
-                                                @enderror
-                                            <div class="form-icon" data-aos="fade-left">
+                                            <div class="form-icon" data-aos="fade-right">
                                                 <button type="submit" name="submit" id="newsletter-submit"
                                                     class="email_icon text-white newsletter-submit button-contactForm">
                                                     Subscribe
@@ -218,9 +239,9 @@
                                 </div>
                                 <!-- social -->
                                 <div class="footer-social mt-5">
-                                    <a href="#" data-aos="fade-up"><i class="text-info fa fa-twitter"></i></a>
-                                    <a href="#" data-aos="fade-up"><i class="text-info fa fa-facebook-f"></i></a>
-                                    <a href="#" data-aos="fade-up"><i class="text-info fa fa-youtube"></i></a>
+                                    <a href="#" data-aos="fade-up"><i class="text-white fa fa-twitter"></i></a>
+                                    <a href="#" data-aos="fade-up"><i class="text-white fa fa-facebook-f"></i></a>
+                                    <a href="#" data-aos="fade-up"><i class="text-white fa fa-youtube"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -234,7 +255,7 @@
                         <div class="row">
                             <div class="col-xl-10 ">
                                 <div class="footer-copy-right">
-                                    <p style="color:#2C234D;">
+                                    <p  style="color:#ffff !important;">
                                         Copyright &copy;
                                         <script>document.write(new Date().getFullYear());</script> All rights reserved |
                                         Developed by Foxiton
@@ -254,7 +275,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/owl.carousel.min.js"></script>-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
 
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/wow/wow.min.js"></script>

@@ -39,7 +39,7 @@ class NewsController extends Controller
     {
         request()->validate([
             'image'=>['required','mimes:jpeg,bmp,png'],
-            'body'=>'required',
+            'body'=>'required|max:200',
             
         ]);
         $news=new news();
@@ -90,7 +90,7 @@ class NewsController extends Controller
     {
           request()->validate([
             'image'=>['required','mimes:jpeg,bmp,png'],
-            'body'=>'required',
+            'body'=>'required|max:200',
             
         ]);
         $news=news::find($id);

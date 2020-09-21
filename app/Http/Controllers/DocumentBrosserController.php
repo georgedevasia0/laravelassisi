@@ -41,16 +41,17 @@ class DocumentBrosserController extends Controller
         $request->validate([
 
             'file'=>'required|mimes:pdf',
-            'title'=>'required',
-            'body'=>'required',
+            'title'=>'required|max:40',
+            'body'=>'required|max:200',
         ]);
         $news=new DocumentBrosser();
         if($request->hasfile('file'))
         {
             $file=$request->file('file');
+            $dest='public/storage/file/brosser/';
             $extension=$file->getClientOriginalExtension(); //getting image extension
             $filename=time().'.'.$extension;
-            $file->move('storage/file/brosser',$filename);
+           $path = $request->file('file')->storeAs($dest,$filename);
             $news->file=$filename;
         }
         $news->title=request('title');

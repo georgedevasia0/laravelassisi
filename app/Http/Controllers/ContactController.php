@@ -25,7 +25,7 @@ class ContactController extends Controller
             'name'=>'required|min:2',
             'email'=>'required|email',
             'phone_number'=>'required|numeric|digits:10',
-            'message'=>'required|min:10'
+            'message'=>'required|min:10|max:250'
         ]);
 
           $contacted = new contact();
@@ -99,6 +99,10 @@ class ContactController extends Controller
     }
     public function export(Request $request)
     {
+        $request->validate([
+            'from'=>'required',
+            'to'=>'required'
+        ]);
         $from=strtotime(request('from'));
         $to=strtotime(request('to'));
         $export = new ContactExport($from,$to);

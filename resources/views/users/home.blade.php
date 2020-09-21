@@ -132,34 +132,37 @@
                 </li>
             </ol>
             <div class="carousel-inner shadow radius">
-                <div class="carousel-item active p-3 radius" style="background-color: #C004D9;">
+                <div class="carousel-item active p-3 radius mpb mp1">
                     <div class="row p-2">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12 ml-2 mx-auto">
                             <div>
                                 <p class="text-white pt-1 text-center" style="line-height:35px;"><span><i class="fas fa-user-graduate fa-2x p-2"></i></span>
-                                 Admissions for 2020-21 batches started. <span class="btn pl-3 btn-light btn-rounded" style="border-radius:15px;">Register Now <i class="fa fa-user-plus text-danger"></i></span>
+                                 Admissions for 2020-21 batches started. 
+								 <a class="ml-2" href="/register"><span class=" btn btn-light btn-rounded" style="border-radius:15px;">Register Now <i class="fa fa-user-plus text-danger"></i> </span></a>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item p-3 radius" style="background:#AB05F2" >
+                <div class="carousel-item p-3 radius mpb mp2" >
                     <div class="row p-2">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12 ml-2 mx-auto">
                             <div>
                                 <p class="text-white pt-1 text-center" style="line-height:35px;"><span><i class="fas fa-user-graduate fa-2x p-2"></i></span>
-                                Admissions for 2020-21 batches started. <span class="btn btn-light btn-rounded" style="border-radius:15px;">Register Now <i class="fa fa-user-plus text-danger"></i></span>
+                                Admissions for 2020-21 batches started. 
+								<a class="ml-2" href="/register"><span class=" btn btn-light btn-rounded" style="border-radius:15px;">Register Now <i class="fa fa-user-plus text-danger"></i> </span></a>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item  p-3 radius" style="background:#C004D9">
+                <div class="carousel-item  p-3 radius mpb mp3">
                     <div class="row p-2">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-12 ml-2 mx-auto">
                             <div>
                                 <p class="text-white pt-1 text-center" style="line-height:35px;"><span><i class="fas fa-user-graduate fa-2x p-2"></i></span>
-                                Admissions for 2020-21 batches started. <span class="btn btn-light btn-rounded" style="border-radius:15px;">Register Now <i class="fa fa-user-plus text-danger"></i> </span>
+                                Admissions for 2020-21 batches started. 
+								<a class="ml-2" href="/register"><span class=" btn btn-light btn-rounded" style="border-radius:15px;">Register Now <i class="fa fa-user-plus text-danger"></i> </span></a>
                                 </p>
                             </div>
                         </div>
@@ -230,7 +233,7 @@
                                 under Capuchin Charitable and Educational Society (CCES). The institution aims at
                                 creating a situation of borderlessness by going beyond one’s linguistic boarders. </p>
                         </div>
-                        <p data-aos="fade-left">
+                        <p data-aos="fade-right">
                             <a href="#" class="btn reverse py-2 mb-5 mt-3 px-4">
                                 MORE ABOUT US <i class="fa fa-long-arrow-right"></i></a>
                         </p>
@@ -251,7 +254,7 @@
                                 </li>
                             </ol>
                             <div class="carousel-inner radius">
-                                <div class="carousel-item active p-3 radius" style="background:url(assets/img/about2.png);background-repeat:no-repeat;background-size:cover;">
+                                <div class="carousel-item active p-3 radius"  style="border:1px solid rgba(10, 10, 226, 0.171);border-radius:5px;">
                                     <div class="row p-2">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-12 ml-2 mx-auto">
                                             <p class="text-center font-weight-bold text-dark">A2 Winners <i class="fa fa-trophy text-primary"></i></p>
@@ -275,21 +278,24 @@
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">You</p>
                                                 </div>
-                
+												
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
+												<a href="/gallery/album/1">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
                                                     <img src="assets/img/testimonials/plus.png" class="img-fluid" alt="">
                                                     
                                                   </div>
-                                                  <p class="text-center text-dark pt-2" style="font-size:12px;">More</p>
+												  
+													<p class="text-center text-dark pt-2" style="font-size:12px;">More</p>
+												 </a>
                                                 </div>
-
+												 
                                             </div>
 
                                         </div>
                                     </div>
                                 </div>
-                                <div class="carousel-item p-3 radius" style="background:url(assets/img/about2.png);background-repeat:no-repeat;background-size:cover;" >
+                                <div class="carousel-item p-3 radius"  style="border:1px solid rgba(10, 10, 226, 0.171);border-radius:5px;">
                                     <div class="row p-2">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-12 ml-2 mx-auto">
                                             <p class="text-center font-weight-bold text-dark">B2 Winners <i class="fa fa-trophy text-primary"></i></p>
@@ -314,11 +320,13 @@
                                                 </div>
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
+												<a href="/gallery/album/2">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
                                                     <img src="assets/img/testimonials/plus.png" class="img-fluid" alt="">
-                                                    
+                                                   
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">More</p>
+												  </a>
                                                 </div>
                                             </div>
 
@@ -327,7 +335,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="carousel-item  p-3 radius" style="background:url(assets/img/about2.png);background-repeat:no-repeat;background-size:cover;">
+                                <div class="carousel-item  p-3 radius"  style="border:1px solid rgba(10, 10, 226, 0.171);border-radius:5px;">
                                     <div class="row p-2">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-12 ml-2 mx-auto">
                                             <p class="text-center font-weight-bold text-dark">C2 Winners <i class="fa fa-trophy text-primary"></i></p>
@@ -351,11 +359,13 @@
                                                 </div>
                 
                                                 <div class="col-lg-2 col-md-2 col-sm-2 col-3 portfolio-item filter-app">
+												<a href="/gallery/album/3">
                                                   <div class="portfolio-wrap" style="border-radius:50%">
                                                     <img src="assets/img/testimonials/plus.png" class="img-fluid" alt="">
                                                     
                                                   </div>
                                                   <p class="text-center text-dark pt-2" style="font-size:12px;">More</p>
+												  </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -496,18 +506,33 @@
 
     <section class=" p-5" style="background-color:#E1F0FA;">
       <div class="container">
-          <div class="wants-wrapper">
-              <div class="row align-items-center justify-content-between">
-                  <div class="col-xl-8 col-lg-9 col-md-8" data-aos="fade-right">
+          <div class="row">
+            <div class="wants-wrapper col-lg-6 pb-5 bvr">
+                <div class="row align-items-center justify-content-between">
+                  <div class="col-xl-12 col-lg-12 col-md-12" data-aos="fade-right">
                       <div class="wantToWork-caption wantToWork-caption2">
                           <h2 class="font-weight-bold" style="color:#2C234D">Download our Newsletter</h2>
                           <p style="color:#2C234D">Our success story depends on the students who learn from us by enlightning their knowledge. </p>
                       </div>
                   </div>
-                  <div class="col-xl-3 col-lg-4 col-md-4" data-aos="fade-left">
+                  <div class="col-xl-12 col-lg-12 col-md-12" data-aos="fade-right">
                       <a href="newsletter/download" class="btn btt text-white px-5 py-3">Download <i class="fa fa-download"></i></a>
                   </div>
-              </div>
+                </div>
+            </div>
+            <div class="wants-wrapper col-lg-6 pl-lg-5 pl-md-0 pl-sm-0">
+                <div class="row align-items-center justify-content-between">
+                  <div class="col-xl-12 col-lg-12 col-md-12" data-aos="fade-right">
+                      <div class="wantToWork-caption wantToWork-caption2">
+                          <h2 class="font-weight-bold" style="color:#2C234D">Download our Brochure</h2>
+                          <p style="color:#2C234D">Our success story depends on the students who learn from us by enlightning their knowledge. </p>
+                      </div>
+                  </div>
+                  <div class="col-xl-12 col-lg-12 col-md-12" data-aos="fade-right">
+                      <a href="brosser/download" class="btn btt text-white px-5 py-3">Download <i class="fa fa-download"></i></a>
+                  </div>
+                </div>
+            </div>
           </div>
       </div>
     </section>
@@ -526,89 +551,76 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="col-lg-5 mx-auto" data-aos="fade-up" data-aos-delay="100">
-                        <div class="team__item bg-white" style="border-radius:5px;">
-                            <div class="team__item__img col-lg-12">
-                                <img src="assets/img/testimonials/testimonials-5.jpg" alt="" class="mx-auto row" style="width:150px;border-radius:5px;">
-                                <div class="team__item__text">
-                                <h5 class="text-center pt-3">DAVID WARNER</h5>
-                                <span class="text-center">Instructor</span>
-                                <p class="text-center">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
-                            </div>
-                            </div>
+                <div class="col-lg-5 mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team__item bg-white" style="border-radius:5px;">
+                        <div class="team__item__img row col-lg-12 ml-1">
+                            <img class="img-staff mx-auto" src="assets/img/testimonials/testimonials-5.jpg" alt="" class="mx-auto row" style="width:150px;border-radius:5px;">
+                            <div class="team__item__text">
+                            <h5 class="text-center pt-3">DAVID WARNER</h5>
+                            <span class="text-center">Instructor</span>
+                            <p class="text-center">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
+                        </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
+                    <div class="team__item bg-white " style="border-radius:5px;">
+                        <div class="team__item__img row">
+                            <img class="img-staff mx-auto" src="assets/img/testimonials/testimonials-5.jpg" alt="" style="border-radius:5px;">
+                        </div>
+                        <div class="team__item__text">
+                            <h6 class="font-weight-bold v1">DAVID WARNER</h6>
+                            <span class="v1">Instructor</span>
+                            <p class="v1">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
+                            <!--<div class="team__item__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                    <div class="team__item bg-white" style="border-radius:5px;">
+                        <div class="team__item__img row">
+                            <img class="img-staff mx-auto" src="assets/img/testimonials/testimonials-5.jpg" alt="" style="border-radius:5px;">
+                        </div>
+                        <div class="team__item__text">
+                            <h6 class="font-weight-bold v1">DAVID WARNER</h6>
+                            <span class="v1">Instructor</span>
+                            <p class="v1">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
                     <div class="team__item bg-white" style="border-radius:5px;">
-                        <div class="team__item__img">
-                            <img src="assets/img/testimonials/testimonials-5.jpg" alt="" style="width:150px;border-radius:5px;">
+                        <div class="team__item__img row">
+                            <img class="img-staff mx-auto" src="assets/img/testimonials/testimonials-5.jpg" alt="" style="border-radius:5px;">
                         </div>
                         <div class="team__item__text">
-                            <h5>DAVID WARNER</h5>
-                            <span>Instructor</span>
-                            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                            </div>
+                            <h6 class="font-weight-bold v1">DAVID WARNER</h6>
+                            <span class="v1">Instructor</span>
+                            <p class="v1">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
+                          
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
                     <div class="team__item bg-white" style="border-radius:5px;">
-                        <div class="team__item__img">
-                            <img src="assets/img/testimonials/testimonials-5.jpg" alt="" style="width:150px;border-radius:5px;">
+                        <div class="team__item__img row">
+                            <img class="img-staff mx-auto" src="assets/img/testimonials/testimonials-5.jpg" alt="" style="border-radius:5px;">
                         </div>
                         <div class="team__item__text">
-                            <h5>DAVID WARNER</h5>
-                            <span>Instructor</span>
-                            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
-                    <div class="team__item bg-white" style="border-radius:5px;">
-                        <div class="team__item__img">
-                            <img src="assets/img/testimonials/testimonials-5.jpg" alt="" style="width:150px;border-radius:5px;">
-                        </div>
-                        <div class="team__item__text">
-                            <h5>DAVID WARNER</h5>
-                            <span>Instructor</span>
-                            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-                    <div class="team__item bg-white" style="border-radius:5px;">
-                        <div class="team__item__img">
-                            <img src="assets/img/testimonials/testimonials-5.jpg" alt="" style="width:150px;border-radius:5px;">
-                        </div>
-                        <div class="team__item__text">
-                            <h5>DAVID WARNER</h5>
-                            <span>Instructor</span>
-                            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                            </div>
+                            <h6 class="font-weight-bold v1">DAVID WARNER</h6>
+                            <span class="v1">Instructor</span>
+                            <p class="v1">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
+                          
                         </div>
                     </div>
                 </div>

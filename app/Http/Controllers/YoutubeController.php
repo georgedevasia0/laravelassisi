@@ -35,7 +35,7 @@ class YoutubeController extends Controller
     { 
         request()->validate([
             'youtubelink'=>'required',
-            'title'=>'required',
+            'title'=>'required|max:40',
             
         ]);
         		
@@ -110,7 +110,7 @@ class YoutubeController extends Controller
     {
         request()->validate([
             'youtubelink'=>'required',
-            'title'=>'required',
+            'title'=>'required|max:40',
             
         ]);
         $youtube = Youtube::find($id);  
