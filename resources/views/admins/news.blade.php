@@ -46,6 +46,11 @@
                          <div class="panel-body">
                               <h4>{{$news->body}}</h4>
                               <center><a href="/admins/news/{{$news->id}}/edit"><button class="btn btn-outline-secondary btn-primary float-right">EDIT</button></a></center>
+                              <form action="/admins/news/{{$news->id}}" method="post">
+                                         @csrf
+                                         @method("DELETE")
+                                         <center><button onclick="return confirm('are you sure');" class="btn btn-danger stretched-link">Delete</button></center>
+                                         </form>
                          </div>
                    </div>
             

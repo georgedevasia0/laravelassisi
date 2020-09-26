@@ -17,7 +17,9 @@
                @method('PUT')
                <div class="panel-body">
                   <p>Select Image</p>
+              <label for="">{{session()->get('edit')}}</label>   
                   <input type='file'  name="image" style="width:100%;margin-bottom:10px" class="form-control bg-grey">
+                 
                   @error('image')
                   <p class="alert alert-danger alert-bock">{{$errors->first('image')}}</p>
                   @enderror

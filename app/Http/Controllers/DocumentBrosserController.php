@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\DocumentBrosser;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DocumentBrosserController extends Controller
 {
@@ -103,8 +104,11 @@ class DocumentBrosserController extends Controller
     public function destroy($id)
     {
         //
-        $news=DocumentBrosser::find($id);
-        $news->delete();
-        return redirect("/admins/document/brosser");
+        $brosser=DocumentBrosser::find($id);
+        $file=$brosser->file;
+        $path="public/storage/file/brosser/".$file;
+        Storage::delete($path);
+        $brosser->delete();
+        return redirect("/admins/document/brosser")->with('message','deleted successfully');
     }
 }

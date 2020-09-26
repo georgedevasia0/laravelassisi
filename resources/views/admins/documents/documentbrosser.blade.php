@@ -54,7 +54,7 @@
                 <form action="/admins/document/brosser/{{$document->id}}" method="POST">
                 @csrf
                 @method('DELETE')
-                  <center><button type="submit" class="btn btn-outline-secondary btn-primary float-right">delete</button></center>
+                  <center><button type="submit" class="btn btn-danger stretched-link">delete</button></center>
                  </form>
              </div>
          </div>

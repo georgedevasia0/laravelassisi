@@ -60,6 +60,7 @@ Route::group(['middleware'=>['LoginAuth']],function()
     Route::get('/admins/news','NewsController@index'); 
     Route::post('/admins/news','NewsController@store'); 
     Route::get('/admins/news/{id}/edit','NewsController@edit'); 
+    Route::delete('/admins/news/{id}','NewsController@destroy'); 
     Route::put('/admins/news/{id}','NewsController@update'); 
     Route::get('/admins/newslettersubscription','NewsletterController@create');
     Route::get('/admins/newslettersubscription/list','NewsletterController@index');

@@ -114,10 +114,31 @@ class YoutubeController extends Controller
             
         ]);
         $youtube = Youtube::find($id);  
-        $youtube->youtubelink=request('youtubelink');
-        $youtube->title=request('title');
-        $youtube->save(); 
-        return redirect('/admins/youtube')->with('message','updated');
+        $shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_-]+)\??/i';
+        $longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))([a-zA-Z0-9_-]+)/i';
+ 
+         if (preg_match($longUrlRegex, $url, $matches)) {
+             $youtube_id = $matches[count($matches) - 1];
+             $link='https://www.youtube.com/embed/' . $youtube_id ;
+             $youtube->youtubelink=$link;
+             $youtube->title=request('title');
+             $youtube->save();
+             return back()->with('message','uploaded successfully');
+         }
+ 
+         elseif (preg_match($shortUrlRegex, $url, $matches)) {
+             $youtube_id = $matches[count($matches) - 1];
+             $link='https://www.youtube.com/embed/' . $youtube_id ;
+             $youtube->youtubelink=$link;
+             $youtube->title=request('title');
+             $youtube->save();
+             return back()->with('message','uploaded successfully');
+         }
+       
+       else {
+         return back()->with('message','youtube link is not found');
+         
+       }
 
     }
 

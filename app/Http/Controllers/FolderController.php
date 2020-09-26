@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Folder;
 use App\gallery;
 use Illuminate\Http\Request;
+use File;
 
 class FolderController extends Controller
 {
@@ -16,13 +17,15 @@ class FolderController extends Controller
     public function index($id)
     {
         //
+      
         $folder= Folder::find($id);
+        
         $data= Folder::all()->skip(3);
         $folders=$folder->folder;
         $galleries=gallery::where(['folder'=>$folders])->latest()->get();   
-        $a2folder=Folder::where('folder','A2Winners')->first();
-        $b2folder=Folder::where('folder','B2 Winners')->first();
-        $c2folder=Folder::where('folder','C2 Winners')->first();    
+        $a2folder=Folder::where('folder','A2')->first();
+        $b2folder=Folder::where('folder','B2')->first();
+        $c2folder=Folder::where('folder','C2')->first();    
         return view('admins.gallery.galleryfolder',['a2folder'=>$a2folder,'b2folder'=>$b2folder,'c2folder'=>$c2folder,'galleries'=>$galleries,'data'=>$data,'folderdata'=>$folder]);
     }
 
@@ -110,7 +113,15 @@ class FolderController extends Controller
     {
         //  
         $folder = Folder::find($id);
+        $image= Gallery::select('image')->where('folder','=',$folder->folder)->get();
+        foreach($image as $data)
+        {
+            $image=$data->image;
+            $path='image/gallery/'.$image;
+            File::delete(public_path($path));
+        }
         $gallery =Gallery::where('folder','=',$folder->folder)->delete();
+
         $folder->delete();
         return redirect('/admins/gallery')->with('message','folder deleted');
     }

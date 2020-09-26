@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\DocumentNews;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DocumentNewsController extends Controller
 {
@@ -54,7 +55,7 @@ class DocumentNewsController extends Controller
             $filename=time().'.'.$extension;
            $path = $request->file('file')->storeAs($dest,$filename);
             $news->file=$filename;
-            session()->put('path',$path);
+
         }
         $news->title=request('title');
         $news->body=request('body');
@@ -106,7 +107,10 @@ class DocumentNewsController extends Controller
     {
         //
         $news=DocumentNews::find($id);
+        $file=$news->file;
+        $path="public/storage/file/news/".$file;
+        Storage::delete($path);
         $news->delete();
-        return redirect("/admins/document/news");
+        return redirect("/admins/document/news")->with('message','Delete successfully');
     }
 }
