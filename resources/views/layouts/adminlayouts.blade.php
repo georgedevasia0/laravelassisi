@@ -20,6 +20,12 @@
 <!-- ICONS -->
 <link rel="apple-touch-icon" sizes="76x76" href="/admin/img/apple-icon.png">
 <link rel="icon" type="image/png" sizes="96x96" href="/admin/img/favicon.png">
+
+<style>
+#cv{
+	display:none !important;
+}
+</style>
 </head>
 
 <!-- //PHP CODE TO DISPLAY -->
@@ -87,7 +93,7 @@
 		<div class="sidebar-scroll">
 			<nav>
 				<ul class="nav">
-					<li><a href="/admins" class="@yield('dash')"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+					<li style="padding-top:13px "><a href="/admins" class="@yield('dash')"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
 					
 
 					<li>
@@ -114,21 +120,25 @@
 						</div>
 					</li>
 					<li><a href="/admins/profile" class="@yield('prof')"><i class="fa fa-user-o "></i> <span>Profile</span></a></li>
+					
+					
 					<li>
-						<a href="#gallery" data-toggle="collapse" class=""><i class="fa fa-folder"></i> <span>Testimonial</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-						<div id="gallery" class="">
+						<a href="#gallery1" onclick="vv()" data-toggle="collapse" class="four"><i class="fa fa-folder"></i> <span>Testimonial</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+						<div id="gallery1">
 							<ul class="nav">
 								<li><a href="/admins/testimonial/youtube" class=""><i class="fa fa-youtube"></i> <span>Youtube</span></a></li>
 								<li><a href="/admins/testimonial/gallery" class=""><i class="fa fa-file-image-o"></i> <span>Image</span></a></li>
 							</ul>
 						</div>
 					</li>
+
+
 					<li>
-						<a href="#gallery" data-toggle="collapse" class=""><i class="fa fa-folder"></i> <span>document</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-						<div id="gallery" class="">
+						<a href="#gallery2" data-toggle="collapse" class=""><i class="fa fa-folder"></i> <span>document</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+						<div id="gallery2" class="">
 							<ul class="nav">
-								<li><a href="/admins/document/news" class=""><i class="fa fa-youtube"></i> <span>News</span></a></li>
-								<li><a href="/admins/document/brosser" class=""><i class="fa fa-file-image-o"></i> <span>Brosser</span></a></li>
+								<li><a href="/admins/document/news" class=""><i class="fa fa-youtube"></i> <span>Newsletter</span></a></li>
+								<li><a href="/admins/document/brosser" class=""><i class="fa fa-file-image-o"></i> <span>Brochure</span></a></li>
 							</ul>
 						</div>
 					</li>
@@ -273,6 +283,45 @@
 		}
 
 	});
+	
+	
+	document.getElementById("a").classList.add("active");
+		
+	function click1(){
+		document.getElementById("settings").style.display = "block";
+		document.getElementById("change-password").style.display = "none";
+		document.getElementById("logout").style.display = "none";
+		document.getElementById("b").classList.remove("active");
+		document.getElementById("c").classList.remove("active");
+		document.getElementById("a").classList.add("active");
+	}
+	
+	function click2(){
+		document.getElementById("settings").style.display = "none";
+		document.getElementById("change-password").style.display = "block";
+		document.getElementById("logout").style.display = "none";
+		document.getElementById("profile").style.display = "none";
+		document.getElementById("a").classList.remove("active");
+		document.getElementById("c").classList.remove("active");
+		document.getElementById("b").classList.add("active");
+	}
+	
+	function click3(){
+		document.getElementById("settings").style.display = "block";
+		document.getElementById("change-password").style.display = "none";
+		document.getElementById("logout").style.display = "none";
+		document.getElementById("profile").style.display = "none";
+		document.getElementById("b").classList.remove("active");
+		document.getElementById("a").classList.remove("active");
+		document.getElementById("c").classList.add("active");
+	}
+	
+	function vv(){
+		document.getElementById("cv").style.display = "block";
+	}
+	
 	</script>
+
+
 </body>
 </htm>

@@ -22,12 +22,13 @@
                         <div class="item ">
                            <div class="card item-card card-block">
                               <center>
-                                 <h4>UPDATE YOUTUBE VIDEO</h4>
+                                 <h4 style="font-weight:700;">UPDATE YOUTUBE VIDEO</h4>
                                  <br>
                                  <form action="/admins/youtube/{{$data->id}}" method="POST">
                                  @csrf
                                  @method('PUT')
                                     <div class="form-group" style="margin-top:15px">
+                                    <label style="text-align:left;width:100%;color:red;padding-bottom:15px;">Enter Link</label>
                                        <input type="text" name="youtubelink" value="{{$data->youtubelink}}" class="form-control" placeholder="Enter the Youtube Link">
                                        @error('youtubelink')
                                        <p class="alert alert-danger alert-block">{{$errors->first('youtubelink')}}</p>
@@ -35,14 +36,14 @@
                                  <br>
                                   
                                        <div class="form-group">
-                                          <label for="exampleFormControlInput1">Title</label>
+                                          <label for="exampleFormControlInput1" style="text-align:left;width:100%;color:red;padding-bottom:15px;">Title</label>
                                           <input type="text" name="title" class="form-control" value="{{$data->title}}"  placeholder="Enter the title">
                                           @error('title')
                                        <p class="alert alert-danger alert-block">{{$errors->first('title')}}</p>
                                        @enderror
                                          
                                        </div>
-                                       <button class="btn btn-success" style="margin:11px">update</button>
+                                       <button class="btn btn-primary" style="margin:11px">Update</button>
                                     </div>
                                  </form>
                               </center>

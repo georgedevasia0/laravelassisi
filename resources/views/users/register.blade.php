@@ -104,7 +104,7 @@
                                         <!-- Form Group -->
                                         <div class="col-12 col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" value="{{old('age')}}" class="form-control mb-30 p-4" name="age" id="age" placeholder="Age">
+                                                <input type="number" value="{{old('age')}}" class="form-control mb-30 p-4" name="age" id="age" placeholder="Age">
                                                 @error('age')
                                                 <p class="alert alert-danger">{{$errors->first('age')}}</p>
                                                 @enderror

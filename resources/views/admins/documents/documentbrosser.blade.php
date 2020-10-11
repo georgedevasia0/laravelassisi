@@ -5,7 +5,7 @@
 <div class="main-content">
    <div class="container-fluid">
    <div class="row">
-      <h3 class="page-title">BROSSER</h3>
+      <h3 class="page-title" style="padding-left:16px;color:black;font-weight:700;">Brochure</h3>
       <div class="col-md-7" id="edit">
          <h3 class="page-title">Add Document </h3>
          @if($message=Session::get('message'))
@@ -15,46 +15,47 @@
                
                </div>
          @endif
-            <div class="panel panel-headline">
+            <div class="panel panel-headline" style="border-radius:10px">
                <form action="/admins/document/brosser" method="post" enctype="multipart/form-data" >
                 @csrf
                  <div class="panel-body">
                    <p>Select Document</p>
-                   <input type='file' value="" name="file" style="width:100%;margin-bottom:10px" class="form-control bg-grey" >
+                   <input type='file' value="" name="file" style="width:100%;margin-bottom:10px" class="form-control bg-grey" required>
                    @error('file')
                    <p class="alert alert-danger">{{$errors->first('file')}}</p>
                    @enderror
                 
                    <p>Title</p>
-                   <input type="text" value="{{old('title')}}"  name="title" class="form-control"  placeholder="Enter the title">
+                   <input type="text" value="{{old('title')}}"  name="title" class="form-control"  placeholder="Enter the title" required>
                    @error('title')
                    <p class="alert alert-danger">{{$errors->first('title')}}</p>
                    @enderror
-                 
-                   <p>Add Discerption</p>
-                   <textarea type="textarea"   name="body" style="height:200px;width:100%" >{{old('body')}}</textarea>
+                 <br>
+                   <p>Add Description</p>
+                   <textarea type="textarea"   name="body"  class="form-control"  style="height:200px;width:100%" required>{{old('body')}}</textarea>
                    @error('body')
                    <p class="alert alert-danger">{{$errors->first('body')}}</p>
                    @enderror
-                  
-                   <center><button class="btn btn-outline-secondary float-right btn-success">Save</button></center>
-                 </div>
+                   <br><br><br>
+                   <center><button class="btn btn-outline-secondary float-right btn-primary" style="border-radius:15px;"><i class="fa fa-save"></i> Save</button></center>
+                 </div><br>
                </form>
             </div> 
       </div>
+      <br><br><br>
          <!-- News List  --> 
       @foreach($data as $document)
       <div class="col-md-5"> 
            <!-- PANEL HEADLINE -->
-         <div class="panel panel-headline">
-            <image src="{{asset('storage/file/brosser'.$document->file)}}" style="width:100%;height:300px">
+         <div class="panel panel-headline" style="border-radius:10px">
+            <image src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" style="padding-top:20px;width:100%;height:300px">
             <div class="panel-body">
             <h3 class="card-title">{{$document->title}}</h3>
             <h4>{{$document->body}}</h4>
                 <form action="/admins/document/brosser/{{$document->id}}" method="POST">
                 @csrf
                 @method('DELETE')
-                  <center><button type="submit" class="btn btn-danger stretched-link">delete</button></center>
+                  <center><button type="submit" class="btn btn-outline-secondary btn-loght float-right"><i class="fa fa-trash text-danger"></i> Delete</button></center>
                  </form>
              </div>
          </div>

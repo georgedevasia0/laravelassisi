@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Testimonialimage;
 use Illuminate\Http\Request;
-use File;
 
 class TestimonialimageController extends Controller
 {
@@ -42,9 +41,9 @@ class TestimonialimageController extends Controller
         $request->validate([
 
             'image'=>'required|mimes:jpeg,bmp,png',
-            'name'=>'required|max:30',
-            'designation'=>'required|max:30',
-            'message'=>'required|max:200'
+            'name'=>'required',
+            'designation'=>'required',
+            'message'=>'required'
         ]);
         $data= new Testimonialimage();
         if($request->hasfile('image'))
@@ -106,10 +105,7 @@ class TestimonialimageController extends Controller
     {
         //deleting the testimonial image section
         $data= Testimonialimage::find($id);
-        $image=$data->image;
-        $path="image/testimonial/".$image;
-        File::delete(public_path($path));
         $data->delete();
-        return redirect('/admins/testimonial/gallery')->with('message','deleted successfully');
+        return redirect('/admins/testimonial/gallery');
     }
 }

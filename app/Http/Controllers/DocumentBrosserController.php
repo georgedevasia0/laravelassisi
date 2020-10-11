@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\DocumentBrosser;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class DocumentBrosserController extends Controller
 {
@@ -42,17 +41,16 @@ class DocumentBrosserController extends Controller
         $request->validate([
 
             'file'=>'required|mimes:pdf',
-            'title'=>'required|max:40',
-            'body'=>'required|max:200',
+            'title'=>'required',
+            'body'=>'required',
         ]);
         $news=new DocumentBrosser();
         if($request->hasfile('file'))
         {
             $file=$request->file('file');
-            $dest='public/storage/file/brosser/';
             $extension=$file->getClientOriginalExtension(); //getting image extension
             $filename=time().'.'.$extension;
-           $path = $request->file('file')->storeAs($dest,$filename);
+            $file->move('storage/file/brosser',$filename);
             $news->file=$filename;
         }
         $news->title=request('title');
@@ -104,11 +102,8 @@ class DocumentBrosserController extends Controller
     public function destroy($id)
     {
         //
-        $brosser=DocumentBrosser::find($id);
-        $file=$brosser->file;
-        $path="public/storage/file/brosser/".$file;
-        Storage::delete($path);
-        $brosser->delete();
-        return redirect("/admins/document/brosser")->with('message','deleted successfully');
+        $news=DocumentBrosser::find($id);
+        $news->delete();
+        return redirect("/admins/document/brosser");
     }
 }

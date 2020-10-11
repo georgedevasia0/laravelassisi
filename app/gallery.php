@@ -10,8 +10,4 @@ class gallery extends Model
     protected $fillable = [
         'image', 'folder',
     ];
-    public function createdefault()
-    {
-        echo(reached);
-    }
 }

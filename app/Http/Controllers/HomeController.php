@@ -10,7 +10,6 @@ use App\gallery;
 use App\Folder;
 use App\Youtube;
 use App\DocumentNews;
-use App\DocumentBrosser;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -21,9 +20,9 @@ class HomeController extends Controller
     $new = News::latest()->take(1)->get();
     $data=Testimonialimage::latest()->take(3)->get();
     $youtube=Testimonialyoutube::latest()->take(3)->get();
-    $galleryA2=gallery::where('folder','A2')->latest()->take(16)->get();
-    $galleryB2=gallery::where('folder','B2')->latest()->take(16)->get();
-    $galleryC2=gallery::where('folder','C2')->latest()->take(16)->get();
+    $galleryA2=gallery::where('folder','A2 Winners')->latest()->take(13)->get();
+    $galleryB2=gallery::where('folder','B2 Winners')->latest()->take(13)->get();
+    $galleryC2=gallery::where('folder','C2 Winners')->latest()->take(13)->get();
     
     $array=[
       'data'=>$news,
@@ -56,21 +55,11 @@ class HomeController extends Controller
         $youtube = Youtube::all();
         return view('users.youtube',['data'=>$youtube]);
    }
-   public function downloadnewsletter()
+   public function download()
    {
-     $filename = DocumentNews::select('file')->latest()->take(1)->first();
-     $file= $filename->file;
-     $path="public/storage/file/news/".$file;
-     $headers = ['content-Type: application/pdf'];
-     $newname ='news-pdf-file-'.time().'.pdf';
-   return Storage::download($path, $newname,$headers);
-    
-   }
-   public function downloadbrosser()
-   {
-     $filename = DocumentBrosser::select('file')->latest()->take(1)->first();
-     $file= $filename->file;
-     $path="public/storage/file/brosser/".$file;
+     $filename =  DocumentNews::select('file')->latest()->take(1)->first();
+     $files= $filename->file;
+     $path=session()->get('path');
      $headers = ['content-Type: application/pdf'];
      $newname ='news-pdf-file-'.time().'.pdf';
    return Storage::download($path, $newname,$headers);

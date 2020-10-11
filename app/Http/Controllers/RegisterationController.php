@@ -41,13 +41,13 @@ class RegisterationController extends Controller
         //storing the user input values to  database 
         $request->validate([
 
-            'name'=>'required|min:2|max:30',
+            'name'=>'required|min:2',
             'phone_number'=>'required|numeric|digits:10',
             'email'=>'required|email',
-            'age'=>'required|numeric|digits_between:1,3',
-            'address'=>'required|min:2|max:100',
-            'qualification'=>'required|min:2|max:30',
-            'language'=>'required|min:2|max:20',
+            'age'=>'required|min:2',
+            'address'=>'required',
+            'qualification'=>'required',
+            'language'=>'required',
 
             
             
@@ -167,10 +167,6 @@ class RegisterationController extends Controller
     }
     public function export(Request $request)
     {
-        $request->validate([
-            'from'=>'required',
-            'to'=>'required'
-        ]);
         $from=strtotime(request('from'));
         $to=strtotime(request('to'));
         $export = new RegisterationExport($from,$to);

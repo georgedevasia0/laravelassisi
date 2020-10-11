@@ -153,12 +153,8 @@ class NewsletterController extends Controller
         
        
     }
-    public function export(Request $request)
+    public function export()
     {
-        $request->validate([
-            'from'=>'required',
-            'to'=>'required'
-        ]);
         $from=strtotime(request('from'));
         $to=strtotime(request('to'));
         $export = new NewsletterExport($from,$to);

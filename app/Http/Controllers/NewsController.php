@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use File;
+
 use App\News;
 use Illuminate\Http\Request;
 
@@ -39,7 +39,7 @@ class NewsController extends Controller
     {
         request()->validate([
             'image'=>['required','mimes:jpeg,bmp,png'],
-            'body'=>'required|max:200',
+            'body'=>'required',
             
         ]);
         $news=new news();
@@ -76,7 +76,6 @@ class NewsController extends Controller
     public function edit($id)
     {
         $news = News::find($id);
-        Session()->put('edit',$news->image);
         return view('admins.newsedit',['news'=>$news]);
     }
 
@@ -90,8 +89,8 @@ class NewsController extends Controller
     public function update(Request $request, $id)
     {
           request()->validate([
-            'image'=>['mimes:jpeg,bmp,png'],
-            'body'=>'required|max:150',
+            'image'=>['required','mimes:jpeg,bmp,png'],
+            'body'=>'required',
             
         ]);
         $news=news::find($id);
@@ -102,19 +101,10 @@ class NewsController extends Controller
             $filename=time().'.'.$extension;
             $file->move('image/news/',$filename);
             $news->image=$filename;
-            $news->body=request('body');
-            $news->save();
-            return redirect("/admins/news")->with('message','News Updated Successfully');
         }
-        else{
-            $filename=Session()->get('edit');
-            $news->image=$filename;
-            $news->body=request('body');
-            $news->save();
-            return redirect("/admins/news")->with('message','News Updated Successfully');
-
-        }
-        
+        $news->body=request('body');
+        $news->save();
+        return redirect("/admins/news")->with('message','News Updated Successfully');
     }
 
     /**
@@ -123,14 +113,8 @@ class NewsController extends Controller
      * @param  \App\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(News $news)
     {
         //
-        $news =News::find($id);
-        $image=$news->image;
-        $path='image/news/'.$image;
-        File::delete(public_path($path));
-        $news->delete();
-        return redirect()->back()->with('message','Testimonial deleted');
     }
 }
